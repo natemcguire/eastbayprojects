@@ -44,6 +44,29 @@
     .btn{padding:14px 18px; border:1px solid var(--ink); border-radius:999px; text-transform:uppercase; letter-spacing:.18em; font-size:.8rem}
     .btn:hover{background:var(--ink); color:#000}
 
+    /* Process Section */
+    .process-section{margin:56px 0}
+    .section-title{font-family:"Playfair Display", serif; font-weight:600; font-size:2.2rem; margin:0 0 32px 0; letter-spacing:.04em}
+    .process-steps{display:grid; gap:20px; max-width:760px}
+    .process-step{font-size:1.1rem; color:var(--ink-dim); margin:0; line-height:1.6}
+
+    /* Expertise Section */
+    .expertise-section{margin:56px 0}
+    .expertise-intro{font-size:1.05rem; color:var(--ink-dim); margin:0 0 32px 0; font-style:italic}
+    .expertise-grid{display:grid; gap:40px; grid-template-columns:repeat(auto-fit, minmax(300px, 1fr))}
+    .expertise-category{border:1px solid var(--line); border-radius:8px; padding:24px; background:linear-gradient(180deg, rgba(255,255,255,.02), rgba(255,255,255,0))}
+    .category-title{font-family:"Playfair Display", serif; font-weight:600; font-size:1.4rem; margin:0 0 20px 0; color:var(--accent)}
+    .vehicle-list{list-style:none; padding:0; margin:0; display:grid; gap:12px}
+    .vehicle-list li{color:var(--ink-dim); font-size:.95rem; line-height:1.5; padding-left:0}
+
+    /* Regulations Section */
+    .regulations-section{margin:56px 0}
+    .regulations-grid{display:grid; gap:24px; grid-template-columns:repeat(auto-fit, minmax(280px, 1fr))}
+    .regulation-item{border:1px solid var(--line); border-radius:6px; padding:20px; background:linear-gradient(180deg, rgba(255,255,255,.01), rgba(255,255,255,0))}
+    .regulation-title{font-family:"Playfair Display", serif; font-weight:600; font-size:1.1rem; margin:0 0 12px 0; color:var(--accent)}
+    .regulation-item p{margin:0; color:var(--ink-dim); font-size:.9rem; line-height:1.5}
+    .date-highlight{color:var(--accent); font-weight:500}
+
     footer{border-top:1px solid var(--line); margin-top:56px; padding-top:24px; color:var(--ink-dim); font-size:.9rem}
   </style>
 </head>
@@ -68,6 +91,85 @@
         <img src="images/LandRoverDefenders.jpg" alt="Land Rover Defenders" />
       </div>
 
+      <div class="process-section">
+        <h2 class="section-title">Process</h2>
+        <div class="process-steps">
+          <p class="process-step">Let us know what you're looking for.</p>
+          <p class="process-step">We'll find it. Typical sourcing from Spain, Italy, and the UK.</p>
+          <p class="process-step">We can import it for you as is, or modify it to your specifications.</p>
+          <p class="process-step">Trucks, SUVs, motorcycles, and sometimes cars.</p>
+        </div>
+      </div>
+
+      <div class="expertise-section">
+        <h2 class="section-title">Where We Have Expertise</h2>
+        <p class="expertise-intro">For vehicles that are over 25 years old (Pre 2000)</p>
+        
+        <div class="expertise-grid">
+          <div class="expertise-category">
+            <h3 class="category-title">British</h3>
+            <ul class="vehicle-list">
+              <li>Land Rover Defender 90 / 110 (esp. TDI diesels)</li>
+              <li>Land Rover Discovery I (diesel, manual)</li>
+              <li>Range Rover Classic (late soft dash, diesel variants)</li>
+            </ul>
+          </div>
+
+          <div class="expertise-category">
+            <h3 class="category-title">German</h3>
+            <ul class="vehicle-list">
+              <li>Mercedes-Benz G-Wagen (G300, G320, G350D)</li>
+              <li>Mercedes-Benz 190E 2.3-16 / 2.5-16 Cosworth</li>
+              <li>Mercedes-Benz E-Class diesels (250D, 300TD wagons)</li>
+            </ul>
+          </div>
+
+          <div class="expertise-category">
+            <h3 class="category-title">Italian</h3>
+            <ul class="vehicle-list">
+              <li>Lancia Delta Integrale (Evo I / Evo II)</li>
+              <li>Alfa Romeo GTV (916)</li>
+              <li>Alfa Romeo 155 Q4</li>
+              <li>Fiat Coupé 20V Turbo</li>
+              <li>Maserati Ghibli II (Biturbo-era cars, quirky imports)</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <div class="regulations-section">
+        <h2 class="section-title">Things to Know</h2>
+        <div class="regulations-grid">
+          <div class="regulation-item">
+            <h4 class="regulation-title">25Y Rule (FMVSS)</h4>
+            <p>Vehicles 25+ years old are exempt from DOT safety regs (federal motor vehicle safety standards). <span class="date-highlight">(Before <span id="dot-date"></span>)</span></p>
+          </div>
+          <div class="regulation-item">
+            <h4 class="regulation-title">21Y Rule (EPA)</h4>
+            <p>Vehicles 21+ years old are exempt from EPA emissions compliance. <span class="date-highlight">(Before <span id="epa-date"></span>)</span></p>
+          </div>
+          <div class="regulation-item">
+            <h4 class="regulation-title">&lt;25Y Rule</h4>
+            <p>Must meet U.S. DOT + EPA standards or be imported under "Show & Display" (rare, restrictive).</p>
+          </div>
+          <div class="regulation-item">
+            <h4 class="regulation-title">25Y Date</h4>
+            <p>Clock starts from month of manufacture, not model year.</p>
+          </div>
+          <div class="regulation-item">
+            <h4 class="regulation-title">State Regs Still Apply</h4>
+            <p>Even if federally legal, state laws (e.g., California CARB) may block registration.</p>
+          </div>
+          <div class="regulation-item">
+            <h4 class="regulation-title">Import Duty</h4>
+            <p>~2.5% for cars, 25% for trucks, when bringing into the U.S.</p>
+          </div>
+          <div class="regulation-item">
+            <h4 class="regulation-title">Customs Form</h4>
+            <p>HS-7 (DOT) + 3520-1 (EPA) filed at entry.</p>
+          </div>
+        </div>
+      </div>
+
       <div class="cta" id="contact">
         <a class="btn" href="mailto:figment.elevens_0w@icloud.com">Contact</a>
         <span class="kicker" style="letter-spacing:.2em">By appointment only</span>
@@ -81,6 +183,34 @@
 
   <script>
     document.getElementById('y').textContent = new Date().getFullYear();
+    
+    // Calculate and display EPA 21-year cutoff date
+    function calculateEPADate() {
+      const today = new Date();
+      const epaDate = new Date(today.getFullYear() - 21, today.getMonth(), today.getDate());
+      
+      // Format the date nicely
+      const options = { year: 'numeric', month: 'long', day: 'numeric' };
+      const formattedDate = epaDate.toLocaleDateString('en-US', options);
+      
+      document.getElementById('epa-date').textContent = formattedDate;
+    }
+    
+    // Calculate and display DOT 25-year cutoff date
+    function calculateDOTDate() {
+      const today = new Date();
+      const dotDate = new Date(today.getFullYear() - 25, today.getMonth(), today.getDate());
+      
+      // Format the date nicely
+      const options = { year: 'numeric', month: 'long', day: 'numeric' };
+      const formattedDate = dotDate.toLocaleDateString('en-US', options);
+      
+      document.getElementById('dot-date').textContent = formattedDate;
+    }
+    
+    // Calculate on page load
+    calculateEPADate();
+    calculateDOTDate();
   </script>
 </body>
 </html>
