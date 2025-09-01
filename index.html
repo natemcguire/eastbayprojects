@@ -7,6 +7,17 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&family=Playfair+Display:wght@400;600&display=swap" rel="stylesheet">
+  
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-7D4GV64RBK"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-7D4GV64RBK');
+  </script>
+  
   <style>
     :root{
       --bg:#0a0a0a;           /* deep black */
@@ -39,21 +50,23 @@
 
     .frame{position:relative; border:1px solid var(--line); border-radius:10px; overflow:hidden; background:linear-gradient(180deg, rgba(255,255,255,.03), rgba(255,255,255,0));}
     .frame img{width:100%; display:block; aspect-ratio:16/9; object-fit:cover; filter:contrast(1.05) saturate(.9)}
+    .bottom-image{border:none; background:none; max-width:350px; margin:0 auto}
+    .bottom-image img{width:100%; max-width:350px; height:auto; aspect-ratio:auto; object-fit:contain; filter:none}
 
     .cta{display:flex; gap:16px; align-items:center; padding-top:8px}
     .btn{padding:14px 18px; border:1px solid var(--ink); border-radius:999px; text-transform:uppercase; letter-spacing:.18em; font-size:.8rem}
     .btn:hover{background:var(--ink); color:#000}
 
     /* Process Section */
-    .process-section{margin:32px 0}
+    .process-section{margin:16px 0}
     .section-title{font-family:"Playfair Display", serif; font-weight:600; font-size:2.2rem; margin:0 0 32px 0; letter-spacing:.04em}
     .process-steps{display:grid; gap:20px; max-width:760px}
     .process-step{font-size:1.1rem; color:var(--ink-dim); margin:0; line-height:1.6}
 
     /* Expertise Section */
-    .expertise-section{margin:56px 0}
+    .expertise-section{margin:16px 0 32px 0}
     .expertise-intro{font-size:1.05rem; color:var(--ink-dim); margin:0 0 32px 0; font-style:italic}
-    .expertise-category{margin-bottom:48px}
+    .expertise-category{margin-bottom:32px}
     .expertise-category .category-title{font-family:"Playfair Display", serif; font-weight:600; font-size:1.8rem; margin:0 0 24px 0; color:var(--accent)}
     .expertise-grid{display:grid; gap:24px; grid-template-columns:repeat(auto-fit, minmax(280px, 1fr))}
     .expertise-subcategory{border:1px solid var(--line); border-radius:8px; padding:20px; background:linear-gradient(180deg, rgba(255,255,255,.02), rgba(255,255,255,0))}
@@ -62,7 +75,7 @@
     .vehicle-list li{color:var(--ink-dim); font-size:.9rem; line-height:1.4; padding-left:0}
 
     /* Regulations Section */
-    .regulations-section{margin:56px 0}
+    .regulations-section{margin:16px 0 56px 0}
     .regulations-grid{display:grid; gap:24px; grid-template-columns:repeat(auto-fit, minmax(280px, 1fr))}
     .regulation-item{border:1px solid var(--line); border-radius:6px; padding:20px; background:linear-gradient(180deg, rgba(255,255,255,.01), rgba(255,255,255,0))}
     .regulation-title{font-family:"Playfair Display", serif; font-weight:600; font-size:1.1rem; margin:0 0 12px 0; color:var(--accent)}
@@ -226,6 +239,10 @@
             <p>HS-7 (DOT) + 3520-1 (EPA) filed at entry.</p>
           </div>
         </div>
+      </div>
+
+      <div class="frame bottom-image" aria-label="Feature image: Classic Cars">
+        <img src="images/neon-ebp.png" alt="East Bay Imports Classic Cars" />
       </div>
 
       <div class="cta" id="contact">
