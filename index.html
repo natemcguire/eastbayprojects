@@ -627,5 +627,17 @@
     setTimeout(type, 900);
 
   </script>
+<script data-snippet-id="fp-analytics">
+(function(){try{
+if(/^(localhost|127\.|0\.0\.0\.0|\[::1\])/.test(location.hostname))return;
+var u="https://husbandlabs-analytics.nate-mcguire.workers.dev/e";
+function send(){try{
+var b=JSON.stringify({s:location.hostname.replace(/^www\./,""),p:location.pathname,r:document.referrer});
+if(navigator.sendBeacon)navigator.sendBeacon(u,b);else fetch(u,{method:"POST",body:b,keepalive:true});
+}catch(e){}}
+send();
+addEventListener("pageshow",function(e){if(e.persisted)send();}); // bfcache restore (back/fwd) — else undercounts
+}catch(e){}})();
+</script>
 </body>
 </html>
