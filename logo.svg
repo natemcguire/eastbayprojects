@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 280 80" fill="none">
+  <!-- Amber bracket mark -->
+  <rect x="0" y="0" width="8" height="80" fill="#C8750A"/>
+  <rect x="0" y="0" width="40" height="8" fill="#C8750A"/>
+  <rect x="0" y="72" width="40" height="8" fill="#C8750A"/>
+
+  <!-- EAST BAY -->
+  <text x="58" y="34"
+    font-family="'Bebas Neue', 'Arial Black', sans-serif"
+    font-size="32"
+    font-weight="400"
+    letter-spacing="4"
+    fill="#F4EFE6">EAST BAY</text>
+
+  <!-- PROJECTS -->
+  <text x="58" y="68"
+    font-family="'Bebas Neue', 'Arial Black', sans-serif"
+    font-size="32"
+    font-weight="400"
+    letter-spacing="4"
+    fill="#C8750A">PROJECTS</text>
+
+  <!-- Thin rule between the words -->
+  <rect x="58" y="41" width="220" height="1.5" fill="#2D5FA6" opacity="0.6"/>
+</svg>

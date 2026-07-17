@@ -1,321 +1,629 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>East Bay Projects — Collector trucks, SUVs, and motorcycles, sourced and built</title>
-  <meta name="description" content="East Bay Projects sources, builds, and imports hard-to-find collector trucks, SUVs, and motorcycles. Based in the Bay Area." />
-  <link rel="canonical" href="https://eastbayprojects.com/" />
-
-  <!-- Open Graph -->
-  <meta property="og:title" content="East Bay Projects" />
-  <meta property="og:description" content="We source, build, and import hard-to-find collector trucks, SUVs, and motorcycles." />
-  <meta property="og:url" content="https://eastbayprojects.com/" />
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>East Bay Projects | Digital Services for Real Businesses</title>
+  <meta name="description" content="East Bay Projects builds websites, digital systems, and online presence for contractors, trades, government firms, and practices in Austin TX and Washington DC." />
+  <meta property="og:title" content="East Bay Projects | Digital Services for Real Businesses" />
+  <meta property="og:description" content="Digital infrastructure for the real economy. Fixed-scope web and digital services for contractors, defense firms, law practices, and real-economy businesses." />
   <meta property="og:type" content="website" />
-  <meta property="og:locale" content="en_US" />
-
-  <!-- Twitter -->
   <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="East Bay Projects" />
-  <meta name="twitter:description" content="We source, build, and import hard-to-find collector trucks, SUVs, and motorcycles." />
+  <meta name="twitter:title" content="East Bay Projects | Digital Services for Real Businesses" />
+  <meta name="twitter:description" content="Digital infrastructure for the real economy." />
 
-  <!-- Structured data -->
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "AutomotiveBusiness",
-    "name": "East Bay Projects",
-    "description": "Sources, builds, and imports hard-to-find collector trucks, SUVs, and motorcycles.",
-    "url": "https://eastbayprojects.com/",
-    "areaServed": {
-      "@type": "Place",
-      "name": "San Francisco Bay Area"
-    }
-  }
-  </script>
-
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&family=Playfair+Display:wght@400;600&display=swap" rel="stylesheet">
-
-  <!-- Google tag (gtag.js) -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-7D4GV64RBK"></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
-
-    gtag('config', 'G-7D4GV64RBK');
-  </script>
-  
   <style>
-    :root{
-      --bg:#0a0a0a;           /* deep black */
-      --ink:#f2f2f2;          /* off‑white text */
-      --ink-dim:#bfbfbf;      /* muted text */
-      --line:#222;            /* hairline */
-      --accent:#ffffff;       /* crisp white */
+    @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=IBM+Plex+Mono:ital,wght@0,300;0,400;0,500;0,600&family=Lora:ital,wght@0,400;0,500;0,600;1,400;1,500&display=swap');
+
+    :root {
+      --paper:       #F4EFE6;
+      --ink:         #0F0F0F;
+      --blue:        #1A3A5C;
+      --blue-mid:    #2D5FA6;
+      --amber:       #C8750A;
+      --amber-light: #E8971A;
+      --rule:        #C8C0B0;
+      --paper-dark:  #E8E2D6;
+      --white:       #FDFCFA;
     }
-    *{box-sizing:border-box}
-    html,body{height:100%}
-    body{
-      margin:0; background:var(--bg); color:var(--ink);
-      font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial, "Apple Color Emoji", "Segoe UI Emoji";
-      line-height:1.45;
-      -webkit-font-smoothing:antialiased; text-rendering:optimizeLegibility;
+
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+    body { font-family: 'Lora', Georgia, serif; background: var(--paper); color: var(--ink); overflow-x: hidden; }
+    a { color: inherit; text-decoration: none; }
+
+    /* HEADER */
+    #site-header {
+      position: fixed; top: 0; left: 0; right: 0; z-index: 1000;
+      background: var(--blue); border-bottom: 1px solid var(--amber);
+      transition: box-shadow 0.3s;
     }
-    a{color:var(--ink); text-decoration:none}
-    .container{max-width:1120px; padding:32px 24px; margin:0 auto}
-    header{display:flex; align-items:center; justify-content:space-between; padding:12px 0; border-bottom:1px solid var(--line)}
-    .brand{display:flex; align-items:center; gap:14px; letter-spacing:.18em}
-    .logo{width:44px; height:44px; border:1px solid var(--line); border-radius:4px; display:grid; place-items:center; font-size:.7rem; color:var(--ink-dim)}
-    .name{font-family:"Playfair Display", serif; font-weight:600; text-transform:uppercase; font-size:1.05rem}
-    nav a{opacity:.84; margin-left:20px}
-    nav a:hover{opacity:1}
+    #site-header.scrolled { box-shadow: 0 4px 32px rgba(0,0,0,0.45); }
+    .header-inner {
+      display: flex; align-items: center; justify-content: space-between;
+      padding: 0 40px; height: 64px; max-width: 1400px; margin: 0 auto;
+    }
+    .header-logo { font-family: 'Bebas Neue', sans-serif; font-size: 22px; letter-spacing: 0.15em; color: var(--white); white-space: nowrap; }
+    .header-logo em { color: var(--amber); font-style: normal; }
+    .header-nav { display: flex; align-items: center; gap: 36px; list-style: none; }
+    .header-nav a { font-family: 'IBM Plex Mono', monospace; font-size: 11px; letter-spacing: 0.12em; text-transform: uppercase; color: rgba(253,252,250,0.75); transition: color 0.2s; }
+    .header-nav a:hover { color: var(--amber); }
+    .btn-header { font-family: 'Bebas Neue', sans-serif; font-size: 15px; letter-spacing: 0.1em; color: var(--blue); background: var(--amber); padding: 10px 20px; border: 2px solid var(--amber); border-radius: 0; cursor: pointer; white-space: nowrap; transition: background 0.2s, color 0.2s; display: inline-block; }
+    .btn-header:hover { background: transparent; color: var(--amber); }
+    .hamburger { display: none; flex-direction: column; gap: 5px; background: none; border: none; cursor: pointer; padding: 4px; }
+    .hamburger span { display: block; width: 26px; height: 2px; background: var(--white); transition: transform 0.3s, opacity 0.3s; }
+    .hamburger.open span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+    .hamburger.open span:nth-child(2) { opacity: 0; }
+    .hamburger.open span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
+    .mobile-nav { display: none; flex-direction: column; background: var(--blue); border-top: 1px solid rgba(200,117,10,0.3); padding: 24px 40px; gap: 20px; }
+    .mobile-nav.open { display: flex; }
+    .mobile-nav a { font-family: 'IBM Plex Mono', monospace; font-size: 13px; letter-spacing: 0.12em; text-transform: uppercase; color: rgba(253,252,250,0.8); }
 
-    .hero{display:grid; gap:28px; padding:56px 0 24px}
-    .kicker{font-size:.8rem; letter-spacing:.24em; text-transform:uppercase; color:var(--ink-dim)}
-    h1{margin:0; font-family:"Playfair Display", serif; font-weight:600; font-size:clamp(2.2rem, 6vw, 4rem); letter-spacing:.04em}
-    .sub{max-width:760px; color:var(--ink-dim); font-size:1.05rem}
+    /* HERO */
+    #hero {
+      min-height: 100vh; background: var(--blue); position: relative; overflow: hidden;
+      display: flex; flex-direction: column; justify-content: center; padding: 120px 40px 80px;
+    }
+    #hero::before {
+      content: ''; position: absolute; inset: 0; pointer-events: none;
+      background-image:
+        repeating-linear-gradient(0deg, rgba(255,255,255,0.055) 0px, rgba(255,255,255,0.055) 1px, transparent 1px, transparent 60px),
+        repeating-linear-gradient(90deg, rgba(255,255,255,0.055) 0px, rgba(255,255,255,0.055) 1px, transparent 1px, transparent 60px);
+    }
+    #hero::after {
+      content: ''; position: absolute; top: -10%; left: -5%; width: 70%; height: 120%; pointer-events: none;
+      background: radial-gradient(ellipse at 30% 40%, rgba(45,95,166,0.35) 0%, transparent 65%);
+    }
+    .hero-inner {
+      position: relative; z-index: 2; max-width: 1400px; margin: 0 auto; width: 100%;
+      display: grid; grid-template-columns: 1fr 380px; gap: 60px; align-items: center;
+    }
+    .hero-eyebrow { font-family: 'IBM Plex Mono', monospace; font-size: 11px; letter-spacing: 0.18em; text-transform: uppercase; color: var(--amber); margin-bottom: 32px; }
+    .hero-headline { font-family: 'Bebas Neue', sans-serif; font-size: clamp(72px, 10vw, 130px); line-height: 0.92; letter-spacing: 0.02em; color: var(--white); margin-bottom: 32px; }
+    .amber-period { color: var(--amber); }
+    .hero-sub { font-family: 'Lora', Georgia, serif; font-size: 18px; line-height: 1.65; color: rgba(253,252,250,0.82); max-width: 540px; margin-bottom: 40px; }
+    .hero-ctas { display: flex; gap: 16px; flex-wrap: wrap; }
+    .btn-fill { font-family: 'Bebas Neue', sans-serif; font-size: 17px; letter-spacing: 0.1em; background: var(--amber); color: var(--white); padding: 14px 28px; border: 2px solid var(--amber); border-radius: 0; cursor: pointer; transition: background 0.2s; display: inline-block; white-space: nowrap; }
+    .btn-fill:hover { background: var(--amber-light); border-color: var(--amber-light); }
+    .btn-ghost { font-family: 'Bebas Neue', sans-serif; font-size: 17px; letter-spacing: 0.1em; background: transparent; color: var(--white); padding: 14px 28px; border: 2px solid rgba(253,252,250,0.55); border-radius: 0; cursor: pointer; transition: border-color 0.2s; display: inline-block; white-space: nowrap; }
+    .btn-ghost:hover { border-color: var(--white); }
+    .typewriter-label { font-family: 'IBM Plex Mono', monospace; font-size: 10px; letter-spacing: 0.2em; text-transform: uppercase; color: rgba(253,252,250,0.4); border-bottom: 1px solid rgba(253,252,250,0.15); padding-bottom: 8px; width: 100%; }
+    .typewriter-box { background: rgba(10,25,45,0.6); border: 1px solid rgba(45,95,166,0.5); border-top: 3px solid var(--amber); padding: 28px 24px; width: 100%; min-height: 136px; margin-top: 12px; }
+    .tw-prefix { font-family: 'IBM Plex Mono', monospace; font-size: 10px; letter-spacing: 0.15em; color: var(--amber); text-transform: uppercase; margin-bottom: 10px; }
+    #tw-display { font-family: 'Bebas Neue', sans-serif; font-size: 36px; letter-spacing: 0.04em; color: var(--amber-light); line-height: 1.15; min-height: 80px; display: flex; align-items: flex-start; flex-wrap: wrap; }
+    .cursor { display: inline-block; width: 3px; height: 0.85em; background: var(--amber); margin-left: 4px; animation: blink 0.9s step-end infinite; vertical-align: middle; flex-shrink: 0; }
+    @keyframes blink { 0%,100%{opacity:1} 50%{opacity:0} }
+    .hero-bottom { position: relative; z-index: 2; max-width: 1400px; margin: 60px auto 0; width: 100%; }
+    .hero-rule { width: 100%; height: 1px; background: var(--amber); opacity: 0.7; margin-bottom: 14px; }
+    .hero-byline { font-family: 'IBM Plex Mono', monospace; font-size: 10px; letter-spacing: 0.18em; color: rgba(253,252,250,0.55); text-transform: uppercase; }
 
-    .frame{position:relative; border:1px solid var(--line); border-radius:10px; overflow:hidden; background:linear-gradient(180deg, rgba(255,255,255,.03), rgba(255,255,255,0));}
-    .frame img{width:100%; display:block; aspect-ratio:16/9; object-fit:cover; filter:contrast(1.05) saturate(.9)}
-    .bottom-image{border:none; background:none; max-width:350px; margin:0 auto}
-    .bottom-image img{width:100%; max-width:350px; height:auto; aspect-ratio:auto; object-fit:contain; filter:none}
+    /* SECTIONS */
+    .sec-cream { background: var(--paper); padding: 100px 40px; }
+    .sec-dark { background: var(--blue); padding: 100px 40px; position: relative; overflow: hidden; }
+    .sec-dark::before {
+      content: ''; position: absolute; inset: 0; pointer-events: none;
+      background-image:
+        repeating-linear-gradient(0deg, rgba(255,255,255,0.03) 0px, rgba(255,255,255,0.03) 1px, transparent 1px, transparent 80px),
+        repeating-linear-gradient(90deg, rgba(255,255,255,0.03) 0px, rgba(255,255,255,0.03) 1px, transparent 1px, transparent 80px);
+    }
+    .sec-inner { max-width: 1400px; margin: 0 auto; position: relative; z-index: 1; }
+    .num-wrap { position: relative; margin-bottom: 8px; }
+    .num-bg {
+      font-family: 'Bebas Neue', sans-serif; font-size: clamp(100px, 14vw, 160px); line-height: 1;
+      color: var(--rule); opacity: 0.45; position: absolute; top: -30px; left: -12px;
+      pointer-events: none; z-index: 0; letter-spacing: -0.02em;
+    }
+    .num-bg.light { color: rgba(253,252,250,0.1); opacity: 1; }
+    .sec-heading { font-family: 'Bebas Neue', sans-serif; font-size: 56px; letter-spacing: 0.04em; color: var(--ink); position: relative; z-index: 1; padding-top: 24px; }
+    .sec-heading.white { color: var(--white); }
 
-    .cta{display:flex; gap:16px; align-items:center; padding-top:8px}
-    .btn{padding:14px 18px; border:1px solid var(--ink); border-radius:999px; text-transform:uppercase; letter-spacing:.18em; font-size:.8rem}
-    .btn:hover{background:var(--ink); color:#000}
+    /* PROBLEM */
+    .problem-grid { display: grid; grid-template-columns: repeat(3,1fr); border-top: 3px solid var(--ink); border-left: 3px solid var(--ink); margin-top: 60px; }
+    .prob-card { padding: 36px 32px 40px; border-right: 3px solid var(--ink); border-bottom: 3px solid var(--ink); position: relative; overflow: hidden; background: var(--paper); transition: background 0.25s; }
+    .prob-card:hover { background: var(--paper-dark); }
+    .card-tag { font-family: 'IBM Plex Mono', monospace; font-size: 10px; letter-spacing: 0.2em; color: var(--amber); text-transform: uppercase; margin-bottom: 20px; }
+    .prob-card h3 { font-family: 'Bebas Neue', sans-serif; font-size: 30px; letter-spacing: 0.03em; color: var(--ink); line-height: 1.1; margin-bottom: 16px; }
+    .prob-card p { font-family: 'Lora', Georgia, serif; font-size: 16px; line-height: 1.7; color: rgba(15,15,15,0.8); }
+    .prob-card::after { content: ''; position: absolute; top: 0; right: 0; width: 0; height: 0; border-style: solid; border-width: 0 28px 28px 0; border-color: transparent var(--amber) transparent transparent; opacity: 0.6; }
 
-    /* Process Section */
-    .process-section{margin:16px 0}
-    .section-title{font-family:"Playfair Display", serif; font-weight:600; font-size:2.2rem; margin:0 0 32px 0; letter-spacing:.04em}
-    .process-steps{display:grid; gap:20px; max-width:760px}
-    .process-step{font-size:1.1rem; color:var(--ink-dim); margin:0; line-height:1.6}
+    /* SERVICES */
+    .services-grid { display: grid; grid-template-columns: repeat(3,1fr); gap: 2px; }
+    .svc-subhead { font-family: 'IBM Plex Mono', monospace; font-size: 11px; letter-spacing: 0.18em; color: var(--amber); text-transform: uppercase; margin-bottom: 56px; display: block; }
+    .svc-card { background: #0F2340; border-top: 3px solid var(--amber); padding: 32px 28px 28px; position: relative; overflow: hidden; display: flex; flex-direction: column; transition: transform 0.25s, box-shadow 0.25s; }
+    .svc-card:hover { transform: translateY(-4px); box-shadow: 0 12px 40px rgba(0,0,0,0.45); z-index: 2; }
+    .svc-num { font-family: 'IBM Plex Mono', monospace; font-size: 9px; letter-spacing: 0.22em; color: var(--amber); text-transform: uppercase; margin-bottom: 14px; }
+    .svc-card h3 { font-family: 'Bebas Neue', sans-serif; font-size: 30px; letter-spacing: 0.04em; color: var(--amber); line-height: 1.1; margin-bottom: 14px; }
+    .svc-rule { width: 100%; height: 1px; background: rgba(200,192,176,0.25); margin-bottom: 14px; }
+    .svc-price { font-family: 'IBM Plex Mono', monospace; font-size: 22px; font-weight: 500; color: var(--amber); letter-spacing: 0.04em; margin-bottom: 16px; }
+    .svc-price .cur { font-size: 14px; vertical-align: top; margin-top: 4px; display: inline-block; opacity: 0.8; }
+    .svc-card p { font-family: 'Lora', Georgia, serif; font-size: 14px; line-height: 1.65; color: rgba(253,252,250,0.75); flex: 1; margin-bottom: 20px; }
+    .tag-row { display: flex; flex-wrap: wrap; gap: 6px; margin-top: auto; }
+    .pill { font-family: 'IBM Plex Mono', monospace; font-size: 10px; letter-spacing: 0.12em; text-transform: uppercase; background: var(--blue-mid); color: rgba(253,252,250,0.85); padding: 4px 8px; border: 1px solid rgba(45,95,166,0.8); }
+    .svc-card::before { content: attr(data-n); position: absolute; bottom: 10px; right: 16px; font-family: 'IBM Plex Mono', monospace; font-size: 64px; font-weight: 600; color: rgba(255,255,255,0.04); line-height: 1; letter-spacing: -0.05em; pointer-events: none; }
 
-    /* Expertise Section */
-    .expertise-section{margin:16px 0 32px 0}
-    .expertise-intro{font-size:1.05rem; color:var(--ink-dim); margin:0 0 32px 0; font-style:italic}
-    .expertise-category{margin-bottom:32px}
-    .expertise-category .category-title{font-family:"Playfair Display", serif; font-weight:600; font-size:1.8rem; margin:0 0 24px 0; color:var(--accent)}
-    .expertise-grid{display:grid; gap:24px; grid-template-columns:repeat(auto-fit, minmax(280px, 1fr))}
-    .expertise-subcategory{border:1px solid var(--line); border-radius:8px; padding:20px; background:linear-gradient(180deg, rgba(255,255,255,.02), rgba(255,255,255,0))}
-    .subcategory-title{font-family:"Playfair Display", serif; font-weight:600; font-size:1.2rem; margin:0 0 16px 0; color:var(--accent)}
-    .vehicle-list{list-style:none; padding:0; margin:0; display:grid; gap:8px}
-    .vehicle-list li{color:var(--ink-dim); font-size:.9rem; line-height:1.4; padding-left:0}
+    /* WHY */
+    .why-grid { display: grid; grid-template-columns: 40% 60%; gap: 80px; align-items: start; }
+    .adv-block { margin-bottom: 44px; padding-left: 60px; position: relative; }
+    .adv-block:last-child { margin-bottom: 0; }
+    .adv-num { font-family: 'Bebas Neue', sans-serif; font-size: 48px; color: var(--amber); line-height: 1; position: absolute; left: 0; top: -4px; }
+    .adv-title { font-family: 'Bebas Neue', sans-serif; font-size: 26px; letter-spacing: 0.04em; color: var(--ink); margin-bottom: 10px; }
+    .adv-body { font-family: 'Lora', Georgia, serif; font-size: 16px; line-height: 1.7; color: rgba(15,15,15,0.75); }
 
-    /* Regulations Section */
-    .regulations-section{margin:16px 0 56px 0}
-    .regulations-grid{display:grid; gap:24px; grid-template-columns:repeat(auto-fit, minmax(280px, 1fr))}
-    .regulation-item{border:1px solid var(--line); border-radius:6px; padding:20px; background:linear-gradient(180deg, rgba(255,255,255,.01), rgba(255,255,255,0))}
-    .regulation-title{font-family:"Playfair Display", serif; font-weight:600; font-size:1.1rem; margin:0 0 12px 0; color:var(--accent)}
-    .regulation-item p{margin:0; color:var(--ink-dim); font-size:.9rem; line-height:1.5}
-    .date-highlight{color:var(--accent); font-weight:500}
+    /* Spec wireframe */
+    .spec-box { position: relative; background: var(--paper-dark); border: 2px solid var(--rule); padding: 48px 36px 36px; }
+    .spec-corner-l { font-family: 'IBM Plex Mono', monospace; font-size: 9px; letter-spacing: 0.25em; color: var(--amber); position: absolute; top: 16px; left: 20px; }
+    .spec-corner-r { font-family: 'IBM Plex Mono', monospace; font-size: 9px; letter-spacing: 0.18em; color: rgba(15,15,15,0.35); position: absolute; top: 16px; right: 20px; }
+    .spec-titlebar { background: var(--blue); color: var(--white); font-family: 'Bebas Neue', sans-serif; font-size: 14px; letter-spacing: 0.1em; padding: 10px 16px; margin-bottom: 24px; display: flex; justify-content: space-between; align-items: center; }
+    .spec-dwg { font-family: 'IBM Plex Mono', monospace; font-size: 9px; color: var(--amber); letter-spacing: 0.12em; }
+    .wf-page { border: 1.5px solid rgba(15,15,15,0.25); background: var(--white); padding: 12px; }
+    .wf-hdr { height: 24px; background: var(--blue); margin-bottom: 8px; display: flex; align-items: center; padding: 0 10px; }
+    .wf-hdr::after { content: 'WEBSITE HEADER / NAV / CTA'; font-family: 'IBM Plex Mono', monospace; font-size: 7px; letter-spacing: 0.1em; color: rgba(253,252,250,0.6); }
+    .wf-hero-area { background: rgba(26,58,92,0.1); border: 1px dashed rgba(26,58,92,0.35); height: 68px; margin-bottom: 8px; display: flex; align-items: center; justify-content: center; }
+    .wf-hero-area::before { content: 'HERO / ABOVE THE FOLD'; font-family: 'IBM Plex Mono', monospace; font-size: 7px; letter-spacing: 0.1em; color: rgba(26,58,92,0.55); }
+    .wf-row { display: grid; grid-template-columns: repeat(3,1fr); gap: 5px; margin-bottom: 8px; }
+    .wf-block { background: rgba(200,117,10,0.08); border: 1px dashed rgba(200,117,10,0.4); height: 44px; display: flex; align-items: center; justify-content: center; }
+    .wf-block::before { content: attr(data-l); font-family: 'IBM Plex Mono', monospace; font-size: 6px; letter-spacing: 0.1em; color: rgba(200,117,10,0.8); }
+    .wf-ft { height: 18px; background: rgba(26,58,92,0.12); display: flex; align-items: center; justify-content: center; }
+    .wf-ft::before { content: 'FOOTER'; font-family: 'IBM Plex Mono', monospace; font-size: 6px; letter-spacing: 0.15em; color: rgba(26,58,92,0.5); }
+    .ann-grid { margin-top: 20px; display: grid; grid-template-columns: 1fr 1fr; gap: 12px 20px; }
+    .ann-row { margin-bottom: 4px; }
+    .ann-line { display: flex; align-items: flex-start; gap: 8px; }
+    .ann-lbl { font-family: 'IBM Plex Mono', monospace; font-size: 9px; color: var(--amber); letter-spacing: 0.08em; white-space: nowrap; padding-top: 1px; flex-shrink: 0; }
+    .ann-dash { flex: 1; height: 1px; background: var(--amber); opacity: 0.35; margin-top: 6px; position: relative; }
+    .ann-dash::before { content: ''; position: absolute; left: 0; top: -3px; width: 6px; height: 6px; border-left: 1.5px solid var(--amber); border-bottom: 1.5px solid var(--amber); transform: rotate(45deg); opacity: 0.55; }
+    .ann-txt { font-family: 'IBM Plex Mono', monospace; font-size: 8px; color: rgba(15,15,15,0.5); letter-spacing: 0.06em; }
+    .spec-table { margin-top: 20px; border: 1.5px solid rgba(200,192,176,0.5); }
+    .spec-thead { background: rgba(200,192,176,0.2); padding: 6px 14px; font-family: 'IBM Plex Mono', monospace; font-size: 8px; letter-spacing: 0.2em; color: rgba(15,15,15,0.5); text-transform: uppercase; }
+    .spec-tbody { padding: 12px 14px; }
+    .spec-tr { display: flex; justify-content: space-between; padding: 7px 0; border-bottom: 1px solid rgba(200,192,176,0.4); align-items: baseline; }
+    .spec-tr:last-child { border-bottom: none; }
+    .spec-k { font-family: 'IBM Plex Mono', monospace; font-size: 9px; letter-spacing: 0.12em; text-transform: uppercase; color: rgba(15,15,15,0.5); }
+    .spec-v { font-family: 'IBM Plex Mono', monospace; font-size: 16px; letter-spacing: 0.06em; color: var(--ink); font-weight: 600; }
+    .spec-v.a { color: var(--amber); }
 
-    footer{border-top:1px solid var(--line); margin-top:56px; padding-top:24px; color:var(--ink-dim); font-size:.9rem}
+    /* ABOUT */
+    #about { display: grid; grid-template-columns: 45% 55%; }
+    .about-l { background: #0F2340; padding: 80px 60px; display: flex; flex-direction: column; justify-content: center; position: relative; overflow: hidden; }
+    .about-l::before { content: ''; position: absolute; inset: 0; pointer-events: none; background-image: repeating-linear-gradient(0deg, rgba(255,255,255,0.03) 0px, rgba(255,255,255,0.03) 1px, transparent 1px, transparent 60px), repeating-linear-gradient(90deg, rgba(255,255,255,0.03) 0px, rgba(255,255,255,0.03) 1px, transparent 1px, transparent 60px); }
+    .about-name { font-family: 'Bebas Neue', sans-serif; font-size: clamp(52px, 6vw, 72px); line-height: 0.92; letter-spacing: 0.03em; color: var(--white); margin-bottom: 16px; position: relative; z-index: 1; }
+    .about-role { font-family: 'IBM Plex Mono', monospace; font-size: 13px; letter-spacing: 0.2em; text-transform: uppercase; color: var(--amber); margin-bottom: 24px; position: relative; z-index: 1; }
+    .about-rule { width: 80px; height: 2px; background: var(--amber); margin-bottom: 20px; position: relative; z-index: 1; }
+    .about-email { font-family: 'IBM Plex Mono', monospace; font-size: 12px; letter-spacing: 0.08em; color: rgba(253,252,250,0.7); position: relative; z-index: 1; }
+    .about-r { background: var(--paper); padding: 80px 60px; display: flex; flex-direction: column; justify-content: center; }
+    .about-body { font-family: 'Lora', Georgia, serif; font-size: 17px; line-height: 1.75; color: rgba(15,15,15,0.82); margin-bottom: 40px; }
+    .creds { display: flex; flex-direction: column; gap: 8px; border-top: 2px solid var(--rule); padding-top: 24px; }
+    .cred { font-family: 'IBM Plex Mono', monospace; font-size: 11px; letter-spacing: 0.15em; text-transform: uppercase; color: rgba(15,15,15,0.55); }
+    .cred strong { color: var(--ink); font-weight: 600; }
+
+    /* CONTACT */
+    .contact-grid { display: grid; grid-template-columns: 55% 45%; gap: 80px; align-items: start; }
+    .contact-note { font-family: 'IBM Plex Mono', monospace; font-size: 11px; letter-spacing: 0.18em; text-transform: uppercase; color: var(--amber); margin-bottom: 40px; display: block; position: relative; z-index: 1; }
+    .f-group { margin-bottom: 20px; }
+    .f-group label { font-family: 'IBM Plex Mono', monospace; font-size: 10px; letter-spacing: 0.2em; text-transform: uppercase; color: rgba(15,15,15,0.55); display: block; margin-bottom: 7px; }
+    .f-group input, .f-group select, .f-group textarea { width: 100%; background: var(--white); border: 2px solid var(--rule); border-radius: 0; padding: 12px 14px; font-family: 'Lora', Georgia, serif; font-size: 16px; color: var(--ink); outline: none; transition: border-color 0.2s; appearance: none; -webkit-appearance: none; }
+    .f-group select { background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8'%3E%3Cpath d='M1 1l5 5 5-5' stroke='%23C8750A' stroke-width='2' fill='none'/%3E%3C/svg%3E"); background-repeat: no-repeat; background-position: right 14px center; background-color: var(--white); padding-right: 40px; }
+    .f-group input:focus, .f-group select:focus, .f-group textarea:focus { border-color: var(--amber); }
+    .f-group textarea { resize: vertical; min-height: 120px; }
+    .f-submit { font-family: 'Bebas Neue', sans-serif; font-size: 20px; letter-spacing: 0.1em; background: var(--amber); color: var(--white); padding: 16px 36px; border: none; border-radius: 0; cursor: pointer; width: 100%; transition: background 0.2s; }
+    .f-submit:hover { background: var(--amber-light); }
+    .f-success { display: none; background: var(--blue); border: 2px solid var(--amber); padding: 28px; font-family: 'IBM Plex Mono', monospace; font-size: 13px; letter-spacing: 0.1em; color: var(--amber); text-transform: uppercase; line-height: 1.6; margin-top: 16px; }
+    .contact-info { padding-top: 100px; }
+    .cinfo-block { margin-bottom: 36px; padding-bottom: 36px; border-bottom: 1px solid var(--rule); }
+    .cinfo-block:last-of-type { border-bottom: none; margin-bottom: 0; padding-bottom: 0; }
+    .cinfo-label { font-family: 'IBM Plex Mono', monospace; font-size: 10px; letter-spacing: 0.25em; text-transform: uppercase; color: var(--amber); margin-bottom: 8px; }
+    .cinfo-val { font-family: 'IBM Plex Mono', monospace; font-size: 14px; letter-spacing: 0.06em; color: var(--ink); line-height: 1.6; }
+    .stamp-wrap { margin-top: 44px; display: flex; justify-content: center; }
+
+    /* FOOTER */
+    #footer { background: var(--blue); border-top: 2px solid var(--amber); }
+    .footer-inner { max-width: 1400px; margin: 0 auto; padding: 32px 40px; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 16px; }
+    .footer-logo { font-family: 'Bebas Neue', sans-serif; font-size: 18px; letter-spacing: 0.12em; color: rgba(253,252,250,0.6); }
+    .footer-ctr { font-family: 'IBM Plex Mono', monospace; font-size: 10px; letter-spacing: 0.15em; color: rgba(253,252,250,0.5); text-transform: uppercase; }
+    .footer-email { font-family: 'IBM Plex Mono', monospace; font-size: 11px; letter-spacing: 0.08em; color: rgba(253,252,250,0.55); }
+
+    /* REVEAL */
+    .d1 { transition-delay: 0.1s; }
+    .d2 { transition-delay: 0.2s; }
+    .d3 { transition-delay: 0.3s; }
+    .d4 { transition-delay: 0.4s; }
+
+    /* RESPONSIVE */
+    @media (max-width: 1100px) {
+      .services-grid { grid-template-columns: repeat(2,1fr); }
+      .why-grid { grid-template-columns: 1fr; gap: 48px; }
+      .contact-grid { grid-template-columns: 1fr; gap: 48px; }
+      .contact-info { padding-top: 0; }
+    }
+    @media (max-width: 900px) {
+      .hero-inner { grid-template-columns: 1fr; }
+      #about { grid-template-columns: 1fr; }
+      .problem-grid { grid-template-columns: 1fr; }
+    }
+    @media (max-width: 768px) {
+      .header-nav, .btn-header { display: none; }
+      .hamburger { display: flex; }
+      .services-grid { grid-template-columns: 1fr; }
+      .sec-cream, .sec-dark { padding: 72px 24px; }
+      #hero { padding: 100px 24px 64px; }
+      .num-bg { font-size: 100px; }
+      .header-inner { padding: 0 24px; }
+      .footer-inner { padding: 24px; flex-direction: column; text-align: center; }
+      .about-l, .about-r { padding: 56px 32px; }
+    }
+    @media (max-width: 480px) {
+      .hero-headline { font-size: 58px; }
+      .sec-heading { font-size: 44px; }
+      .hero-ctas { flex-direction: column; }
+    }
   </style>
 </head>
 <body>
-  <div class="container">
-    <header>
-      <div class="brand">
-        <div class="logo">EB</div>
-        <div class="name">East Bay Projects</div>
-      </div>
-      <nav>
-        <a href="mailto:figment.elevens_0w@icloud.com">Contact</a>
-      </nav>
-    </header>
 
-    <section class="hero">
-      <div class="kicker">Collectors • Land Rover & European Imports</div>
-      <h1>We source, build, and import hard‑to‑find collector trucks, SUVs, and motorcycles.</h1>
-      <p class="sub">Purpose‑built rigs, factory‑correct restorations, and rare European models—curated for discerning buyers.</p>
+  <header id="site-header">
+    <div class="header-inner">
+      <a href="#" class="header-logo">EAST BAY <em>PROJECTS</em></a>
+      <nav><ul class="header-nav">
+        <li><a href="#services">Services</a></li>
+        <li><a href="#why">Why Us</a></li>
+      <li><a href="portfolio.html">Portfolio</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul></nav>
+      <a href="#contact" class="btn-header">GET A FREE AUDIT &rarr;</a>
+      <button class="hamburger" id="hamburger" aria-label="Menu"><span></span><span></span><span></span></button>
+    </div>
+    <div class="mobile-nav" id="mobile-nav">
+      <a href="#services">Services</a>
+      <a href="#why">Why Us</a>
+      <a href="portfolio.html">Portfolio</a>
+      <a href="#about">About</a>
+      <a href="#contact">Contact</a>
+      <a href="#contact" class="btn-header" style="align-self:flex-start;margin-top:8px">GET A FREE AUDIT &rarr;</a>
+    </div>
+  </header>
 
-      <div class="frame" aria-label="Feature image: Land Rover Defenders">
-        <img src="images/LandRoverDefenders.jpg" alt="Land Rover Defenders" />
-      </div>
-
-      <div class="process-section">
-        <h2 class="section-title">Process</h2>
-        <div class="process-steps">
-          <p class="process-step">Let us know what you're looking for.</p>
-          <p class="process-step">We'll find it. Typical sourcing from Spain, Italy, and the UK.</p>
-          <p class="process-step">We can import it for you as is, or modify it to your specifications.</p>
-          <p class="process-step">25+ years old Trucks, SUVs, motorcycles, and sometimes cars.</p>
-          <p class="process-step">Click contact to get started and send us your wishlist.</p>
+  <section id="hero">
+    <div class="hero-inner">
+      <div>
+        <p class="hero-eyebrow">EST. 2011 &middot; AUSTIN TX &middot; WASHINGTON DC</p>
+        <h1 class="hero-headline">DIGITAL<br>INFRASTRUCTURE<br>FOR THE REAL<br>ECONOMY<span class="amber-period">.</span></h1>
+        <p class="hero-sub">East Bay Projects builds websites, systems, and digital presence for contractors, trades, government firms, and practices that compete in the physical world.</p>
+        <div class="hero-ctas">
+          <a href="#contact" class="btn-fill">GET A FREE AUDIT &rarr;</a>
+          <a href="#services" class="btn-ghost">SEE SERVICES &darr;</a>
         </div>
       </div>
-      <div class="expertise-section">
-        <h2 class="section-title">Where We Have Expertise</h2>
-        <p class="expertise-intro">For vehicles that are over 25 years old (Pre 2000)</p>
-        
-        <div class="expertise-category">
-          <h3 class="category-title">Cars & Trucks</h3>
-          <div class="expertise-grid">
-            <div class="expertise-subcategory">
-              <h4 class="subcategory-title">British</h4>
-              <ul class="vehicle-list">
-                <li>Land Rover Defender 90 / 110 (esp. TDI diesels)</li>
-                <li>Land Rover Discovery I (diesel, manual)</li>
-                <li>Range Rover Classic (late soft dash, diesel variants)</li>
-              </ul>
-            </div>
+      <div>
+        <p class="typewriter-label">CLIENT VERTICAL / ACTIVE</p>
+        <div class="typewriter-box">
+          <p class="tw-prefix">SERVING &#9658;</p>
+          <div id="tw-display"><span id="tw-word"></span><span class="cursor"></span></div>
+        </div>
+      </div>
+    </div>
+    <div class="hero-bottom">
+      <div class="hero-rule"></div>
+      <p class="hero-byline">SERVING BUSINESSES IN AUSTIN &middot; SAN ANTONIO &middot; WASHINGTON DC METRO</p>
+    </div>
+  </section>
 
-            <div class="expertise-subcategory">
-              <h4 class="subcategory-title">German</h4>
-              <ul class="vehicle-list">
-                <li>Mercedes-Benz G-Wagen (G300, G320, G350D)</li>
-                <li>Mercedes-Benz 190E 2.3-16 / 2.5-16 Cosworth</li>
-                <li>Mercedes-Benz E-Class diesels (250D, 300TD wagons)</li>
-              </ul>
-            </div>
+  <section id="problem" class="sec-cream">
+    <div class="sec-inner">
+      <div class="num-wrap">
+        <span class="num-bg">01</span>
+        <h2 class="sec-heading">THE PROBLEM</h2>
+      </div>
+      <div class="problem-grid">
+        <div class="prob-card">
+          <p class="card-tag">PROBLEM / 01</p>
+          <h3>YOUR COMPETITOR&rsquo;S SITE IS FASTER.</h3>
+          <p>In 2026, Google ranks site speed. If your site takes more than 3 seconds to load, you&rsquo;re invisible.</p>
+        </div>
+        <div class="prob-card">
+          <p class="card-tag">PROBLEM / 02</p>
+          <h3>YOUR SSL IS EXPIRED.</h3>
+          <p>A padlock warning in the browser address bar sends customers to your competitors. It costs $500 to fix. Every month you wait is lost revenue.</p>
+        </div>
+        <div class="prob-card">
+          <p class="card-tag">PROBLEM / 03</p>
+          <h3>YOUR DIGITAL PRESENCE DOESN&rsquo;T MATCH YOUR WORK.</h3>
+          <p>You do $2M in roofing. Your website looks like it was built by your nephew in 2013. The disconnect is costing you jobs.</p>
+        </div>
+      </div>
+    </div>
+  </section>
 
-            <div class="expertise-subcategory">
-              <h4 class="subcategory-title">Italian</h4>
-              <ul class="vehicle-list">
-                <li>Alfa Romeo GTV (916)</li>
-                <li>Alfa Romeo 155 Q4</li>
-                <li>Fiat Coupé 20V Turbo</li>
-              </ul>
+  <section id="services" class="sec-dark">
+    <div class="sec-inner">
+      <div class="num-wrap">
+        <span class="num-bg light">02</span>
+        <h2 class="sec-heading white">SERVICES</h2>
+      </div>
+      <span class="svc-subhead">FIXED-SCOPE PROJECTS &middot; NO HOURLY SURPRISES</span>
+      <div class="services-grid">
+        <div class="svc-card" data-n="01">
+          <p class="svc-num">SERVICE / 01</p>
+          <h3>SSL &amp; SECURITY FIX</h3>
+          <div class="svc-rule"></div>
+          <p class="svc-price"><span class="cur">$</span>&thinsp;500 &mdash; 1,500</p>
+          <p>Expired SSL, mixed content warnings, Google security flags. Diagnosed and fixed within the week. Includes a full security audit report.</p>
+          <div class="tag-row"><span class="pill">SAME WEEK</span><span class="pill">AUDIT INCLUDED</span></div>
+        </div>
+        <div class="svc-card" data-n="02">
+          <p class="svc-num">SERVICE / 02</p>
+          <h3>SITE MODERNIZATION</h3>
+          <div class="svc-rule"></div>
+          <p class="svc-price"><span class="cur">$</span>&thinsp;2,500 &mdash; 5,000</p>
+          <p>Your 2015 WordPress rebuilt as a fast, mobile-first, converting website. PageSpeed 90+. No subscriptions to bloated page builders.</p>
+          <div class="tag-row"><span class="pill">WORDPRESS</span><span class="pill">SHOPIFY</span><span class="pill">CUSTOM</span></div>
+        </div>
+        <div class="svc-card" data-n="03">
+          <p class="svc-num">SERVICE / 03</p>
+          <h3>TRADES COMPLETE PACKAGE</h3>
+          <div class="svc-rule"></div>
+          <p class="svc-price"><span class="cur">$</span>&thinsp;5,000 &mdash; 15,000</p>
+          <p>New site + Google Business Profile optimization + review management system + local SEO. The complete digital play for contractors.</p>
+          <div class="tag-row"><span class="pill">LOCAL SEO</span><span class="pill">GOOGLE GBP</span><span class="pill">REVIEWS</span></div>
+        </div>
+        <div class="svc-card" data-n="04">
+          <p class="svc-num">SERVICE / 04</p>
+          <h3>GOVERNMENT &amp; DEFENSE WEB</h3>
+          <div class="svc-rule"></div>
+          <p class="svc-price" style="font-size:1.1rem;letter-spacing:0.08em">CONTACT FOR PRICING</p>
+          <p>Credibility-first web presence for contractors that win federal bids. Cleared-personnel career pages. Capability statement design. SAM.gov aligned presentation.</p>
+          <div class="tag-row"><span class="pill">FEDERAL</span><span class="pill">CLEARED</span><span class="pill">CAPABILITY STMT</span></div>
+        </div>
+        <div class="svc-card" data-n="05">
+          <p class="svc-num">SERVICE / 05</p>
+          <h3>PRACTICE TECHNOLOGY</h3>
+          <div class="svc-rule"></div>
+          <p class="svc-price" style="font-size:1.1rem;letter-spacing:0.08em">CONTACT FOR PRICING</p>
+          <p>Modern sites with intake forms, scheduling, and client portals for law firms and medical practices. HIPAA-aware design.</p>
+          <div class="tag-row"><span class="pill">LAW FIRMS</span><span class="pill">MEDICAL</span><span class="pill">PORTALS</span></div>
+        </div>
+        <div class="svc-card" data-n="06">
+          <p class="svc-num">SERVICE / 06</p>
+          <h3>MONTHLY MAINTENANCE</h3>
+          <div class="svc-rule"></div>
+          <p class="svc-price"><span class="cur">$</span>&thinsp;1,000 &mdash; 10,000<span style="font-size:14px;opacity:0.7;font-weight:400">/mo</span></p>
+          <p>Most of our builds don't need hand-holding. But if you're high maintenance — we're here for you. Hosting, updates, security monitoring, and whatever else keeps you up at night.</p>
+          <div class="tag-row"><span class="pill">RECURRING</span><span class="pill">MONITORING</span><span class="pill">REPORTS</span></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="why" class="sec-cream">
+    <div class="sec-inner">
+      <div class="why-grid">
+        <div>
+          <div class="num-wrap">
+            <span class="num-bg">03</span>
+            <h2 class="sec-heading">WHY EAST BAY PROJECTS</h2>
+          </div>
+          <div style="margin-top:56px">
+            <div class="adv-block">
+              <span class="adv-num">01</span>
+              <h3 class="adv-title">WE FOCUS ON WHAT MATTERS.</h3>
+              <p class="adv-body">Making your business grow. Not your dev bill. Whether that&rsquo;s a new leads funnel, operational software, a mobile app, or a complete digital overhaul &mdash; we scope it, build it, and ship it.</p>
+            </div>
+            <div class="adv-block">
+              <span class="adv-num">02</span>
+              <h3 class="adv-title">WE CAN BUILD ANYTHING.</h3>
+              <p class="adv-body">Operational software. Lead funnels. iOS apps. Custom platforms. Anything that moves the needle for your business &mdash; we&rsquo;ve shipped it before at scale, and we can build it for you in weeks, not quarters.</p>
+            </div>
+            <div class="adv-block">
+              <span class="adv-num">03</span>
+              <h3 class="adv-title">NO SURPRISES. EVER.</h3>
+              <p class="adv-body">Every project is scoped and priced upfront. No hourly billing. No change-order treadmill. No mystery invoices. You know exactly what you&rsquo;re getting and what it costs before a single line of code is written.</p>
             </div>
           </div>
         </div>
-
-        <div class="expertise-category">
-          <h3 class="category-title">Motorcycles</h3>
-          <div class="expertise-grid">
-            <div class="expertise-subcategory">
-              <h4 class="subcategory-title">Ducati</h4>
-              <ul class="vehicle-list">
-                <li>851 / 888 Superbike</li>
-                <li>916 / 996 SPS & Senna Editions</li>
-                <li>Monster 900 (carb models)</li>
-                <li>750 F1</li>
-              </ul>
+        <div>
+          <div class="spec-box">
+            <span class="spec-corner-l">TECHNICAL SPECIFICATION</span>
+            <span class="spec-corner-r">REV. A &middot; SHEET 1 OF 1</span>
+            <div class="spec-titlebar">
+              <span>EAST BAY PROJECTS &mdash; PROJECT DELIVERABLE</span>
+              <span class="spec-dwg">DWG NO. EBP-WEB-001</span>
             </div>
-
-            <div class="expertise-subcategory">
-              <h4 class="subcategory-title">Moto Guzzi</h4>
-              <ul class="vehicle-list">
-                <li>Le Mans Mk I–III</li>
-                <li>Daytona 1000</li>
-                <li>1000S</li>
-              </ul>
+            <div class="wf-page">
+              <div class="wf-hdr"></div>
+              <div class="wf-hero-area"></div>
+              <div class="wf-row">
+                <div class="wf-block" data-l="SERVICE 01"></div>
+                <div class="wf-block" data-l="SERVICE 02"></div>
+                <div class="wf-block" data-l="SERVICE 03"></div>
+              </div>
+              <div class="wf-ft"></div>
             </div>
-
-            <div class="expertise-subcategory">
-              <h4 class="subcategory-title">Laverda</h4>
-              <ul class="vehicle-list">
-                <li>Jota 1000</li>
-              </ul>
+            <div class="ann-grid">
+              <div class="ann-row">
+                <div class="ann-line"><span class="ann-lbl">&#8596; WIDTH</span><div class="ann-dash"></div></div>
+                <p class="ann-txt">RESPONSIVE &middot; 320PX &mdash; 1920PX</p>
+              </div>
+              <div class="ann-row">
+                <div class="ann-line"><span class="ann-lbl">&#8597; PERF</span><div class="ann-dash"></div></div>
+                <p class="ann-txt">PAGESPEED SCORE 90+</p>
+              </div>
+              <div class="ann-row">
+                <div class="ann-line"><span class="ann-lbl">&#8635; LOAD</span><div class="ann-dash"></div></div>
+                <p class="ann-txt">LCP &lt; 1.2 SECONDS</p>
+              </div>
+              <div class="ann-row">
+                <div class="ann-line"><span class="ann-lbl">&#8853; SEC</span><div class="ann-dash"></div></div>
+                <p class="ann-txt">SSL &middot; HEADERS &middot; FIREWALL</p>
+              </div>
             </div>
-
-            <div class="expertise-subcategory">
-              <h4 class="subcategory-title">Bimota</h4>
-              <ul class="vehicle-list">
-                <li>Tesi 1D</li>
-                <li>YB4 / YB6</li>
-              </ul>
-            </div>
-
-            <div class="expertise-subcategory">
-              <h4 class="subcategory-title">Triumph</h4>
-              <ul class="vehicle-list">
-                <li>Daytona Super III (Cosworth)</li>
-                <li>Speed Triple (early models)</li>
-              </ul>
-            </div>
-
-            <div class="expertise-subcategory">
-              <h4 class="subcategory-title">Norton</h4>
-              <ul class="vehicle-list">
-                <li>Commando MkIII (850)</li>
-                <li>Rotary F1</li>
-              </ul>
+            <div class="spec-table">
+              <div class="spec-thead">PROJECT SPECIFICATION SUMMARY</div>
+              <div class="spec-tbody">
+                <div class="spec-tr"><span class="spec-k">TIMELINE</span><span class="spec-v a">2&ndash;3 WEEKS</span></div>
+                <div class="spec-tr"><span class="spec-k">REVISIONS</span><span class="spec-v">UNLIMITED (SCOPED)</span></div>
+                <div class="spec-tr"><span class="spec-k">BILLING MODEL</span><span class="spec-v a">FIXED-PRICE</span></div>
+                <div class="spec-tr"><span class="spec-k">MOBILE FIRST</span><span class="spec-v">YES &middot; ALL BREAKPOINTS</span></div>
+                <div class="spec-tr"><span class="spec-k">PAGESPEED</span><span class="spec-v a">90+ GUARANTEED</span></div>
+              </div>
             </div>
           </div>
         </div>
       </div>
-      <div class="regulations-section">
-        <h2 class="section-title">Things to Know</h2>
-        <div class="regulations-grid">
-          <div class="regulation-item">
-            <h4 class="regulation-title">25Y Rule (FMVSS)</h4>
-            <p>Vehicles (including motorcycles) 25+ years old are exempt from DOT safety regs (federal motor vehicle safety standards). <span class="date-highlight">(Before <span id="dot-date"></span>)</span></p>
+    </div>
+  </section>
+
+  <section id="about">
+    <div class="about-l">
+      <img src="nate.jpg" alt="Nate McGuire" style="width:140px;height:140px;border-radius:50%;object-fit:cover;object-position:center top;border:3px solid #C8750A;margin-bottom:1.5rem;display:block;position:relative;z-index:1">
+      <p class="about-name">NATE<br>McGUIRE</p>
+      <p class="about-role">FOUNDER</p>
+      <div class="about-rule"></div>
+      <a href="mailto:contact@eastbayprojects.com" class="about-email">contact@eastbayprojects.com</a>
+    </div>
+    <div class="about-r">
+      <p class="about-body">East Bay Projects is Nate McGuire — Distinguished Engineer, founder, and operator who has shipped apps, operational software, and lead funnels for Fortune 500 companies down to venture-backed startups. 15+ years of building things that actually work.</p>
+      <div class="creds">
+        <p class="cred"><strong>DISTINGUISHED ENGINEER</strong></p>
+        <p class="cred"><strong>NoVa: ALEXANDRIA &amp; D.C.</strong> &middot; TEXAS: AUSTIN &amp; SAN ANTONIO</p>
+        <div style="display:flex;flex-wrap:wrap;gap:10px;margin-top:12px">
+          <span style="font-family:'IBM Plex Mono',monospace;font-size:13px;font-weight:600;letter-spacing:0.12em;text-transform:uppercase;color:var(--ink);background:var(--paper-dark,#E8E2D6);border:1.5px solid var(--rule,#C8C0B0);padding:8px 16px;display:inline-block">FORTUNE 500</span>
+          <span style="font-family:'IBM Plex Mono',monospace;font-size:13px;font-weight:600;letter-spacing:0.12em;text-transform:uppercase;color:var(--ink);background:var(--paper-dark,#E8E2D6);border:1.5px solid var(--rule,#C8C0B0);padding:8px 16px;display:inline-block">VENTURE-BACKED STARTUPS</span>
+          <span style="font-family:'IBM Plex Mono',monospace;font-size:13px;font-weight:600;letter-spacing:0.12em;text-transform:uppercase;color:var(--amber,#C8750A);background:var(--paper-dark,#E8E2D6);border:1.5px solid var(--amber,#C8750A);padding:8px 16px;display:inline-block">REAL ECONOMY</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact" class="sec-cream">
+    <div class="sec-inner">
+      <div class="num-wrap">
+        <span class="num-bg">05</span>
+        <h2 class="sec-heading">START A PROJECT</h2>
+      </div>
+      <span class="contact-note">FREE AUDIT &middot; FIXED-SCOPE QUOTE &middot; NO COMMITMENT</span>
+      <div class="contact-grid">
+        <div>
+          <form id="contact-form" action="mailto:contact@eastbayprojects.com" method="post" enctype="text/plain">
+            <div class="f-group"><label for="fn">Name</label><input type="text" id="fn" name="name" placeholder="Your name" required></div>
+            <div class="f-group"><label for="fe">Email</label><input type="email" id="fe" name="email" placeholder="you@company.com" required></div>
+            <div class="f-group"><label for="fc">Company</label><input type="text" id="fc" name="company" placeholder="Your company"></div>
+            <div class="f-group"><label for="fp">Phone</label><input type="tel" id="fp" name="phone" placeholder="(512) 555-0100"></div>
+            <div class="f-group">
+              <label for="fs">Service Needed</label>
+              <select id="fs" name="service">
+                <option value="">Select a service&hellip;</option>
+                <option>SSL Fix</option>
+                <option>Site Modernization</option>
+                <option>Trades Package</option>
+                <option>Gov &amp; Defense</option>
+                <option>Practice Tech</option>
+                <option>Monthly Maintenance</option>
+                <option>Not Sure</option>
+              </select>
+            </div>
+            <div class="f-group"><label for="fm">Message</label><textarea id="fm" name="message" rows="4" placeholder="Tell me about your project&hellip;"></textarea></div>
+            <button type="submit" class="f-submit">SEND MESSAGE &rarr;</button>
+          </form>
+          <div class="f-success" id="f-success" aria-live="polite">YOUR EMAIL APP HAS BEEN OPENED. SEND THE DRAFT TO COMPLETE YOUR INQUIRY.</div>
+        </div>
+        <div class="contact-info">
+          <div class="cinfo-block">
+            <p class="cinfo-label">EMAIL</p>
+            <p class="cinfo-val"><a href="mailto:contact@eastbayprojects.com">contact@eastbayprojects.com</a></p>
           </div>
-          <div class="regulation-item">
-            <h4 class="regulation-title">21Y Rule (EPA)</h4>
-            <p>Vehicles 21+ years old are exempt from EPA emissions compliance. <span class="date-highlight">(Before <span id="epa-date"></span>)</span></p>
+          <div class="cinfo-block">
+            <p class="cinfo-label">LOCATIONS</p>
+            <p class="cinfo-val">NoVa: Alexandria &amp; Washington, D.C.<br>Texas: Austin &amp; San Antonio</p>
           </div>
-          <div class="regulation-item">
-            <h4 class="regulation-title">&lt;25Y Rule</h4>
-            <p>Must meet U.S. DOT + EPA standards or be imported under "Show & Display" (rare, restrictive).</p>
+          <div class="cinfo-block">
+            <p class="cinfo-label">RESPONSE TIME</p>
+            <p class="cinfo-val">Within 24 hours</p>
           </div>
-          <div class="regulation-item">
-            <h4 class="regulation-title">25Y Date</h4>
-            <p>Clock starts from month of manufacture, not model year.</p>
-          </div>
-          <div class="regulation-item">
-            <h4 class="regulation-title">State Regs Still Apply</h4>
-            <p>Even if federally legal, state laws (e.g., California CARB) may block registration.</p>
-          </div>
-          <div class="regulation-item">
-            <h4 class="regulation-title">Import Duty</h4>
-            <p>~2.5% for cars, 25% for trucks, when bringing into the U.S.</p>
-          </div>
-          <div class="regulation-item">
-            <h4 class="regulation-title">Customs Form</h4>
-            <p>HS-7 (DOT) + 3520-1 (EPA) filed at entry.</p>
+          <div class="stamp-wrap">
+            <svg width="140" height="140" viewBox="0 0 140 140" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+              <circle cx="70" cy="70" r="62" fill="none" stroke="#C8750A" stroke-width="2.5"/>
+              <circle cx="70" cy="70" r="50" fill="none" stroke="#C8750A" stroke-width="1"/>
+              <g stroke="#C8750A" stroke-width="1.5" opacity="0.55">
+                <line x1="70" y1="8" x2="70" y2="18"/><line x1="70" y1="122" x2="70" y2="132"/>
+                <line x1="8" y1="70" x2="18" y2="70"/><line x1="122" y1="70" x2="132" y2="70"/>
+              </g>
+              <defs>
+                <path id="at" d="M70,70 m-52,0 a52,52 0 1,1 104,0"/>
+                <path id="ab" d="M70,70 m-52,0 a52,52 0 0,0 104,0"/>
+              </defs>
+              <text font-family="'IBM Plex Mono',monospace" font-size="9" letter-spacing="4" fill="#C8750A" text-anchor="middle">
+                <textPath href="#at" startOffset="50%">EAST BAY PROJECTS · AUSTIN TX ·</textPath>
+              </text>
+              <text font-family="'IBM Plex Mono',monospace" font-size="9" letter-spacing="4" fill="#C8750A" text-anchor="middle">
+                <textPath href="#ab" startOffset="50%">WASHINGTON DC · VERIFIED ·</textPath>
+              </text>
+              <text x="70" y="66" font-family="'Bebas Neue',sans-serif" font-size="13" letter-spacing="3" fill="#C8750A" text-anchor="middle">EST.</text>
+              <text x="70" y="84" font-family="'Bebas Neue',sans-serif" font-size="22" letter-spacing="2" fill="#C8750A" text-anchor="middle">2011</text>
+            </svg>
           </div>
         </div>
       </div>
+    </div>
+  </section>
 
-      <div class="frame bottom-image" aria-label="Feature image: Classic Cars">
-        <img src="images/neon-ebp.png" alt="East Bay Imports Classic Cars" />
-      </div>
-
-      <div class="cta" id="contact">
-        <a class="btn" href="mailto:figment.elevens_0w@icloud.com">Contact</a>
-        <span class="kicker" style="letter-spacing:.2em">By appointment only</span>
-      </div>
-    </section>
-
-    <footer>
-      © <span id="y"></span> East Bay Projects. All rights reserved.
-    </footer>
-  </div>
+  <footer id="footer">
+    <div class="footer-inner">
+      <span class="footer-logo">EAST BAY PROJECTS</span>
+      <span class="footer-ctr">&copy; 2026 &middot; <strong style="color:var(--amber,#C8750A)">MADE IN USA</strong></span>
+      <a href="mailto:contact@eastbayprojects.com" class="footer-email">contact@eastbayprojects.com</a>
+    </div>
+  </footer>
 
   <script>
-    document.getElementById('y').textContent = new Date().getFullYear();
-    
-    // Calculate and display EPA 21-year cutoff date
-    function calculateEPADate() {
-      const today = new Date();
-      const epaDate = new Date(today.getFullYear() - 21, today.getMonth(), today.getDate());
-      
-      // Format the date nicely
-      const options = { year: 'numeric', month: 'long', day: 'numeric' };
-      const formattedDate = epaDate.toLocaleDateString('en-US', options);
-      
-      document.getElementById('epa-date').textContent = formattedDate;
+    // Sticky header
+    const hdr = document.getElementById('site-header');
+    window.addEventListener('scroll', () => hdr.classList.toggle('scrolled', scrollY > 20), {passive:true});
+
+    // Hamburger
+    const ham = document.getElementById('hamburger');
+    const mnav = document.getElementById('mobile-nav');
+    ham.addEventListener('click', () => { ham.classList.toggle('open'); mnav.classList.toggle('open'); });
+    mnav.querySelectorAll('a').forEach(a => a.addEventListener('click', () => { ham.classList.remove('open'); mnav.classList.remove('open'); }));
+
+    // Smooth scroll
+    document.querySelectorAll('a[href^="#"]').forEach(a => {
+      a.addEventListener('click', e => {
+        const href = a.getAttribute('href');
+        if (!href || href === '#') return;
+        const t = document.querySelector(href);
+        if (t) { e.preventDefault(); window.scrollTo({top: t.getBoundingClientRect().top + scrollY - 64, behavior:'smooth'}); }
+      });
+    });
+
+    // Contact form: open a populated email draft without requiring a backend.
+    const contactForm = document.getElementById('contact-form');
+    contactForm.addEventListener('submit', e => {
+      e.preventDefault();
+      const data = new FormData(contactForm);
+      const subject = `East Bay Projects inquiry from ${data.get('name')}`;
+      const body = [
+        `Name: ${data.get('name')}`,
+        `Email: ${data.get('email')}`,
+        `Company: ${data.get('company') || 'Not provided'}`,
+        `Phone: ${data.get('phone') || 'Not provided'}`,
+        `Service: ${data.get('service') || 'Not selected'}`,
+        '',
+        data.get('message') || 'No message provided'
+      ].join('\n');
+      window.location.href = `mailto:contact@eastbayprojects.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+      document.getElementById('f-success').style.display = 'block';
+    });
+
+    // Typewriter
+    const words = ['ROOFING CONTRACTORS','HVAC COMPANIES','LAW FIRMS','DEFENSE CONTRACTORS','RESTAURANTS','MEDICAL PRACTICES','PLUMBING COMPANIES','ELECTRICAL CONTRACTORS','LANDSCAPING FIRMS','CIVIL ENGINEERING'];
+    let wi=0, ci=0, del=false;
+    const twEl = document.getElementById('tw-word');
+    function type() {
+      const w = words[wi];
+      if (!del) { ci++; twEl.textContent = w.slice(0,ci); if(ci===w.length){del=true; setTimeout(type,2000); return;} setTimeout(type,70); }
+      else { ci--; twEl.textContent = w.slice(0,ci); if(ci===0){del=false; wi=(wi+1)%words.length; setTimeout(type,350); return;} setTimeout(type,40); }
     }
-    
-    // Calculate and display DOT 25-year cutoff date
-    function calculateDOTDate() {
-      const today = new Date();
-      const dotDate = new Date(today.getFullYear() - 25, today.getMonth(), today.getDate());
-      
-      // Format the date nicely
-      const options = { year: 'numeric', month: 'long', day: 'numeric' };
-      const formattedDate = dotDate.toLocaleDateString('en-US', options);
-      
-      document.getElementById('dot-date').textContent = formattedDate;
-    }
-    
-    // Calculate on page load
-    calculateEPADate();
-    calculateDOTDate();
+    setTimeout(type, 900);
+
   </script>
 </body>
 </html>
