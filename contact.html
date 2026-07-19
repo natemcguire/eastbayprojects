@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Start a Project | East Bay Projects</title>
+  <meta name="description" content="Tell East Bay Projects what needs to be fixed, launched, or built. Get a focused response from a senior engineer within one business day.">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://eastbayprojects.com/contact">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&amp;family=IBM+Plex+Mono:wght@400;500;600&amp;family=Lora:wght@400;600&amp;display=swap" rel="stylesheet">
+  <style>
+    :root { --blue:#10264B; --blue-dark:#091B37; --amber:#C8750A; --paper:#F4F0E8; --paper-dark:#E8E2D6; --white:#FDFCF9; --ink:#171D28; --muted:#626A74; --rule:#C8C0B0; --red:#9F2D20; --green:#267637; }
+    * { box-sizing: border-box; }
+    body { margin:0; background:var(--paper); color:var(--ink); font-family:'Lora',Georgia,serif; }
+    a { color:inherit; }
+    header { background:var(--blue-dark); border-bottom:2px solid var(--amber); }
+    .header-inner { max-width:1440px; min-height:72px; margin:0 auto; padding:0 40px; display:flex; align-items:center; justify-content:space-between; gap:24px; }
+    .logo { color:var(--white); text-decoration:none; font-family:'Bebas Neue',sans-serif; font-size:23px; letter-spacing:.12em; white-space:nowrap; }
+    .logo em { color:var(--amber); font-style:normal; }
+    nav { display:flex; gap:26px; align-items:center; }
+    nav a { color:rgba(253,252,249,.72); text-decoration:none; text-transform:uppercase; font-family:'IBM Plex Mono',monospace; font-size:10px; letter-spacing:.13em; }
+    nav a:hover { color:var(--white); }
+    main { min-height:calc(100vh - 72px); display:grid; grid-template-columns:minmax(0,.78fr) minmax(560px,1.22fr); }
+    .pitch { background:var(--blue-dark); color:var(--white); padding:88px max(48px,calc((100vw - 1360px)/2)) 80px max(40px,calc((100vw - 1360px)/2)); position:relative; overflow:hidden; }
+    .pitch::after { content:'START'; position:absolute; left:-20px; bottom:-52px; color:rgba(255,255,255,.025); font-family:'Bebas Neue',sans-serif; font-size:210px; line-height:.8; pointer-events:none; }
+    .eyebrow { margin:0 0 24px; color:var(--amber); font-family:'IBM Plex Mono',monospace; font-size:11px; font-weight:600; letter-spacing:.16em; text-transform:uppercase; }
+    h1 { margin:0; max-width:620px; font-family:'Bebas Neue',sans-serif; font-size:clamp(64px,6vw,106px); font-weight:400; line-height:.88; letter-spacing:.015em; }
+    h1 em { color:var(--amber); font-style:normal; }
+    .pitch-copy { max-width:570px; margin:30px 0 0; color:rgba(253,252,249,.75); font-size:17px; line-height:1.7; }
+    .promise { margin:50px 0 0; padding:24px 0; border-top:1px solid rgba(255,255,255,.18); border-bottom:1px solid rgba(255,255,255,.18); display:grid; grid-template-columns:repeat(3,1fr); gap:18px; }
+    .promise strong { display:block; color:var(--amber); font-family:'Bebas Neue',sans-serif; font-size:30px; font-weight:400; }
+    .promise span { display:block; margin-top:3px; color:rgba(253,252,249,.54); font-family:'IBM Plex Mono',monospace; font-size:8px; letter-spacing:.09em; line-height:1.5; text-transform:uppercase; }
+    .direct { margin-top:34px; color:rgba(253,252,249,.55); font-family:'IBM Plex Mono',monospace; font-size:9px; letter-spacing:.08em; line-height:1.7; text-transform:uppercase; }
+    .direct a { color:var(--white); text-underline-offset:4px; }
+    .form-side { padding:72px max(40px,calc((100vw - 1360px)/2)) 76px 64px; }
+    .form-kicker { margin:0 0 10px; color:var(--amber); font-family:'IBM Plex Mono',monospace; font-size:10px; font-weight:600; letter-spacing:.14em; text-transform:uppercase; }
+    h2 { margin:0; font-family:'Bebas Neue',sans-serif; font-size:52px; font-weight:400; letter-spacing:.02em; }
+    .form-intro { margin:10px 0 30px; color:var(--muted); line-height:1.6; }
+    form { max-width:760px; }
+    .grid { display:grid; grid-template-columns:1fr 1fr; gap:20px; }
+    .field { margin-bottom:20px; }
+    .field.full { grid-column:1/-1; }
+    label { display:block; margin-bottom:7px; color:var(--muted); font-family:'IBM Plex Mono',monospace; font-size:9px; font-weight:600; letter-spacing:.12em; text-transform:uppercase; }
+    input, select, textarea { width:100%; border:1px solid var(--rule); border-radius:0; background:var(--white); color:var(--ink); font:16px 'Lora',Georgia,serif; padding:14px 15px; outline:none; }
+    input:focus, select:focus, textarea:focus { border-color:var(--amber); box-shadow:0 0 0 2px rgba(200,117,10,.12); }
+    textarea { min-height:145px; resize:vertical; line-height:1.55; }
+    .consent { display:flex; gap:11px; align-items:flex-start; margin:2px 0 24px; color:var(--muted); font-size:12px; line-height:1.55; }
+    .consent input { width:17px; height:17px; margin:1px 0 0; accent-color:var(--amber); flex:0 0 auto; }
+    .submit { appearance:none; border:2px solid var(--blue-dark); background:var(--blue-dark); color:var(--white); padding:16px 22px; cursor:pointer; font-family:'IBM Plex Mono',monospace; font-size:11px; font-weight:600; letter-spacing:.11em; text-transform:uppercase; }
+    .submit:hover { background:var(--amber); border-color:var(--amber); color:var(--blue-dark); }
+    .fine-print { max-width:650px; margin:20px 0 0; color:var(--muted); font-family:'IBM Plex Mono',monospace; font-size:8px; line-height:1.65; }
+    .status { display:none; max-width:700px; border-top:4px solid var(--green); background:var(--white); padding:34px; }
+    .status.error { border-color:var(--red); }
+    .status h2 { font-size:48px; }
+    .status p { color:var(--muted); font-size:17px; line-height:1.65; }
+    .status a { color:var(--blue); font-family:'IBM Plex Mono',monospace; font-size:10px; font-weight:600; letter-spacing:.08em; text-transform:uppercase; text-underline-offset:5px; }
+    .hp { position:absolute !important; left:-10000px !important; width:1px !important; height:1px !important; overflow:hidden !important; }
+    footer { background:var(--blue-dark); color:rgba(253,252,249,.5); border-top:2px solid var(--amber); padding:25px 40px; text-align:center; font-family:'IBM Plex Mono',monospace; font-size:9px; letter-spacing:.1em; text-transform:uppercase; }
+    @media (max-width:900px) {
+      main { grid-template-columns:1fr; }
+      .pitch, .form-side { padding:66px 28px; }
+      .pitch::after { display:none; }
+    }
+    @media (max-width:600px) {
+      .header-inner { min-height:64px; padding:0 20px; }
+      .logo { font-size:19px; }
+      nav a:not(:last-child) { display:none; }
+      .pitch { padding:44px 22px 38px; }
+      h1 { font-size:55px; }
+      .pitch-copy { margin-top:22px; font-size:15px; line-height:1.58; }
+      .promise { margin-top:28px; padding:18px 0; grid-template-columns:repeat(3,1fr); gap:8px; }
+      .promise strong { font-size:24px; }
+      .promise span { font-size:7px; }
+      .direct { margin-top:20px; }
+      .form-side { padding:58px 22px; }
+      .grid { grid-template-columns:1fr; gap:0; }
+      .field.full { grid-column:auto; }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="header-inner">
+      <a href="/" class="logo">EAST BAY <em>PROJECTS</em></a>
+      <nav aria-label="Primary navigation">
+        <a href="/#services">Services</a>
+        <a href="/portfolio.html">Portfolio</a>
+        <a href="/civic.html">Civic</a>
+        <a href="mailto:contact@eastbayprojects.com">Email Nate</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="pitch">
+      <p class="eyebrow">Fixed scope / Senior-led / Fast</p>
+      <h1>WHAT NEEDS TO BE <em>FIXED</em> OR BUILT?</h1>
+      <p class="pitch-copy">Tell us what is broken, blocked, or costing you customers. You will hear directly from Nate with a practical next step and, when the fit is clear, a fixed-scope recommendation.</p>
+      <div class="promise" aria-label="Engagement expectations">
+        <div><strong>1 DAY</strong><span>Typical initial response</span></div>
+        <div><strong>3–7 DAYS</strong><span>Common rescue sprint</span></div>
+        <div><strong>DIRECT</strong><span>No agency handoffs</span></div>
+      </div>
+      <p class="direct">Prefer email? <a href="mailto:contact@eastbayprojects.com">contact@eastbayprojects.com</a></p>
+    </section>
+
+    <section class="form-side">
+      <div id="form-wrap">
+        <p class="form-kicker">Start a project</p>
+        <h2>THE USEFUL DETAILS.</h2>
+        <p class="form-intro">A few specifics are enough. No polished brief required.</p>
+        <form action="/api/contact" method="post" id="lead-form">
+          <div class="grid">
+            <div class="field">
+              <label for="name">Your name *</label>
+              <input id="name" name="name" autocomplete="name" required maxlength="120">
+            </div>
+            <div class="field">
+              <label for="email">Work email *</label>
+              <input id="email" name="email" type="email" autocomplete="email" required maxlength="254">
+            </div>
+            <div class="field">
+              <label for="phone">Phone</label>
+              <input id="phone" name="phone" type="tel" autocomplete="tel" maxlength="40">
+            </div>
+            <div class="field">
+              <label for="company">Company or organization</label>
+              <input id="company" name="company" autocomplete="organization" maxlength="160">
+            </div>
+            <div class="field full">
+              <label for="website">Current website</label>
+              <input id="website" name="website" type="text" inputmode="url" autocomplete="url" placeholder="example.com" maxlength="300">
+            </div>
+            <div class="field">
+              <label for="project-type">What do you need? *</label>
+              <select id="project-type" name="project_type" required>
+                <option value="">Select one</option>
+                <option>Website rescue or repair</option>
+                <option>New website or redesign</option>
+                <option>Custom application or automation</option>
+                <option>Civic or campaign digital</option>
+                <option>Ongoing technical support</option>
+                <option>Something else</option>
+              </select>
+            </div>
+            <div class="field">
+              <label for="timeline">When do you need it?</label>
+              <select id="timeline" name="timeline">
+                <option value="">Select one</option>
+                <option>Immediately</option>
+                <option>Within 1 week</option>
+                <option>Within 1 month</option>
+                <option>Within 3 months</option>
+                <option>Still planning</option>
+              </select>
+            </div>
+            <div class="field full">
+              <label for="budget">Approximate working budget</label>
+              <select id="budget" name="budget">
+                <option value="">Select one</option>
+                <option>Under $2,500</option>
+                <option>$2,500–$5,000</option>
+                <option>$5,000–$10,000</option>
+                <option>$10,000–$25,000</option>
+                <option>$25,000+</option>
+                <option>Not sure yet</option>
+              </select>
+            </div>
+            <div class="field full">
+              <label for="message">What is broken, blocked, or ready to build? *</label>
+              <textarea id="message" name="message" required minlength="10" maxlength="4000" placeholder="The problem, the deadline, and what a good outcome looks like."></textarea>
+            </div>
+          </div>
+
+          <div class="hp" aria-hidden="true">
+            <label for="company-url">Leave this field empty</label>
+            <input id="company-url" name="company_url" tabindex="-1" autocomplete="off">
+          </div>
+          <input type="hidden" name="form_started_at" id="form-started-at">
+          <input type="hidden" name="source_page" id="source-page">
+          <input type="hidden" name="referrer" id="referrer">
+          <input type="hidden" name="utm_source" id="utm-source">
+          <input type="hidden" name="utm_medium" id="utm-medium">
+          <input type="hidden" name="utm_campaign" id="utm-campaign">
+          <input type="hidden" name="utm_term" id="utm-term">
+          <input type="hidden" name="utm_content" id="utm-content">
+          <input type="hidden" name="gclid" id="gclid">
+
+          <label class="consent">
+            <input type="checkbox" required>
+            <span>East Bay Projects may contact me about this request. I understand that submitting this form does not create a client relationship.</span>
+          </label>
+          <button class="submit" type="submit">SEND PROJECT DETAILS &rarr;</button>
+          <p class="fine-print">Your information is used only to evaluate and respond to this inquiry. See our <a href="/privacy.html">privacy notice</a>.</p>
+        </form>
+      </div>
+
+      <div class="status" id="success" role="status">
+        <p class="form-kicker">Message received</p>
+        <h2>THANK YOU.</h2>
+        <p>Your project details are safely recorded. Nate will review them and normally respond within one business day.</p>
+        <a href="/">Return to East Bay Projects &rarr;</a>
+      </div>
+
+      <div class="status error" id="error" role="alert">
+        <p class="form-kicker">Something went wrong</p>
+        <h2>PLEASE TRY AGAIN.</h2>
+        <p>Your submission was not recorded. Refresh the page and try again, or email <a href="mailto:contact@eastbayprojects.com">contact@eastbayprojects.com</a>.</p>
+      </div>
+    </section>
+  </main>
+
+  <footer>East Bay Projects &middot; Austin + Washington DC &middot; &copy; 2026</footer>
+
+  <script>
+    const params = new URLSearchParams(window.location.search);
+    const formWrap = document.getElementById('form-wrap');
+    if (params.get('submitted') === '1') {
+      formWrap.style.display = 'none';
+      document.getElementById('success').style.display = 'block';
+      document.title = 'Thank You | East Bay Projects';
+    } else if (params.get('error') === '1') {
+      document.getElementById('error').style.display = 'block';
+    }
+
+    document.getElementById('form-started-at').value = Date.now();
+    document.getElementById('source-page').value = window.location.href;
+    document.getElementById('referrer').value = document.referrer;
+    for (const key of ['utm_source', 'utm_medium', 'utm_campaign', 'utm_term', 'utm_content', 'gclid']) {
+      const field = document.getElementById(key.replaceAll('_', '-'));
+      if (field) field.value = params.get(key) || '';
+    }
+  </script>
+</body>
+</html>
