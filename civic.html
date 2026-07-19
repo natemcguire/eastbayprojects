@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Civic &amp; Campaign Digital | East Bay Projects</title>
+  <meta name="description" content="Rapid-response websites, campaign platforms, public-data tools, and digital operations for candidates, ballot measures, coalitions, and public-affairs teams.">
+  <meta name="robots" content="index, follow">
+  <link rel="canonical" href="https://eastbayprojects.com/civic.html">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Civic &amp; Campaign Digital | East Bay Projects">
+  <meta property="og:description" content="Campaign-grade digital infrastructure. Scoped fast, built under pressure, live when it matters.">
+  <meta property="og:url" content="https://eastbayprojects.com/civic.html">
+  <meta property="og:image" content="https://eastbayprojects.com/assets/civic/brown-for-austin-d1-desktop.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&amp;family=IBM+Plex+Mono:wght@400;500;600&amp;family=Lora:ital,wght@0,400;0,600;1,400&amp;display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --blue: #10264B;
+      --blue-dark: #091B37;
+      --amber: #C8750A;
+      --paper: #F4F0E8;
+      --paper-dark: #E8E2D6;
+      --white: #FDFCF9;
+      --ink: #171D28;
+      --muted: #626A74;
+      --rule: #C8C0B0;
+      --green: #267637;
+    }
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body { margin: 0; color: var(--ink); background: var(--paper); font-family: 'Lora', Georgia, serif; }
+    a { color: inherit; }
+    img { max-width: 100%; display: block; }
+    header { position: sticky; top: 0; z-index: 20; background: rgba(9,27,55,.97); border-bottom: 2px solid var(--amber); }
+    .header-inner { max-width: 1440px; margin: 0 auto; min-height: 72px; padding: 0 40px; display: flex; align-items: center; justify-content: space-between; gap: 28px; }
+    .logo { color: var(--white); text-decoration: none; font-family: 'Bebas Neue', sans-serif; font-size: 23px; letter-spacing: .12em; white-space: nowrap; }
+    .logo em { color: var(--amber); font-style: normal; }
+    nav { display: flex; align-items: center; gap: 28px; }
+    nav a { color: rgba(253,252,249,.74); text-decoration: none; text-transform: uppercase; font-family: 'IBM Plex Mono', monospace; font-size: 11px; letter-spacing: .13em; }
+    nav a:hover, nav a.active { color: var(--white); }
+    .nav-cta { border: 1px solid var(--amber); color: var(--amber); padding: 10px 15px; }
+    .hero { background: var(--blue-dark); color: var(--white); overflow: hidden; position: relative; }
+    .hero::after { content: 'CIVIC'; position: absolute; right: -22px; bottom: -95px; font-family: 'Bebas Neue', sans-serif; font-size: clamp(180px, 26vw, 430px); line-height: .75; color: rgba(255,255,255,.025); pointer-events: none; }
+    .hero-inner { max-width: 1440px; margin: 0 auto; min-height: 720px; padding: 104px 40px 92px; display: grid; grid-template-columns: 1.25fr .75fr; align-items: end; gap: 80px; position: relative; z-index: 1; }
+    .kicker, .section-kicker { font-family: 'IBM Plex Mono', monospace; text-transform: uppercase; letter-spacing: .16em; font-size: 12px; font-weight: 600; }
+    .kicker { color: var(--amber); margin: 0 0 24px; }
+    h1 { margin: 0; max-width: 880px; font-family: 'Bebas Neue', sans-serif; font-weight: 400; font-size: clamp(78px, 9vw, 146px); line-height: .86; letter-spacing: .015em; }
+    h1 em { color: var(--amber); font-style: normal; }
+    .hero-copy { max-width: 620px; margin: 34px 0 0; color: rgba(253,252,249,.78); font-size: 19px; line-height: 1.65; }
+    .hero-actions { display: flex; gap: 14px; flex-wrap: wrap; margin-top: 38px; }
+    .btn { display: inline-block; text-decoration: none; text-transform: uppercase; font-family: 'IBM Plex Mono', monospace; font-size: 12px; font-weight: 600; letter-spacing: .1em; padding: 16px 20px; }
+    .btn-primary { background: var(--amber); color: var(--blue-dark); border: 2px solid var(--amber); }
+    .btn-secondary { border: 2px solid rgba(255,255,255,.32); color: var(--white); }
+    .hero-proof { border-top: 2px solid var(--amber); padding-top: 24px; align-self: end; }
+    .proof-label { margin: 0 0 16px; color: var(--amber); font-family: 'IBM Plex Mono', monospace; font-size: 11px; letter-spacing: .13em; text-transform: uppercase; }
+    .proof-stat { margin: 0; font-family: 'Bebas Neue', sans-serif; font-size: 52px; line-height: .95; }
+    .proof-note { margin: 14px 0 0; color: rgba(253,252,249,.62); font-size: 14px; line-height: 1.55; }
+    .trust-bar { background: var(--amber); color: var(--blue-dark); }
+    .trust-inner { max-width: 1440px; margin: 0 auto; padding: 18px 40px; display: flex; justify-content: space-between; gap: 24px; flex-wrap: wrap; font-family: 'IBM Plex Mono', monospace; font-size: 11px; font-weight: 600; letter-spacing: .1em; text-transform: uppercase; }
+    .section { padding: 104px 40px; }
+    .section-inner { max-width: 1360px; margin: 0 auto; }
+    .section-kicker { color: var(--amber); margin: 0 0 15px; }
+    .section-title { margin: 0; font-family: 'Bebas Neue', sans-serif; font-size: clamp(54px, 6vw, 92px); font-weight: 400; line-height: .95; letter-spacing: .02em; }
+    .section-intro { max-width: 760px; margin: 22px 0 56px; color: var(--muted); font-size: 18px; line-height: 1.65; }
+    .case-grid { display: grid; grid-template-columns: 1fr 1fr; border: 1px solid var(--rule); }
+    .case { background: var(--white); min-width: 0; }
+    .case + .case { border-left: 1px solid var(--rule); }
+    .case-shot { aspect-ratio: 16/10; overflow: hidden; background: #d8d8d8; border-bottom: 1px solid var(--rule); }
+    .case-shot img { width: 100%; height: 100%; object-fit: cover; object-position: top; transition: transform .5s ease; }
+    .case:hover .case-shot img { transform: scale(1.015); }
+    .case-body { padding: 34px; }
+    .case-tag { margin: 0 0 10px; color: var(--amber); font-family: 'IBM Plex Mono', monospace; font-size: 10px; font-weight: 600; letter-spacing: .14em; text-transform: uppercase; }
+    .case h3 { margin: 0; font-family: 'Bebas Neue', sans-serif; font-size: 39px; font-weight: 400; letter-spacing: .025em; }
+    .case p { color: var(--muted); line-height: 1.65; }
+    .case-metrics { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1px; margin-top: 26px; background: var(--rule); border: 1px solid var(--rule); }
+    .metric { background: var(--paper); padding: 17px 13px; }
+    .metric strong { display: block; color: var(--ink); font-family: 'Bebas Neue', sans-serif; font-size: 27px; font-weight: 400; }
+    .metric span { display: block; margin-top: 2px; font-family: 'IBM Plex Mono', monospace; font-size: 8px; letter-spacing: .08em; text-transform: uppercase; color: var(--muted); }
+    .case-link { display: inline-block; margin-top: 25px; color: var(--blue); font-family: 'IBM Plex Mono', monospace; font-size: 11px; font-weight: 600; letter-spacing: .08em; text-transform: uppercase; text-decoration-color: var(--amber); text-underline-offset: 5px; }
+    .services { background: var(--blue); color: var(--white); }
+    .services .section-intro { color: rgba(253,252,249,.67); }
+    .service-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 2px; background: rgba(255,255,255,.16); }
+    .service { background: var(--blue-dark); padding: 38px 32px; min-height: 350px; display: flex; flex-direction: column; }
+    .service-num { color: var(--amber); font-family: 'IBM Plex Mono', monospace; font-size: 10px; letter-spacing: .13em; }
+    .service h3 { margin: 28px 0 12px; font-family: 'Bebas Neue', sans-serif; font-size: 39px; font-weight: 400; line-height: 1; }
+    .price { margin: 0 0 22px; color: var(--amber); font-family: 'IBM Plex Mono', monospace; font-weight: 600; font-size: 14px; }
+    .service p:last-of-type { color: rgba(253,252,249,.65); font-size: 15px; line-height: 1.65; }
+    .service-time { margin-top: auto; padding-top: 28px; font-family: 'IBM Plex Mono', monospace; font-size: 9px; letter-spacing: .11em; text-transform: uppercase; color: rgba(253,252,249,.45); }
+    .process-grid { display: grid; grid-template-columns: repeat(4, 1fr); border-top: 1px solid var(--rule); border-left: 1px solid var(--rule); }
+    .step { min-height: 245px; padding: 30px 26px; border-right: 1px solid var(--rule); border-bottom: 1px solid var(--rule); }
+    .step strong { color: var(--amber); font-family: 'Bebas Neue', sans-serif; font-size: 52px; font-weight: 400; }
+    .step h3 { margin: 22px 0 10px; font-family: 'IBM Plex Mono', monospace; font-size: 12px; text-transform: uppercase; letter-spacing: .09em; }
+    .step p { color: var(--muted); font-size: 14px; line-height: 1.6; }
+    .cta { background: var(--amber); color: var(--blue-dark); }
+    .cta-inner { max-width: 1360px; margin: 0 auto; padding: 90px 40px; display: grid; grid-template-columns: 1fr auto; gap: 60px; align-items: center; }
+    .cta h2 { margin: 0; font-family: 'Bebas Neue', sans-serif; font-weight: 400; font-size: clamp(58px, 7vw, 108px); line-height: .9; }
+    .cta p { max-width: 680px; margin: 22px 0 0; font-size: 17px; line-height: 1.6; }
+    .cta .btn { background: var(--blue-dark); color: var(--white); border: 2px solid var(--blue-dark); white-space: nowrap; }
+    .compliance { background: var(--paper-dark); border-top: 1px solid var(--rule); }
+    .compliance-inner { max-width: 1360px; margin: 0 auto; padding: 25px 40px; color: var(--muted); font-family: 'IBM Plex Mono', monospace; font-size: 9px; line-height: 1.65; letter-spacing: .04em; }
+    footer { background: var(--blue-dark); color: rgba(253,252,249,.55); border-top: 2px solid var(--amber); }
+    .footer-inner { max-width: 1440px; margin: 0 auto; padding: 30px 40px; display: flex; justify-content: space-between; gap: 18px; flex-wrap: wrap; align-items: center; font-family: 'IBM Plex Mono', monospace; font-size: 10px; letter-spacing: .1em; text-transform: uppercase; }
+    .footer-inner a { color: inherit; }
+    @media (max-width: 900px) {
+      .header-inner { padding: 0 22px; }
+      nav a:not(.nav-cta) { display: none; }
+      .hero-inner { min-height: auto; padding: 80px 24px; grid-template-columns: 1fr; gap: 60px; }
+      .section { padding: 78px 22px; }
+      .case-grid, .service-grid { grid-template-columns: 1fr; }
+      .case + .case { border-left: 0; border-top: 1px solid var(--rule); }
+      .process-grid { grid-template-columns: 1fr 1fr; }
+      .cta-inner { grid-template-columns: 1fr; padding: 70px 24px; }
+    }
+    @media (max-width: 560px) {
+      .header-inner { min-height: 64px; }
+      .logo { font-size: 19px; }
+      nav { gap: 0; }
+      .nav-cta { padding: 9px 10px; font-size: 9px; }
+      .hero-inner { padding-top: 68px; }
+      h1 { font-size: 68px; }
+      .hero-copy { font-size: 17px; }
+      .trust-inner { padding: 15px 22px; }
+      .case-body { padding: 26px 22px; }
+      .case-metrics { grid-template-columns: 1fr; }
+      .service { min-height: 310px; }
+      .process-grid { grid-template-columns: 1fr; }
+      .footer-inner { padding: 26px 22px; flex-direction: column; text-align: center; }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="header-inner">
+      <a href="index.html" class="logo">EAST BAY <em>PROJECTS</em></a>
+      <nav aria-label="Primary navigation">
+        <a href="index.html#services">Services</a>
+        <a href="portfolio.html">Portfolio</a>
+        <a href="civic.html" class="active">Civic</a>
+        <a href="index.html#about">About</a>
+        <a href="#contact" class="nav-cta">Start a project</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="hero-inner">
+        <div>
+          <p class="kicker">Civic &amp; Campaign Digital / Austin + Nationwide</p>
+          <h1>MOVE FAST.<br>MAKE IT <em>CLEAR.</em><br>GO LIVE.</h1>
+          <p class="hero-copy">Campaign-grade websites, public-data tools, and digital operations for candidates, ballot measures, coalitions, and public-affairs teams. Scoped in days. Built for pressure.</p>
+          <div class="hero-actions">
+            <a class="btn btn-primary" href="#contact">Scope a launch &rarr;</a>
+            <a class="btn btn-secondary" href="#work">See the work &darr;</a>
+          </div>
+        </div>
+        <aside class="hero-proof" aria-label="Selected proof">
+          <p class="proof-label">Selected proof / Austin, Texas</p>
+          <p class="proof-stat">2 LIVE CIVIC PLATFORMS</p>
+          <p class="proof-note">A rapid-response ballot-measure information site and a full candidate campaign platform—both built and operated by Nate McGuire.</p>
+        </aside>
+      </div>
+    </section>
+
+    <div class="trust-bar">
+      <div class="trust-inner">
+        <span>Rapid response</span>
+        <span>Candidate platforms</span>
+        <span>Public-data tools</span>
+        <span>Donation + volunteer conversion</span>
+        <span>Cloud operations</span>
+      </div>
+    </div>
+
+    <section class="section" id="work">
+      <div class="section-inner">
+        <p class="section-kicker">Selected Austin work / Live</p>
+        <h2 class="section-title">BUILT FOR THE PUBLIC RECORD.</h2>
+        <p class="section-intro">Two different civic problems, two purpose-built systems: one designed to make a complex ballot question understandable, the other to run the digital front door of a city-council campaign.</p>
+
+        <div class="case-grid">
+          <article class="case">
+            <div class="case-shot">
+              <img src="assets/civic/austin-tax-rate-election-desktop.png" alt="Austin Tax Rate Election website showing the final Proposition Q results" width="1440" height="1000">
+            </div>
+            <div class="case-body">
+              <p class="case-tag">Ballot measure / Rapid response / Public data</p>
+              <h3>Austin Tax Rate Election</h3>
+              <p>A citizen-built public-information site that converted a complicated tax-rate election into clear numbers, shareable explanations, and a durable results record. The project became part of Austin's public debate and earned local media attention.</p>
+              <div class="case-metrics">
+                <div class="metric"><strong>HOURS</strong><span>Initial launch</span></div>
+                <div class="metric"><strong>$12</strong><span>Original domain cost</span></div>
+                <div class="metric"><strong>63.48%</strong><span>Final against vote</span></div>
+              </div>
+              <a class="case-link" href="https://austintaxrateelection.com/" target="_blank" rel="noopener noreferrer">View live project &rarr;</a>
+            </div>
+          </article>
+
+          <article class="case">
+            <div class="case-shot">
+              <img src="assets/civic/brown-for-austin-d1-desktop.png" alt="Steven Brown for Austin City Council District 1 campaign website and donation experience" width="1440" height="1000">
+            </div>
+            <div class="case-body">
+              <p class="case-tag">Candidate campaign / Full platform / Operations</p>
+              <h3>Steven Brown for Austin D1</h3>
+              <p>A complete campaign platform for Austin City Council District 1: donations, volunteer and email capture, endorsements, events, news, multilingual groundwork, admin workflows, cloud data, and continuous production monitoring.</p>
+              <div class="case-metrics">
+                <div class="metric"><strong>7+</strong><span>Campaign sections</span></div>
+                <div class="metric"><strong>24/7</strong><span>Production monitoring</span></div>
+                <div class="metric"><strong>3</strong><span>Language framework</span></div>
+              </div>
+              <a class="case-link" href="https://brownforaustind1.com/" target="_blank" rel="noopener noreferrer">View live project &rarr;</a>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section services" id="services">
+      <div class="section-inner">
+        <p class="section-kicker">Fixed-scope engagements</p>
+        <h2 class="section-title">WHAT WE SHIP.</h2>
+        <p class="section-intro">No six-month discovery phase. We define the decision your digital platform needs to produce, build the shortest credible path, and launch.</p>
+        <div class="service-grid">
+          <article class="service">
+            <span class="service-num">SERVICE / 01</span>
+            <h3>72-Hour Issue Launch</h3>
+            <p class="price">FROM $7,500</p>
+            <p>A focused rapid-response site for a ballot question, public issue, or breaking campaign moment. Message architecture, responsive build, analytics, share cards, and launch operations.</p>
+            <span class="service-time">Typical launch: 3–5 days</span>
+          </article>
+          <article class="service">
+            <span class="service-num">SERVICE / 02</span>
+            <h3>Candidate Platform</h3>
+            <p class="price">$12,500–25,000</p>
+            <p>The campaign's complete digital front door: biography, platform, endorsements, events, news, donations, volunteer capture, contact data, and campaign-controlled updates.</p>
+            <span class="service-time">Typical launch: 1–3 weeks</span>
+          </article>
+          <article class="service">
+            <span class="service-num">SERVICE / 03</span>
+            <h3>Donation &amp; Signup Sprint</h3>
+            <p class="price">$2,500–5,000</p>
+            <p>A focused conversion repair for an existing campaign site: donation flow, volunteer and email capture, mobile speed, analytics, integrations, and the highest-leverage page fixes.</p>
+            <span class="service-time">Typical turnaround: 3–7 days</span>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="process">
+      <div class="section-inner">
+        <p class="section-kicker">How it works</p>
+        <h2 class="section-title">A CAMPAIGN CLOCK, NOT AN AGENCY CLOCK.</h2>
+        <p class="section-intro">Every engagement is built around the actual deadline: filing day, endorsement, debate, launch, early voting, or election day.</p>
+        <div class="process-grid">
+          <article class="step"><strong>01</strong><h3>Decision</h3><p>Define the one action or understanding the page must create.</p></article>
+          <article class="step"><strong>02</strong><h3>Source</h3><p>Collect approved copy, evidence, disclosures, brand assets, and integrations.</p></article>
+          <article class="step"><strong>03</strong><h3>Build</h3><p>Design and engineering happen together, with a working system reviewed early.</p></article>
+          <article class="step"><strong>04</strong><h3>Operate</h3><p>Launch, monitor, measure, and update as the public conversation changes.</p></article>
+        </div>
+      </div>
+    </section>
+
+    <section class="cta" id="contact">
+      <div class="cta-inner">
+        <div>
+          <h2>WHAT HAS TO BE LIVE NEXT WEEK?</h2>
+          <p>Send the deadline, the audience, and what is currently blocked. You will get a fixed-scope recommendation—not a sales deck.</p>
+        </div>
+        <a class="btn" href="mailto:contact@eastbayprojects.com?subject=Civic%20%26%20Campaign%20Digital%20Project&amp;body=Deadline%3A%0AProject%3A%0AWhat%20needs%20to%20go%20live%3A%0A">CONTACT NATE &rarr;</a>
+      </div>
+    </section>
+
+    <aside class="compliance">
+      <div class="compliance-inner">East Bay Projects provides commercial technology, design, and digital-operations services. Clients remain responsible for campaign content, legal review, required disclaimers, accessibility and language review, treasurer approval, and all applicable reporting. Work is contracted and invoiced at standard commercial rates.</div>
+    </aside>
+  </main>
+
+  <footer>
+    <div class="footer-inner">
+      <span>East Bay Projects &middot; Austin + Washington DC</span>
+      <span>&copy; 2026 &middot; Civic &amp; Campaign Digital</span>
+      <a href="mailto:contact@eastbayprojects.com">contact@eastbayprojects.com</a>
+    </div>
+  </footer>
+</body>
+</html>
