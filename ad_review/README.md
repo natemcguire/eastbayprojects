@@ -107,3 +107,19 @@ Tailscale Serve is tailnet-only. Do not substitute `tailscale funnel`.
 - There is no sync worker yet, so approval cannot mutate the Google Ads account.
 - Browser profiles, credentials, generated assets, database files, logs, and notification secrets
   remain outside Git.
+
+## Build a private sync plan
+
+```sh
+python3 ad_review/build_sync_plan.py
+```
+
+This writes `~/.local/share/eastbayprojects/ad-review/sync/plan.json` with mode
+`PLAN_ONLY`. The planner reads only ads whose review status is `approved` and whose sync job is
+`queued`. It proposes a PAUSED Search campaign with four category-based ad groups, deduplicates
+RSA copy, enforces the 15-headline and 4-description caps, and preserves final URLs and sitelinks.
+Approved display assets are grouped for the existing Performance Max target read from private
+SQLite settings. Live customer, campaign, and asset-group identifiers are never committed to Git.
+
+Building the plan makes no Google calls and changes no database status. Actual Google Ads syncing
+is a separate, explicit future step.

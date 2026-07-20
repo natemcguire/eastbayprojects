@@ -97,17 +97,11 @@ fake interface text, generic AI office scenes, compliance claims, and unrelated 
 
 ## Immediate next steps on the Mac mini
 
-1. Verify the remote checkout and toolchain.
-2. Start a persistent Playwright-controlled Chrome session on the mini and let Nate sign into
-   Google Ads before further browser automation.
-3. Choose a small local application stack and persistence layer appropriate for a single-owner
-   Tailscale service.
-4. Build the display-ad review page and text-ad review/preview page.
-5. Add approval/rejection persistence and the queued-sync state machine.
-6. Configure ntfy notifications with the private review URL.
-7. Generate the regional creative families and place them into `pending_review`.
-8. Integrate the approved queue with the authenticated Google Ads session/API, with dry-run and
-   idempotency safeguards before any account mutation.
+1. Review the remaining display assets through the Tailscale-only interface.
+2. Inspect the deterministic private sync plan before any account integration.
+3. Build a separate dry-run Google Ads worker with idempotency and account-target validation.
+4. Require explicit authorization before the first Google Ads mutation; keep the proposed Search
+   campaign PAUSED.
 
 ## Operational safety
 
@@ -126,16 +120,20 @@ fake interface text, generic AI office scenes, compliance claims, and unrelated 
   unapproved ads from entering the sync queue.
 - Private state defaults to `~/.local/share/eastbayprojects/ad-review/`; it is not stored in Git.
 - The importer accepts private JSON arrays with stable IDs and skips existing records.
-- ntfy configuration is environment-only. Tailscale Serve should proxy port 8765; Funnel is
-  prohibited.
-- The Google Ads sync worker is intentionally not implemented yet, so review actions cannot change
-  the live account.
+- Tailscale Serve proxies port 8765 at the configured tailnet-only URL; Funnel is prohibited.
+- ntfy is configured privately and its review notification/link flow has been tested.
+- The Google Ads sync worker is intentionally not implemented, and no approved item has been
+  synchronized to the live account.
 
 ### Runtime checkpoint (July 20, 2026)
 
-- LaunchAgent `com.eastbayprojects.ad-review` is installed and serving successfully on loopback
-  port 8765.
-- Twelve private text-ad variants were imported with stable IDs and remain `pending_review`.
-- Tailscale Serve could not be activated until Serve is enabled for this node in the tailnet admin
-  flow. The application remains inaccessible off-host until that approval is completed.
-- ntfy hooks are present but require private `service.env` values before notifications are sent.
+- LaunchAgent `com.eastbayprojects.ad-review` is running successfully on loopback port 8765.
+- Tailscale Serve is active at the configured tailnet-only URL. The hostname remains private
+  operational configuration.
+- The private queue contains 12 text variants, 15 original display assets, and 15 branded display
+  assets. At this checkpoint, 11 items are approved and 2 are rejected; the rest await review.
+- ntfy is configured and tested without committing its topic, token, or private review URL.
+- Google Ads customer, campaign, and asset-group IDs live only in private SQLite settings.
+- The deterministic plan currently contains 10 approved text RSAs across four PAUSED Search ad
+  groups and 1 approved display asset for the configured Performance Max asset group.
+- Actual Google Ads synchronization has not run and remains a separate, explicitly authorized step.
