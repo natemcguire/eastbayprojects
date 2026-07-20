@@ -6,6 +6,10 @@ Last updated: July 20, 2026
 
 - Repository: `git@github.com:natemcguire/eastbayprojects.git`
 - Branch: `main`
+- `origin/main` is the sole canonical code state.
+- `nates-mac-mini` is the canonical development and runtime host, not the canonical Git history.
+- Only cloud-safe source and documentation belong in GitHub. Approval records, browser sessions,
+  generated drafts, credentials, contact data, logs, and queue state remain private on the mini.
 - Current deployment commit: `1ae4b6a` (`Install Google Ads site tag`)
 - Production: `https://eastbayprojects.com`
 - Cloudflare Pages project: `eastbayprojects`
