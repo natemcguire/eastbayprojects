@@ -115,3 +115,18 @@ fake interface text, generic AI office scenes, compliance claims, and unrelated 
 - Do not auto-approve generated copy or images.
 - Do not claim that a public marketing site is CMMC- or HIPAA-compliant.
 - Keep the review application private to Tailscale and do not publish it to Cloudflare Pages.
+
+## Private ad review foundation
+
+- A loopback-only review service now lives under `ad_review/` and runs on the Mac mini at
+  `http://127.0.0.1:8765`.
+- The display page shows regional creative previews; the text page provides a selectable list and
+  a Google Search-style context preview. Both have approve/reject controls in the upper-right.
+- SQLite records ads, audit events, and idempotent sync jobs. A database trigger prevents
+  unapproved ads from entering the sync queue.
+- Private state defaults to `~/.local/share/eastbayprojects/ad-review/`; it is not stored in Git.
+- The importer accepts private JSON arrays with stable IDs and skips existing records.
+- ntfy configuration is environment-only. Tailscale Serve should proxy port 8765; Funnel is
+  prohibited.
+- The Google Ads sync worker is intentionally not implemented yet, so review actions cannot change
+  the live account.

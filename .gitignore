@@ -2,3 +2,8 @@
 .dev.vars
 node_modules/
 .DS_Store
+__pycache__/
+*.pyc
+ad_review/.state/
+ad_review/private/
+ad_review/runtime/

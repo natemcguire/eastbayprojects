@@ -1,0 +1,19 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>East Bay Ad Review</title><link rel="stylesheet" href="/app.css">
+</head>
+<body>
+<header>
+<a class="brand" href="/display"><b>EB</b><span>East Bay Projects<small>Ad review</small></span></a>
+<nav><a data-route="display" href="/display">Display ads</a><a data-route="text" href="/text">Text ads</a><a data-route="queue" href="/queue">Sync queue</a></nav>
+<i>Private - Tailscale</i>
+</header>
+<main>
+<div class="heading"><div><label>CREATIVE REVIEW</label><h1 id="title"></h1><p id="subtitle"></p></div><span id="count"></span></div>
+<section id="workspace"><aside><div class="filter"><b>Review items</b><select id="status"><option value="">All statuses</option><option value="pending_review">Needs review</option><option value="approved">Approved</option><option value="rejected">Rejected</option></select></div><div id="items"></div></aside><article id="preview"></article></section>
+<section id="queue" class="hidden"></section>
+</main>
+<div id="toast"></div><script src="/app.js" defer></script>
+</body></html>
