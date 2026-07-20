@@ -73,3 +73,33 @@ WHEN (SELECT status FROM ads WHERE id = NEW.ad_id) != 'approved'
 BEGIN
   SELECT RAISE(ABORT, 'only approved ads can enter the sync queue');
 END;
+
+
+CREATE TABLE IF NOT EXISTS campaign_reviews (
+  plan_digest TEXT PRIMARY KEY,
+  source_fingerprint TEXT NOT NULL,
+  geography TEXT NOT NULL DEFAULT 'DMV',
+  daily_budget_micros INTEGER NOT NULL DEFAULT 15000000
+    CHECK (daily_budget_micros > 0),
+  launch_status TEXT NOT NULL DEFAULT 'PAUSED'
+    CHECK (launch_status IN ('PAUSED', 'ENABLED')),
+  decision TEXT NOT NULL DEFAULT 'pending_review'
+    CHECK (decision IN ('pending_review', 'approved', 'rejected')),
+  actor TEXT NOT NULL DEFAULT '',
+  created_at TEXT NOT NULL,
+  updated_at TEXT NOT NULL
+);
+
+CREATE TABLE IF NOT EXISTS campaign_review_events (
+  id INTEGER PRIMARY KEY AUTOINCREMENT,
+  plan_digest TEXT NOT NULL REFERENCES campaign_reviews(plan_digest) ON DELETE CASCADE,
+  decision TEXT NOT NULL CHECK (decision IN ('approved', 'rejected')),
+  geography TEXT NOT NULL,
+  daily_budget_micros INTEGER NOT NULL,
+  launch_status TEXT NOT NULL CHECK (launch_status IN ('PAUSED', 'ENABLED')),
+  actor TEXT NOT NULL DEFAULT 'nate',
+  created_at TEXT NOT NULL
+);
+
+CREATE INDEX IF NOT EXISTS campaign_review_events_plan
+  ON campaign_review_events (plan_digest, created_at DESC);

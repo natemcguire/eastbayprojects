@@ -40,8 +40,16 @@ def db_path() -> Path:
     return state_dir() / "review.sqlite3"
 
 
+class ClosingConnection(sqlite3.Connection):
+    def __exit__(self, exc_type, exc_value, traceback):
+        try:
+            return super().__exit__(exc_type, exc_value, traceback)
+        finally:
+            self.close()
+
+
 def connect() -> sqlite3.Connection:
-    db = sqlite3.connect(db_path(), timeout=10)
+    db = sqlite3.connect(db_path(), timeout=10, factory=ClosingConnection)
     db.row_factory = sqlite3.Row
     db.execute("PRAGMA foreign_keys = ON")
     return db
@@ -200,6 +208,12 @@ class Handler(BaseHTTPRequestHandler):
         parsed = urlparse(self.path)
         if parsed.path == "/api/health":
             return self.json_response({"ok": True, "service": "eastbay-ad-review"})
+        if parsed.path == "/api/campaign-review":
+            from campaign_review import CampaignReviewError, get_current_review
+            try:
+                return self.json_response(get_current_review())
+            except CampaignReviewError as error:
+                return self.error_json(str(error), HTTPStatus.CONFLICT)
         if parsed.path == "/api/ads":
             params = parse_qs(parsed.query)
             kind = params.get("kind", [""])[0]
@@ -238,6 +252,12 @@ class Handler(BaseHTTPRequestHandler):
             return self.error_json(str(error), HTTPStatus.BAD_REQUEST)
         if parsed.path == "/api/ads":
             return self.create_ad(payload)
+        if parsed.path == "/api/campaign-review/decision":
+            from campaign_review import CampaignReviewError, decide_campaign
+            try:
+                return self.json_response(decide_campaign(payload))
+            except CampaignReviewError as error:
+                return self.error_json(str(error), HTTPStatus.BAD_REQUEST)
         if parsed.path.startswith("/api/ads/") and parsed.path.endswith("/decision"):
             ad_id = parsed.path.removeprefix("/api/ads/").removesuffix("/decision").strip("/")
             return self.decide(ad_id, payload)
@@ -319,7 +339,7 @@ class Handler(BaseHTTPRequestHandler):
         self.send_file(candidate)
 
     def serve_static(self, path: str) -> None:
-        route = path if path not in {"/", "/display", "/text", "/queue"} else "/index.html"
+        route = path if path not in {"/", "/display", "/text", "/queue", "/campaign"} else "/index.html"
         candidate = (STATIC / route.lstrip("/")).resolve()
         if STATIC.resolve() not in candidate.parents or not candidate.is_file():
             return self.send_error(HTTPStatus.NOT_FOUND)

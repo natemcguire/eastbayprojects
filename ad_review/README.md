@@ -123,3 +123,19 @@ SQLite settings. Live customer, campaign, and asset-group identifiers are never 
 
 Building the plan makes no Google calls and changes no database status. Actual Google Ads syncing
 is a separate, explicit future step.
+
+
+## Campaign-level approval
+
+The tailnet-only `/campaign` screen reviews the current deterministic plan before any future Google
+Ads mutation. Each plan digest gets a separate, audited campaign review with these defaults:
+
+- Geography: DMV
+- Daily budget: $15.00
+- Launch choice: create paused
+
+Approval and rejection both require the reviewer to deliberately confirm that geography, budget,
+and launch status were checked. Selecting `Create active` is possible only as an explicit choice;
+it is never the default. Campaign review writes only `campaign_reviews` and
+`campaign_review_events`. It does not call Google Ads, update asset decisions, or mark sync jobs
+as synced.

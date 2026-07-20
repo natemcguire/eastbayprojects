@@ -98,7 +98,7 @@ fake interface text, generic AI office scenes, compliance claims, and unrelated 
 ## Immediate next steps on the Mac mini
 
 1. Review the remaining display assets through the Tailscale-only interface.
-2. Inspect the deterministic private sync plan before any account integration.
+2. Approve or reject the campaign geography, daily budget, and paused/active launch choice.
 3. Build a separate dry-run Google Ads worker with idempotency and account-target validation.
 4. Require explicit authorization before the first Google Ads mutation; keep the proposed Search
    campaign PAUSED.
@@ -116,6 +116,8 @@ fake interface text, generic AI office scenes, compliance claims, and unrelated 
   `http://127.0.0.1:8765`.
 - The display page shows regional creative previews; the text page provides a selectable list and
   a Google Search-style context preview. Both have approve/reject controls in the upper-right.
+- The campaign page ties review to the exact private plan digest and requires explicit geography,
+  daily budget, and paused/active launch approval. Defaults are DMV, $15/day, and create paused.
 - SQLite records ads, audit events, and idempotent sync jobs. A database trigger prevents
   unapproved ads from entering the sync queue.
 - Private state defaults to `~/.local/share/eastbayprojects/ad-review/`; it is not stored in Git.
@@ -136,4 +138,6 @@ fake interface text, generic AI office scenes, compliance claims, and unrelated 
 - Google Ads customer, campaign, and asset-group IDs live only in private SQLite settings.
 - The deterministic plan currently contains 10 approved text RSAs across four PAUSED Search ad
   groups and 1 approved display asset for the configured Performance Max asset group.
+- Campaign-level review is pending with safe defaults: DMV geography, $15 daily budget, and
+  create paused.
 - Actual Google Ads synchronization has not run and remains a separate, explicitly authorized step.
