@@ -130,3 +130,12 @@ fake interface text, generic AI office scenes, compliance claims, and unrelated 
   prohibited.
 - The Google Ads sync worker is intentionally not implemented yet, so review actions cannot change
   the live account.
+
+### Runtime checkpoint (July 20, 2026)
+
+- LaunchAgent `com.eastbayprojects.ad-review` is installed and serving successfully on loopback
+  port 8765.
+- Twelve private text-ad variants were imported with stable IDs and remain `pending_review`.
+- Tailscale Serve could not be activated until Serve is enabled for this node in the tailnet admin
+  flow. The application remains inaccessible off-host until that approval is completed.
+- ntfy hooks are present but require private `service.env` values before notifications are sent.
