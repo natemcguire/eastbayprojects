@@ -1,6 +1,6 @@
 # East Bay Projects — Current Status
 
-Last updated: July 20, 2026
+Last updated: July 25, 2026
 
 ## Source of truth
 
@@ -29,6 +29,34 @@ workspace unless a new handoff explicitly reverses this decision.
 - `/civic.html` — civic and campaign work
 - `/privacy.html` — privacy notice
 - Contact form submissions are stored in the Cloudflare D1 database bound as `LEADS_DB`.
+
+## Google Workspace email and outbound drafts
+
+- Google Workspace now handles mail for `eastbayprojects.com`.
+- The primary branded sender is `nate@eastbayprojects.com`; `contact@eastbayprojects.com` is an
+  alias on the same mailbox.
+- Cloudflare Email Routing is disabled so it does not conflict with Google Workspace delivery.
+- The live DNS baseline includes Google MX, SPF, 2048-bit DKIM with selector `google`, and a
+  monitoring-only DMARC policy (`p=none`).
+- Inbound and outbound delivery tests passed. A post-setup authentication test returned SPF,
+  DKIM, and DMARC `pass` for `eastbayprojects.com`.
+- The 400 active East Bay Projects drafts from the personal Gmail account were captured to
+  private Mac mini storage, recreated in the branded mailbox, and verified one-to-one by subject,
+  recipients, body, and sender.
+- The 400 verified source drafts were moved to Trash in the personal account and remain
+  recoverable there for 30 days. Their private capture and verification manifests are not stored
+  in Git.
+- The Google Workspace MCP connection is authorized for both the personal and branded accounts;
+  its credentials remain private on the Mac mini.
+
+### Outbound email next steps
+
+1. Review the recreated drafts from the branded mailbox, including the two unfinished drafts that
+   do not yet have recipients.
+2. Begin with a small, measured sending cadence and monitor replies, bounces, spam placement, and
+   domain reputation before increasing volume.
+3. Review DMARC reports and move from monitoring to an enforcement policy only after legitimate
+   senders are confirmed.
 
 ## Google Ads status
 
