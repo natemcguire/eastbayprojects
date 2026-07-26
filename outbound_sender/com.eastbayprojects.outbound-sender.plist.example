@@ -8,6 +8,9 @@
 <string>run-once</string>
 </array>
 <key>WorkingDirectory</key><string>__PROJECT_DIR__</string>
+<key>EnvironmentVariables</key><dict>
+<key>EASTBAY_OUTBOUND_QUIET_PAUSED</key><string>1</string>
+</dict>
 <key>RunAtLoad</key><true/>
 <key>StartInterval</key><integer>60</integer>
 <key>StandardOutPath</key><string>__HOME__/.local/share/eastbayprojects/outbound-sender/service.log</string>

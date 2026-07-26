@@ -772,6 +772,12 @@ def main() -> None:
         result = suppress(args.recipient, args.reason)
     else:
         result = status_report()
+    if (
+        args.command == "run-once"
+        and result.get("paused")
+        and os.environ.get("EASTBAY_OUTBOUND_QUIET_PAUSED") == "1"
+    ):
+        return
     print(json.dumps(result, indent=2, sort_keys=True))
 
 
