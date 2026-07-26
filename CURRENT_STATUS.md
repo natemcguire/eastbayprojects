@@ -48,14 +48,26 @@ workspace unless a new handoff explicitly reverses this decision.
   in Git.
 - The Google Workspace MCP connection is authorized for both the personal and branded accounts;
   its credentials remain private on the Mac mini.
+- A persistent Gmail API sender now runs from the Mac mini through LaunchAgent
+  `com.eastbayprojects.outbound-sender`; the Air and Apple Mail are not part of delivery.
+- The private queue contains 398 unique recipient-ready drafts and skips the two drafts without
+  recipients. Its proposed weekday ramp is 10, 15, and 20 messages on July 27–29, then up to 25
+  per weekday through August 19, between 9:30 a.m. and 3:30 p.m. Eastern.
+- The outbound queue is deliberately paused and all 398 sendable rows are blocked. No campaign
+  email can send until a valid business postal address or registered PO Box is supplied, the
+  commercial-message and opt-out footer is added and verified, and the queue is explicitly
+  resumed.
+- The sender retries transient failures without duplicating sends, supports a private suppression
+  list, and auto-pauses on an excessive bounce rate or a stale backlog.
 
 ### Outbound email next steps
 
-1. Review the recreated drafts from the branded mailbox, including the two unfinished drafts that
-   do not yet have recipients.
-2. Begin with a small, measured sending cadence and monitor replies, bounces, spam placement, and
-   domain reputation before increasing volume.
-3. Review DMARC reports and move from monitoring to an enforcement policy only after legitimate
+1. Supply the valid business postal address or registered PO Box for the required outbound footer.
+2. Review the two unfinished drafts that do not yet have recipients.
+3. Prepare and verify all queued drafts, re-plan if the intended start has passed, then explicitly
+   resume the Mac mini sender.
+4. Monitor replies, bounces, spam placement, and domain reputation before increasing volume.
+5. Review DMARC reports and move from monitoring to an enforcement policy only after legitimate
    senders are confirmed.
 
 ## Google Ads status
