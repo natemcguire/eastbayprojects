@@ -1,6 +1,6 @@
 # East Bay Projects — Current Status
 
-Last updated: July 25, 2026
+Last updated: July 26, 2026
 
 ## Source of truth
 
@@ -10,10 +10,10 @@ Last updated: July 25, 2026
 - `nates-mac-mini` is the canonical development and runtime host, not the canonical Git history.
 - Only cloud-safe source and documentation belong in GitHub. Approval records, browser sessions,
   generated drafts, credentials, contact data, logs, and queue state remain private on the mini.
-- Current deployment commit: `1ae4b6a` (`Install Google Ads site tag`)
+- Current deployment commit: `8a88235` (`Strengthen founder proof and performance copy`)
 - Production: `https://eastbayprojects.com`
 - Cloudflare Pages project: `eastbayprojects`
-- Latest deployment URL: `https://48e3e17d.eastbayprojects-1vq.pages.dev`
+- Latest deployment URL: `https://ebee08a6.eastbayprojects-1vq.pages.dev`
 - Google Ads tag `AW-18335868802` is installed immediately after `<head>` on every public HTML page.
 - The Cloudflare cache for `eastbayprojects.com` was purged after deployment.
 
@@ -25,6 +25,9 @@ workspace unless a new handoff explicitly reverses this decision.
 
 - `/` — primary commercial site
 - `/contact` — lead form and Google Ads landing page
+- The founder bio now links to `natemcguire.com` and identifies Mayven Studios, selected major
+  clients, and its acquisition by the holding company founded by Uber's first employee and CEO.
+- Performance claims are framed as measured and reported outcomes, not an absolute score guarantee.
 - `/portfolio.html` — selected work
 - `/civic.html` — civic and campaign work
 - `/privacy.html` — privacy notice
