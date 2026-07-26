@@ -53,21 +53,20 @@ workspace unless a new handoff explicitly reverses this decision.
 - The private queue contains 398 unique recipient-ready drafts and skips the two drafts without
   recipients. Its proposed weekday ramp is 10, 15, and 20 messages on July 27–29, then up to 25
   per weekday through August 19, between 9:30 a.m. and 3:30 p.m. Eastern.
-- The outbound queue is deliberately paused and all 398 sendable rows are blocked. No campaign
-  email can send until a valid business postal address or registered PO Box is supplied, the
-  commercial-message and opt-out footer is added and verified, and the queue is explicitly
-  resumed.
+- All 398 sendable drafts include the verified commercial-message disclosure, reply-based opt-out,
+  list-unsubscribe header, and business postal address supplied by Nate. Sender and recipient
+  fields were also verified across the full queue.
+- The outbound queue is active with 398 pending messages and zero campaign sends at activation.
+  The first message is scheduled for July 27 at 9:51 a.m. Eastern.
 - The sender retries transient failures without duplicating sends, supports a private suppression
   list, and auto-pauses on an excessive bounce rate or a stale backlog.
 
 ### Outbound email next steps
 
-1. Supply the valid business postal address or registered PO Box for the required outbound footer.
-2. Review the two unfinished drafts that do not yet have recipients.
-3. Prepare and verify all queued drafts, re-plan if the intended start has passed, then explicitly
-   resume the Mac mini sender.
-4. Monitor replies, bounces, spam placement, and domain reputation before increasing volume.
-5. Review DMARC reports and move from monitoring to an enforcement policy only after legitimate
+1. Review the two unfinished drafts that do not yet have recipients.
+2. Monitor the active Mac mini queue, replies, bounces, spam placement, and domain reputation
+   before increasing volume.
+3. Review DMARC reports and move from monitoring to an enforcement policy only after legitimate
    senders are confirmed.
 
 ## Google Ads status
