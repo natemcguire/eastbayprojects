@@ -1,6 +1,6 @@
 # East Bay Projects — Current Status
 
-Last updated: July 26, 2026
+Last updated: July 27, 2026
 
 ## Source of truth
 
@@ -168,6 +168,14 @@ fake interface text, generic AI office scenes, compliance claims, and unrelated 
 - ntfy is configured privately and its review notification/link flow has been tested.
 - The Google Ads sync worker is intentionally not implemented, and no approved item has been
   synchronized to the live account.
+
+### Infrastructure checkpoint (July 27, 2026)
+
+- Colima now runs under the user LaunchAgent `homebrew.mxcl.colima` with `RunAtLoad` and
+  `KeepAlive`; it is no longer dependent on a manually started terminal session.
+- The ntfy container retains `unless-stopped`, publishes host port `8082`, and recovered with the
+  other Colima containers during a controlled VM restart. Localhost and Tailscale health checks
+  passed on `8082`; nothing is listening on the retired `8081` port.
 
 ### Runtime checkpoint (July 20, 2026)
 
