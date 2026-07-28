@@ -230,6 +230,11 @@
       formWrap.style.display = 'none';
       document.getElementById('success').style.display = 'block';
       document.title = 'Thank You | East Bay Projects';
+      if (typeof gtag === 'function') {
+        gtag('event', 'conversion', {
+          'send_to': 'AW-18335868802'
+        });
+      }
     } else if (params.get('error') === '1') {
       document.getElementById('error').style.display = 'block';
     }
