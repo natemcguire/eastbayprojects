@@ -27,7 +27,7 @@ workspace unless a new handoff explicitly reverses this decision.
 - `scripts/build-restyle.py` copies the five live marketing pages and applies `design-lab/restyle/style.css`. It asserts exact visible-text equality on every page.
 - The new style uses warm ivory, deep green, and modern typography. Preview builds omit analytics and neutralize form submission; no production source is modified.
 - Previous content explorations remain in `design-lab/current/` but are not part of this build.
-- Local desktop/mobile review, navigation and asset checks passed. Test-only deployment pending.
+- Local desktop/mobile review, navigation and asset checks passed. Deployed to `https://4b150e4f.eastbayprojects-designs.pages.dev` from `42f5e87`; production deployment ID verified unchanged.
 
 ## Design exploration (September 11, 2026)
 
