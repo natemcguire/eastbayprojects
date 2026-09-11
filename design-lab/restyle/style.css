@@ -39,3 +39,4 @@ a,button { transition:background .2s,color .2s,transform .2s; }
 @media(prefers-reduced-motion:reduce) { html { scroll-behavior:auto; } *,*:before,*:after { transition:none!important; animation:none!important; } }
 .form-kicker,.section-kicker { color:#566D40; }
 .plain-dark .section-kicker,.section-dark .section-kicker { color:#BCD48E; }
+.card .card-tag { color:#BDCAB4; }.card .card-num,.card .card-url { color:#BCD48E; }
