@@ -1,0 +1,330 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="robots" content="noindex, nofollow" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Start a Project — East Bay Projects</title>
+    <meta
+      name="description"
+      content="Tell us about your next website, software, or civic project. Work directly with a senior design and engineering team in Austin and Washington, DC."
+    />
+    <link rel="canonical" href="https://eastbayprojects.com/editorial/contact" />
+    <meta property="og:title" content="Start a Project — East Bay Projects" />
+    <meta
+      property="og:description"
+      content="Tell us about your next website, software, or civic project. Work directly with a senior design and engineering team in Austin and Washington, DC."
+    />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://eastbayprojects.com/editorial/contact" />
+    <meta
+      property="og:image"
+      content="https://eastbayprojects.com/assets/brand/eastbay-projects-square-logo.png"
+    />
+    <meta name="twitter:card" content="summary" />
+    <link rel="icon" href="/logo.svg" type="image/svg+xml" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;450;500;550;600;650;700&amp;family=IBM+Plex+Mono:wght@400;500&amp;family=Lora:ital,wght@1,400;1,500&amp;display=swap"
+    />
+    <link rel="stylesheet" href="/editorial/site.css" />
+    <script src="/editorial/site.js" defer></script>
+  </head>
+  <body>
+    <a class="skip-link" href="#main">Skip to content</a>
+    <header class="site-header">
+      <div class="wrap header-inner">
+        <a class="wordmark" href="/editorial/" aria-label="East Bay Projects home"
+          ><span class="brand-symbol" aria-hidden="true"
+            ><i></i><i></i><i></i><i></i></span
+          ><span><span>east bay</span><span>projects.</span></span></a
+        >
+        <nav class="desktop-nav" aria-label="Main navigation">
+          <a href="/editorial/portfolio.html">Our work</a
+          ><a href="/editorial/#services">What we do</a><a href="/editorial/#about">The studio</a
+          ><a href="/editorial/contact" class="nav-contact" aria-current="page"
+            >Start a project <span aria-hidden="true">↗</span></a
+          >
+        </nav>
+        <button
+          class="menu-toggle"
+          type="button"
+          aria-expanded="false"
+          aria-controls="mobile-nav"
+        >
+          Menu +
+        </button>
+      </div>
+      <nav
+        class="mobile-nav"
+        id="mobile-nav"
+        aria-label="Mobile navigation"
+        hidden
+      >
+        <a href="/editorial/portfolio.html">Our work</a><a href="/editorial/#services">What we do</a
+        ><a href="/editorial/#about">The studio</a
+        ><a href="/editorial/contact">Start a project ↗</a>
+      </nav>
+    </header>
+    <main class="wrap contact-main" id="main">
+      <section class="contact-pitch">
+        <p class="eyebrow">Start a conversation</p>
+        <h1>What are we<br /><em>building next?</em></h1>
+        <p>
+          A better website, a useful tool, a civic project with a deadline. Tell
+          us a little about the job and we’ll help you find a good starting
+          point.
+        </p>
+        <div class="contact-facts">
+          <div>
+            <strong>Real people</strong
+            ><span>You’ll hear directly from Nate.</span>
+          </div>
+          <div>
+            <strong>A clear scope</strong
+            ><span>Agreed before work begins.</span>
+          </div>
+          <div>
+            <strong>A prompt reply</strong
+            ><span>Usually within one business day.</span>
+          </div>
+        </div>
+        <p class="direct">
+          Prefer a simple email?<br /><a
+            href="mailto:contact@eastbayprojects.com"
+            >contact@eastbayprojects.com</a
+          >
+        </p>
+      </section>
+      <section class="form-side" aria-label="Project inquiry">
+        <div id="form-wrap">
+          <p class="form-kicker">A few useful details</p>
+          <h2>Tell us what you have in mind.</h2>
+          <p class="form-intro">
+            No polished brief required. Fields marked * are required.
+          </p>
+          <form action="/api/editorial/contact" method="post" id="lead-form">
+            <div class="form-grid">
+              <div class="field">
+                <label for="name">Your name *</label>
+                <input
+                  id="name"
+                  name="name"
+                  autocomplete="name"
+                  required
+                  maxlength="120"
+                />
+              </div>
+              <div class="field">
+                <label for="email">Work email *</label>
+                <input
+                  id="email"
+                  name="email"
+                  type="email"
+                  autocomplete="email"
+                  required
+                  maxlength="254"
+                />
+              </div>
+              <div class="field">
+                <label for="phone">Phone</label>
+                <input
+                  id="phone"
+                  name="phone"
+                  type="tel"
+                  autocomplete="tel"
+                  maxlength="40"
+                />
+              </div>
+              <div class="field">
+                <label for="company">Company or organization</label>
+                <input
+                  id="company"
+                  name="company"
+                  autocomplete="organization"
+                  maxlength="160"
+                />
+              </div>
+              <div class="field full">
+                <label for="website">Current website</label>
+                <input
+                  id="website"
+                  name="website"
+                  type="text"
+                  inputmode="url"
+                  autocomplete="url"
+                  placeholder="example.com"
+                  maxlength="300"
+                />
+              </div>
+              <div class="field">
+                <label for="project-type">What do you need? *</label>
+                <select id="project-type" name="project_type" required>
+                  <option value="">Select one</option>
+                  <option>Website rescue or repair</option>
+                  <option>New website or redesign</option>
+                  <option>Custom application or automation</option>
+                  <option>Civic or campaign digital</option>
+                  <option>Ongoing technical support</option>
+                  <option>Something else</option>
+                </select>
+              </div>
+              <div class="field">
+                <label for="timeline">When do you need it?</label>
+                <select id="timeline" name="timeline">
+                  <option value="">Select one</option>
+                  <option>Immediately</option>
+                  <option>Within 1 week</option>
+                  <option>Within 1 month</option>
+                  <option>Within 3 months</option>
+                  <option>Still planning</option>
+                </select>
+              </div>
+              <div class="field full">
+                <label for="budget">Approximate working budget</label>
+                <select id="budget" name="budget">
+                  <option value="">Select one</option>
+                  <option>Under $2,500</option>
+                  <option>$2,500–$5,000</option>
+                  <option>$5,000–$10,000</option>
+                  <option>$10,000–$25,000</option>
+                  <option>$25,000+</option>
+                  <option>Not sure yet</option>
+                </select>
+              </div>
+              <div class="field full">
+                <label for="message"
+                  >What is broken, blocked, or ready to build? *</label
+                >
+                <textarea
+                  id="message"
+                  name="message"
+                  required
+                  minlength="10"
+                  maxlength="4000"
+                  placeholder="The problem, the deadline, and what a good outcome looks like."
+                ></textarea>
+              </div>
+            </div>
+
+            <div class="hp" aria-hidden="true">
+              <label for="company-url">Leave this field empty</label>
+              <input
+                id="company-url"
+                name="company_url"
+                tabindex="-1"
+                autocomplete="off"
+              />
+            </div>
+            <input type="hidden" name="form_started_at" id="form-started-at" />
+            <input type="hidden" name="source_page" id="source-page" />
+            <input type="hidden" name="referrer" id="referrer" />
+            <input type="hidden" name="utm_source" id="utm-source" />
+            <input type="hidden" name="utm_medium" id="utm-medium" />
+            <input type="hidden" name="utm_campaign" id="utm-campaign" />
+            <input type="hidden" name="utm_term" id="utm-term" />
+            <input type="hidden" name="utm_content" id="utm-content" />
+            <input type="hidden" name="gclid" id="gclid" />
+
+            <label class="consent">
+              <input type="checkbox" required />
+              <span
+                >East Bay Projects may contact me about this request. I
+                understand that submitting this form does not create a client
+                relationship.</span
+              >
+            </label>
+            <button class="button submit" type="submit">
+              Send project details <span aria-hidden="true">↗</span>
+            </button>
+            <p class="fine-print">
+              Your information is used only to evaluate and respond to this
+              inquiry. See our <a href="/privacy.html">privacy notice</a>.
+            </p>
+          </form>
+        </div>
+        <div class="status" id="success" role="status">
+          <p class="form-kicker">Message received</p>
+          <h2>Thanks for getting in touch.</h2>
+          <p>
+            Your project details are recorded. Nate will review them and
+            normally respond within one business day.
+          </p>
+          <a href="/editorial/">Back to East Bay Projects ↗</a>
+        </div>
+        <div class="status error" id="error" role="alert">
+          <p class="form-kicker">Something went wrong</p>
+          <h2>Please try again.</h2>
+          <p>
+            Your submission was not recorded. Try again using the form above, or
+            email
+            <a href="mailto:contact@eastbayprojects.com"
+              >contact@eastbayprojects.com</a
+            >.
+          </p>
+        </div>
+      </section>
+    </main>
+    <footer class="site-footer">
+      <div class="wrap">
+        <div class="footer-top">
+          <div>
+            <a class="footer-logo" href="/editorial/">east bay projects.</a>
+            <p class="footer-tagline">
+              Thoughtful design. Useful technology. Real people.
+            </p>
+          </div>
+          <div class="footer-links">
+            <div>
+              <a href="/editorial/portfolio.html">Our work</a
+              ><a href="/editorial/#services">What we do</a
+              ><a href="/editorial/civic.html">Civic &amp; campaigns</a>
+            </div>
+            <div>
+              <a href="/editorial/#about">The studio</a
+              ><a href="/editorial/contact">Start a project ↗</a
+              ><a href="mailto:contact@eastbayprojects.com">Email us ↗</a>
+            </div>
+          </div>
+        </div>
+        <div class="footer-base">
+          <span>© 2026 East Bay Projects</span
+          ><span>Austin, TX &amp; Washington, DC · Made in the USA</span
+          ><a href="/privacy.html">Privacy</a>
+        </div>
+      </div>
+    </footer>
+    <script>
+      const params = new URLSearchParams(window.location.search);
+      const formWrap = document.getElementById("form-wrap");
+      if (params.get("submitted") === "1") {
+        formWrap.style.display = "none";
+        document.getElementById("success").style.display = "block";
+        document.title = "Thank You | East Bay Projects";
+        if (typeof gtag === "function") {
+          gtag("event", "conversion", {
+            send_to: "AW-18335868802",
+          });
+        }
+      } else if (params.get("error") === "1") {
+        document.getElementById("error").style.display = "block";
+      }
+
+      document.getElementById("form-started-at").value = Date.now();
+      document.getElementById("source-page").value = window.location.href;
+      document.getElementById("referrer").value = document.referrer;
+      for (const key of [
+        "utm_source",
+        "utm_medium",
+        "utm_campaign",
+        "utm_term",
+        "utm_content",
+        "gclid",
+      ]) {
+        const field = document.getElementById(key.replaceAll("_", "-"));
+        if (field) field.value = params.get(key) || "";
+      }
+    </script>
+  </body>
+</html>

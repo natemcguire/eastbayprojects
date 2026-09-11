@@ -1,0 +1,4 @@
+name = "eastbayprojects-designs"
+compatibility_date = "2026-09-11"
+pages_build_output_dir = "../design-dist"
+# Deliberately no production bindings, Functions, or custom domains.

@@ -1,6 +1,6 @@
 # East Bay Projects — Current Status
 
-Last updated: July 27, 2026
+Last updated: September 11, 2026
 
 ## Source of truth
 
@@ -20,6 +20,24 @@ Last updated: July 27, 2026
 After the July 20 handoff, development should continue from the Mac mini checkout at
 `~/Projects/eastbayprojects`. Do not treat the laptop checkout as the active development
 workspace unless a new handoff explicitly reverses this decision.
+
+## Design exploration (September 11, 2026)
+
+- Nate requested ten distinct design directions, following the Seamaphore review approach,
+  on a separate test site. Production is not being redesigned or deployed in this change.
+- Test project: `eastbayprojects-designs`, planned URL `https://eastbayprojects-designs.pages.dev`.
+- Public source: `design-lab/`; build with `python3 scripts/build-design-lab.py`.
+- The generated `design-dist/` contains only the prototypes and public portfolio/team assets.
+  Run the deploy command from `design-lab/`, with explicit project name `eastbayprojects-designs`.
+- The gallery offers ten complete homepage directions, local shortlisting, and side-by-side
+  comparison at desktop and phone widths. Editorial also includes work, civic, and contact pages.
+- The positioning study pairs a business/product partner with a senior engineer. Shared offers
+  focus on reaching people, improving workflows, and launching products or public initiatives.
+  Civic projects share the main portfolio with commercial work; Seamaphore and Nate’s Software
+  are included as public examples. Copy remains exploratory.
+- Prototype forms stay in the browser. No advertising tags, production Functions, database
+  bindings, or private runtime state are included. Indexing is disabled.
+- Production baseline remains deployment `ebee08a6-5604-49e9-aa83-413cda292621` at source `8a88235`.
 
 ## Live site
 
