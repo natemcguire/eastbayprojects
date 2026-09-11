@@ -28,8 +28,13 @@ workspace unless a new handoff explicitly reverses this decision.
   digital presence, operations, and product delivery. The homepage now explains the engineer
   and Operations Expert partnership. Desktop/mobile layout and all local links passed checks.
 - Nate requested substantially deeper business cases after reviewing the first opportunity
-  studies. Two Astra agents are reworking them for neutral printable proposals. These replace
-  the earlier research as recommendations; proposal artifacts remain local while in progress.
+  studies. Two Astra agents completed deeper cases and neutral six-page printable PDFs, kept local
+  under ignored `output/pdf/`. Kingstowne now focuses on 2027 contract economics and
+  whole-account churn; Straus on its disclosed manufacturing-loss priority, incremental
+  sales, and rollout cash needs. The existing test opportunity pages retain their earlier
+  exploratory content; the new PDFs replace those as current business recommendations.
+  Source memos and reproducible PDF builders are local in `output/pdf/.source/`.
+  No outreach or production deployment accompanied this work.
 
 - Nate rejected the ten replacement designs and asked to preserve the current site while
   incorporating civic throughout. Root production source pages remain unchanged.
