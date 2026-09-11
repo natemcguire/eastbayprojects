@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500;600;700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap');
 :root { --paper:#F5F5EF; --paper-dark:#E9EBE2; --ink:#202920; --blue:#202D26; --blue-dark:#17221C; --blue-mid:#394C3D; --amber:#BCD48E; --amber-light:#D0E6A8; --white:#FAFBF7; --rule:#CCD0C5; --muted:#626B60; }
 html { scroll-padding-top:90px; }
@@ -40,3 +41,28 @@ a,button { transition:background .2s,color .2s,transform .2s; }
 .form-kicker,.section-kicker { color:#566D40; }
 .plain-dark .section-kicker,.section-dark .section-kicker { color:#BCD48E; }
 .card .card-tag { color:#BDCAB4; }.card .card-num,.card .card-url { color:#BCD48E; }
+/* Direction two: a typographic studio, with a restrained vermilion accent. */
+
+:root { --paper:#FAF9F6; --paper-dark:#EEECE7; --ink:#20201F; --blue:#242423; --blue-dark:#171716; --blue-mid:#41413E; --amber:#FF7055; --amber-light:#FF957F; --white:#FAF9F6; --rule:#D2CFC8; --muted:#686660; }
+#site-header,body>header { background:#FAF9F6; border-color:#D2CFC8; }
+.header-logo,.logo { letter-spacing:-.055em; font-size:20px; }.header-logo em,.logo em { color:#DF442F; }
+.header-inner { height:88px; min-height:88px; }.header-nav a:hover,header nav a:hover,header nav a.active { color:#D9432D; }
+.btn-header,.btn-nav,.nav-cta,.btn-fill,.btn-ghost,.btn-cta,.btn,.f-submit,.submit { border-radius:0; }
+#hero { padding:152px 48px 32px; background:#FAF9F6; }
+#hero .hero-inner { grid-template-columns:minmax(0,1fr) 325px; gap:70px; align-items:end; }
+.hero-headline { font-family:'Barlow Condensed','Arial Narrow',sans-serif!important; font-weight:600; font-size:clamp(72px,9.2vw,132px); line-height:.86; letter-spacing:-.025em!important; margin-bottom:38px; }
+.hero-eyebrow { color:#74716A; font-size:10px; letter-spacing:.07em; margin-bottom:40px; }
+.amber-period { color:#E6442D; }.hero-sub { color:#64615B; max-width:580px; font-size:17px; line-height:1.7; }
+.btn-fill { background:#E6442D; border-color:#E6442D; color:#FFF; }.btn-fill:hover { background:#BD321F; border-color:#BD321F; }.btn-ghost { border-color:#AAA59C; color:#282724; }
+.typewriter-label { border-color:#B9B3AA; color:#737067; }.typewriter-box { background:#EEEAE3; border:0; border-left:3px solid #E6442D; border-radius:0; padding:30px; min-height:188px; }.tw-prefix { color:#7C7267; }#tw-display { font-family:'Barlow Condensed',sans-serif; font-size:42px; font-weight:500; color:#262522; line-height:1; letter-spacing:0; }.cursor { background:#E6442D; width:2px; }.hero-bottom { margin-top:70px; }.hero-rule { background:#B7B2A8; }.hero-byline { color:#767168; }
+.sec-cream { background:#FAF9F6; }.sec-dark { background:#242423; }.sec-heading,.page-title,.cta-title,.section-title { font-family:'Barlow Condensed',sans-serif!important; font-weight:600; font-size:clamp(48px,5.2vw,76px); line-height:.96; letter-spacing:-.01em!important; }.num-bg { color:#D9432D; }.num-bg.light { color:#FF7055; }
+.problem-grid { gap:48px; }.prob-card { border-color:#B6AEA2; }.prob-card h3 { font-size:26px; font-weight:500; }.prob-card p { color:#6A665E; }.card-tag { color:#AE3929; }
+.services-grid { gap:0; border-top:1px solid #66625A; border-left:1px solid #66625A; }.svc-card { background:transparent; border:0; border-right:1px solid #66625A; border-bottom:1px solid #66625A; border-radius:0; padding:36px; }.svc-card:hover { background:#30302D; transform:none; }.svc-card h3 { font-family:'Barlow Condensed',sans-serif!important; font-size:34px; letter-spacing:0!important; font-weight:500; }.svc-subhead { color:#FF947D; }.svc-card p { color:#CCC9C1; }.svc-price { color:#FF947D; }.pill { border-color:#69665E; color:#C9C5BC; border-radius:0; }
+.adv-num { color:#D9432D; }.adv-body { color:#69655D; }.spec-box { background:#EEEAE3; border-color:#C5BBAE; border-radius:0; }.spec-titlebar { background:#272723; }.spec-corner-l,.spec-dwg { color:#C7573B; }
+#about,.about-l { background:#242423; }.about-r { background:#EEEAE3; }.about-email { color:#FF947D; }.crew-member img { border-color:#C1B8AA!important; }.contact-note,.cinfo-label { color:#B54532; }.f-group input,.f-group textarea,.f-group select,input,textarea,select { border-color:#BDB6AC; border-radius:0; background:#FFF; }
+#footer,footer { background:#242423; border-top:1px solid #60594E; }.footer-email,.f-email { color:#FF947D; }
+.page-hero { background:#FAF9F6; }.page-title { font-size:clamp(74px,10vw,142px); }.page-title em { color:#D9432D; }.page-sub { color:#69655D; }.eyebrow { color:#AA402F; }.card { background:#242423; border:0; border-radius:0; }.card-title { font-family:'Barlow Condensed',sans-serif!important; font-size:43px; letter-spacing:0!important; }.card .card-tag { color:#C1BCB2; }.card .card-num,.card .card-url { color:#FF947D; }
+.hero,.pitch { background:#242423; }.hero h1,.pitch h1 { font-family:'Barlow Condensed',sans-serif!important; font-size:clamp(66px,8vw,122px); line-height:.92; letter-spacing:-.01em!important; }.hero-proof { border-color:#FF7055; }.proof-stat { font-family:'Barlow Condensed',sans-serif!important; font-size:48px; }.case,.case+.case { border-radius:0; }.form-kicker,.section-kicker { color:#B34632; }.plain-dark .section-kicker,.section-dark .section-kicker { color:#FF947D; }
+:focus-visible { outline-color:#D9432D; }
+@media(max-width:1100px) { #hero .hero-inner { grid-template-columns:minmax(0,1fr) 260px; gap:36px; }.hero-headline { font-size:clamp(62px,9vw,102px); }.typewriter-box { padding:24px; }#tw-display { font-size:34px; } }
+@media(max-width:768px) { #hero { padding:126px 24px 30px; }#hero .hero-inner { grid-template-columns:1fr; gap:38px; }.hero-headline { font-size:clamp(52px,12.8vw,96px); line-height:.91; }.hero-eyebrow { margin-bottom:32px; }.hero-sub { font-size:16px; }.typewriter-box { min-height:130px; }.hero-bottom { margin-top:40px; }.header-inner { min-height:72px; height:72px; }.header-logo,.logo { font-size:18px; }.svc-card { padding:28px; }.sec-heading { font-size:48px; }.hero h1,.pitch h1 { font-size:64px; }.page-title { font-size:86px; } }

@@ -25,7 +25,7 @@ workspace unless a new handoff explicitly reverses this decision.
 
 - User superseded the content changes: the active test must use the live site's exact text and structure, with styling changes only and no campaign hero feature.
 - `scripts/build-restyle.py` copies the five live marketing pages and applies `design-lab/restyle/style.css`. It asserts exact visible-text equality on every page.
-- The new style uses warm ivory, deep green, and modern typography. Preview builds omit analytics and neutralize form submission; no production source is modified.
+- The latest style uses oversized condensed typography, warm white, charcoal, and vermilion accents. Preview builds omit analytics and neutralize form submission; no production source is modified.
 - Previous content explorations remain in `design-lab/current/` but are not part of this build.
 - Local desktop/mobile review, navigation and asset checks passed. Deployed to `https://4b150e4f.eastbayprojects-designs.pages.dev` from `42f5e87`; production deployment ID verified unchanged.
 
@@ -236,3 +236,8 @@ fake interface text, generic AI office scenes, compliance claims, and unrelated 
 - Added a public-source Sea Trek opportunity study in place of Straus on the study index, and expanded the Kingstowne renewal explanation. No private customer evidence is in the site.
 - Completed two eight-page, print-friendly local proposal PDFs in `output/pdf/`; artifacts and editable builders remain ignored and local-only.
 - Checked PDF page layouts, local website links, desktop layout, and mobile navigation. Deployed to `https://b8ea5886.eastbayprojects-designs.pages.dev` (source `18703f6`). Production deployment ID is unchanged; direct scripted HTTP verification received a 403, so the deployed pages were checked in the browser.
+
+### Second exact-content style (September 11, 2026)
+
+- Reworked typography, color, service grids, and buttons while preserving all five live pages verbatim. No campaign imagery added to the homepage.
+- Previous ivory/green preview remains available at `https://4b150e4f.eastbayprojects-designs.pages.dev`. New deployment pending.
