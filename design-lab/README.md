@@ -1,7 +1,9 @@
-# East Bay Projects design exploration
+# East Bay Projects test site
 
-Ten independent design directions, with a comparison gallery and a persistent
-direction switcher, following the approach used for the Seamaphore exploration.
+The active preview retains the existing East Bay Projects design and integrates civic
+through the main homepage, services, portfolio, navigation, and inquiry flow. It also
+includes careers and two prospective operations/growth studies. The initial ten
+design explorations remain available as an archive.
 This is a separate test site. The root marketing pages and production Cloudflare
 Pages project are not part of this build or deployment.
 
@@ -15,9 +17,16 @@ Deploy from this directory:
 wrangler pages deploy ../design-dist --project-name eastbayprojects-designs --branch main
 ```
 
-The gallery is `/`; individual directions use the IDs in `concepts.json`.
+The active revision is `/` (also `/current/`). Careers are at `/current/careers.html`;
+prospective studies are at `/current/case-studies.html`, with separate Kingstowne
+and Straus pages. The research memos in `docs/research/` cite public sources and
+separate facts from hypotheses; they are not copied into the deployment.
+
+The archived gallery is `/directions.html`; individual directions use the IDs in `concepts.json`.
 `/compare.html` shows two directions side by side, with desktop and phone views.
-Preview forms run entirely in the browser and do not submit or store inquiries.
+Preview forms, including the careers form, run entirely in the browser and do not
+submit or store inquiries or applications. Forms are inert until their preview
+handlers are attached.
 There are no advertising tags, production database bindings, or email senders.
 All routes are marked noindex, with an additional response header and robots file.
 

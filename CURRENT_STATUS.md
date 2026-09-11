@@ -21,12 +21,39 @@ After the July 20 handoff, development should continue from the Mac mini checkou
 `~/Projects/eastbayprojects`. Do not treat the laptop checkout as the active development
 workspace unless a new handoff explicitly reverses this decision.
 
+## Active test revision (September 11, 2026)
+
+- Nate rejected the ten replacement designs and asked to preserve the current site while
+  incorporating civic throughout. Root production source pages remain unchanged.
+- The test site's `/` and `/current/` now use the existing navy/amber, Bebas Neue, Lora, and
+  technical-grid design. Civic appears in the homepage story, rotating audience list, standard
+  service grid, shared portfolio, team language, and inquiry flow.
+- Navigation is shared across the revised homepage, portfolio, civic detail, contact, careers,
+  opportunity-study index, and two individual studies. Seamaphore and Nate’s Software remain
+  included alongside the commercial and civic portfolio.
+- Careers at `/current/careers.html` describe Forward-Deployed Engineer and Operations Expert
+  roles, including how the pair works together. The preview currently invites employees and
+  contractors; employment terms and compensation have not been specified by Nate.
+- Two user-requested research agents produced public-source memos under `docs/research/`:
+  Kingstowne Lawn & Landscape in Alexandria and Straus Family Creamery in the North Bay.
+  Their published pages are explicitly prospective opportunity studies, with proposed pilots
+  and measurement plans; no client relationship or delivered result is represented.
+- Kingstowne pilot: match one seasonal service to customer eligibility and capacity within
+  existing route clusters, measuring completed work, contribution/crew-hour, and office effort.
+- Straus pilot: follow qualified café interest through distributor handoff and first/repeat
+  orders, measuring account activation, incremental cases, contribution, and staff effort.
+- Public preview assets only; inquiry/application forms are inert without JavaScript and
+  simulate submission locally. No production functions, databases, tracking, or private state.
+- Validation: all 8 pages at 1440px and 390px, key pages at 320px; shared mobile navigation,
+  careers role selection and form simulation, civic inquiry preselection, and local links/anchors.
+- The earlier explorations are archived at `/directions.html` on the same test project.
+
 ## Design exploration (September 11, 2026)
 
 - Nate requested ten distinct design directions, following the Seamaphore review approach,
   on a separate test site. Production is not being redesigned or deployed in this change.
 - Test project: `eastbayprojects-designs`, URL `https://eastbayprojects-designs.pages.dev`.
-- Deployed source: `2325d7a`; deployment `https://8245e059.eastbayprojects-designs.pages.dev`.
+- Initial exploration source: `2325d7a`; deployment `https://8245e059.eastbayprojects-designs.pages.dev`.
 - Public source: `design-lab/`; build with `python3 scripts/build-design-lab.py`.
 - The generated `design-dist/` contains only the prototypes and public portfolio/team assets.
   Run the deploy command from `design-lab/`, with explicit project name `eastbayprojects-designs`.
