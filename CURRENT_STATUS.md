@@ -23,6 +23,14 @@ workspace unless a new handoff explicitly reverses this decision.
 
 ## Active test revision (September 11, 2026)
 
+- Follow-up design refinement preserves the visual identity while featuring a civic project in
+  the hero, showing project imagery in the homepage portfolio, and unifying services around
+  digital presence, operations, and product delivery. The homepage now explains the engineer
+  and Operations Expert partnership. Desktop/mobile layout and all local links passed checks.
+- Nate requested substantially deeper business cases after reviewing the first opportunity
+  studies. Two Astra agents are reworking them for neutral printable proposals. These replace
+  the earlier research as recommendations; proposal artifacts remain local while in progress.
+
 - Nate rejected the ten replacement designs and asked to preserve the current site while
   incorporating civic throughout. Root production source pages remain unchanged.
 - Verified test deployment: `https://31f18329.eastbayprojects-designs.pages.dev`, source
