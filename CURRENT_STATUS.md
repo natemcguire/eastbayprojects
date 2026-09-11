@@ -264,3 +264,10 @@ fake interface text, generic AI office scenes, compliance claims, and unrelated 
 - Completed the private, neutral `output/pdf/growth-partnership-pitch.pdf`: seven-page engagement pitch followed by evidence, scenario analysis, and the prior technical appendix.
 - The PDF and supporting source remain ignored and local-only. No private research or customer evidence was added to Git.
 - Rendered and reviewed the new pages and checked scenario arithmetic. No production or test deployment changed.
+
+### Engagement model and styled proposals (September 11, 2026)
+
+- Added the bounded fit review to the test homepage, clarified the agreement-before-build model, and retained integrated civic work and the existing design language.
+- Added a public-source Sea Trek opportunity study in place of Straus on the study index, and expanded the Kingstowne renewal explanation. No private customer evidence is in the site.
+- Completed two eight-page, print-friendly local proposal PDFs in `output/pdf/`; artifacts and editable builders remain ignored and local-only.
+- Checked PDF page layouts, local website links, desktop layout, and mobile navigation. Test deployment pending; production unchanged.
