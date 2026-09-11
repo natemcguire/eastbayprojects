@@ -258,3 +258,9 @@ fake interface text, generic AI office scenes, compliance claims, and unrelated 
 - Campaign-level review is pending with safe defaults: DMV geography, $15 daily budget, and
   create paused.
 - Actual Google Ads synchronization has not run and remains a separate, explicitly authorized step.
+
+### Local engagement proposal revision (September 11, 2026)
+
+- Completed the private, neutral `output/pdf/growth-partnership-pitch.pdf`: seven-page engagement pitch followed by evidence, scenario analysis, and the prior technical appendix.
+- The PDF and supporting source remain ignored and local-only. No private research or customer evidence was added to Git.
+- Rendered and reviewed the new pages and checked scenario arithmetic. No production or test deployment changed.
