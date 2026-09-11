@@ -23,46 +23,11 @@ workspace unless a new handoff explicitly reverses this decision.
 
 ## Active test revision (September 11, 2026)
 
-- Follow-up design refinement preserves the visual identity while featuring a civic project in
-  the hero, showing project imagery in the homepage portfolio, and unifying services around
-  digital presence, operations, and product delivery. The homepage now explains the engineer
-  and Operations Expert partnership. Desktop/mobile layout and all local links passed checks.
-- Nate requested substantially deeper business cases after reviewing the first opportunity
-  studies. Two Astra agents completed deeper cases and neutral six-page printable PDFs, kept local
-  under ignored `output/pdf/`. Kingstowne now focuses on 2027 contract economics and
-  whole-account churn; Straus on its disclosed manufacturing-loss priority, incremental
-  sales, and rollout cash needs. The existing test opportunity pages retain their earlier
-  exploratory content; the new PDFs replace those as current business recommendations.
-  Source memos and reproducible PDF builders are local in `output/pdf/.source/`.
-  No outreach or production deployment accompanied this work.
-
-- Nate rejected the ten replacement designs and asked to preserve the current site while
-  incorporating civic throughout. Root production source pages remain unchanged.
-- Verified test deployment: `https://c8468833.eastbayprojects-designs.pages.dev`, source
-  `0f1d391`; public alias `https://eastbayprojects-designs.pages.dev`. All eight deployed
-  pages were checked in the browser. Production remains at `ebee08a6` / source `8a88235`.
-- The test site's `/` and `/current/` now use the existing navy/amber, Bebas Neue, Lora, and
-  technical-grid design. Civic appears in the homepage story, featured project, shared service
-  descriptions, visual portfolio, team language, and inquiry flow.
-- Navigation is shared across the revised homepage, portfolio, civic detail, contact, careers,
-  opportunity-study index, and two individual studies. Seamaphore and Nate’s Software remain
-  included alongside the commercial and civic portfolio.
-- Careers at `/current/careers.html` describe Forward-Deployed Engineer and Operations Expert
-  roles, including how the pair works together. The preview currently invites employees and
-  contractors; employment terms and compensation have not been specified by Nate.
-- Two user-requested research agents produced public-source memos under `docs/research/`:
-  Kingstowne Lawn & Landscape in Alexandria and Straus Family Creamery in the North Bay.
-  Their published pages are explicitly prospective opportunity studies, with proposed pilots
-  and measurement plans; no client relationship or delivered result is represented.
-- Kingstowne pilot: match one seasonal service to customer eligibility and capacity within
-  existing route clusters, measuring completed work, contribution/crew-hour, and office effort.
-- Straus pilot: follow qualified café interest through distributor handoff and first/repeat
-  orders, measuring account activation, incremental cases, contribution, and staff effort.
-- Public preview assets only; inquiry/application forms are inert without JavaScript and
-  simulate submission locally. No production functions, databases, tracking, or private state.
-- Validation: all 8 pages at 1440px and 390px, key pages at 320px; shared mobile navigation,
-  careers role selection and form simulation, civic inquiry preselection, and local links/anchors.
-- The earlier explorations are archived at `/directions.html` on the same test project.
+- User superseded the content changes: the active test must use the live site's exact text and structure, with styling changes only and no campaign hero feature.
+- `scripts/build-restyle.py` copies the five live marketing pages and applies `design-lab/restyle/style.css`. It asserts exact visible-text equality on every page.
+- The new style uses warm ivory, deep green, and modern typography. Preview builds omit analytics and neutralize form submission; no production source is modified.
+- Previous content explorations remain in `design-lab/current/` but are not part of this build.
+- Local desktop/mobile review, navigation and asset checks passed. Test-only deployment pending.
 
 ## Design exploration (September 11, 2026)
 
