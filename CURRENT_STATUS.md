@@ -25,6 +25,9 @@ workspace unless a new handoff explicitly reverses this decision.
 
 - Nate rejected the ten replacement designs and asked to preserve the current site while
   incorporating civic throughout. Root production source pages remain unchanged.
+- Verified test deployment: `https://31f18329.eastbayprojects-designs.pages.dev`, source
+  `32b65fe`; public alias `https://eastbayprojects-designs.pages.dev`. All eight deployed
+  pages were checked in the browser. Production remains at `ebee08a6` / source `8a88235`.
 - The test site's `/` and `/current/` now use the existing navy/amber, Bebas Neue, Lora, and
   technical-grid design. Civic appears in the homepage story, rotating audience list, standard
   service grid, shared portfolio, team language, and inquiry flow.
