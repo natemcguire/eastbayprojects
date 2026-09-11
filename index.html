@@ -197,6 +197,9 @@
     .about-name { font-family: 'Bebas Neue', sans-serif; font-size: clamp(52px, 6vw, 72px); line-height: 0.92; letter-spacing: 0.03em; color: var(--white); margin-bottom: 16px; position: relative; z-index: 1; }
     .about-role { font-family: 'IBM Plex Mono', monospace; font-size: 13px; letter-spacing: 0.2em; text-transform: uppercase; color: var(--amber); margin-bottom: 24px; position: relative; z-index: 1; }
     .about-rule { width: 80px; height: 2px; background: var(--amber); margin-bottom: 20px; position: relative; z-index: 1; }
+    .crew { display: flex; gap: 40px; flex-wrap: wrap; position: relative; z-index: 1; }
+    .crew-member { display: flex; flex-direction: column; }
+    .crew-name { font-family: 'IBM Plex Mono', monospace; font-size: 15px; font-weight: 600; letter-spacing: 0.1em; color: #fff; margin: 16px 0 6px; }
     .about-email { font-family: 'IBM Plex Mono', monospace; font-size: 12px; letter-spacing: 0.08em; color: rgba(253,252,250,0.7); position: relative; z-index: 1; }
     .about-r { background: var(--paper); padding: 80px 60px; display: flex; flex-direction: column; justify-content: center; }
     .about-body { font-family: 'Lora', Georgia, serif; font-size: 17px; line-height: 1.75; color: rgba(15,15,15,0.82); margin-bottom: 40px; }
@@ -486,21 +489,33 @@
 
   <section id="about">
     <div class="about-l">
-      <img src="nate.jpg" alt="Nate McGuire" style="width:140px;height:140px;border-radius:50%;object-fit:cover;object-position:center top;border:3px solid #C8750A;margin-bottom:1.5rem;display:block;position:relative;z-index:1">
-      <p class="about-name">NATE<br>McGUIRE</p>
-      <p class="about-role">FOUNDER</p>
-      <div class="about-rule"></div>
+      <div class="crew">
+        <div class="crew-member">
+          <img src="nate.jpg" alt="Nate McGuire" style="width:112px;height:112px;border-radius:50%;object-fit:cover;object-position:center top;border:3px solid #C8750A;display:block;position:relative;z-index:1">
+          <p class="crew-name">NATE McGUIRE</p>
+          <p class="about-role" style="margin-bottom:0">FOUNDER &middot; BUILD</p>
+        </div>
+        <div class="crew-member">
+          <img src="assets/josh.png" alt="Josh McGuire" style="width:112px;height:112px;border-radius:50%;object-fit:cover;object-position:center top;border:3px solid #C8750A;display:block;position:relative;z-index:1">
+          <p class="crew-name">JOSH McGUIRE</p>
+          <p class="about-role" style="margin-bottom:0">DELIVERY &middot; SHIP</p>
+        </div>
+      </div>
+      <div class="about-rule" style="margin-top:32px"></div>
       <a href="mailto:contact@eastbayprojects.com" class="about-email">contact@eastbayprojects.com</a>
     </div>
     <div class="about-r">
-      <p class="about-body">East Bay Projects is led by <a href="https://natemcguire.com">Nate McGuire</a>&mdash;a Distinguished Engineer and founder of Mayven Studios, the agency behind work for Google, Facebook, IBM, Airbnb, and Andreessen Horowitz. Mayven was acquired by Saltwater, founded by Uber&rsquo;s first employee and first CEO. Nate brings 15+ years of building digital systems that actually work.</p>
+      <p class="about-body" style="margin-bottom:1.25rem">East Bay Projects works like a general contractor for software: one team that scopes the job, brings the right crew, and delivers &mdash; small jobs and large, for a growing roster of clients who need it done right.</p>
+      <p class="about-body" style="margin-bottom:1.25rem"><strong><a href="https://natemcguire.com">Nate McGuire</a></strong> is a Distinguished Engineer with 15+ years building digital systems that work. He founded Mayven Studios &mdash; the agency behind projects for Google, Facebook, IBM, Airbnb, and Andreessen Horowitz &mdash; which was acquired by Saltwater, founded by Uber&rsquo;s first employee.</p>
+      <p class="about-body"><strong>Josh McGuire</strong> is a Certified Scrum Master with 9+ years running complex delivery programs across Big Four consulting and venture-backed teams. He led delivery at Mayven and now runs technology programs at Deloitte and manages the Lightspeed Venture Partners account.</p>
       <div class="creds">
-        <p class="cred"><strong>DISTINGUISHED ENGINEER</strong></p>
         <p class="cred"><strong>NoVa: ALEXANDRIA &amp; D.C.</strong> &middot; TEXAS: AUSTIN &amp; SAN ANTONIO</p>
         <div style="display:flex;flex-wrap:wrap;gap:10px;margin-top:12px">
-          <span style="font-family:'IBM Plex Mono',monospace;font-size:13px;font-weight:600;letter-spacing:0.12em;text-transform:uppercase;color:var(--ink);background:var(--paper-dark,#E8E2D6);border:1.5px solid var(--rule,#C8C0B0);padding:8px 16px;display:inline-block">FORTUNE 500</span>
-          <span style="font-family:'IBM Plex Mono',monospace;font-size:13px;font-weight:600;letter-spacing:0.12em;text-transform:uppercase;color:var(--ink);background:var(--paper-dark,#E8E2D6);border:1.5px solid var(--rule,#C8C0B0);padding:8px 16px;display:inline-block">VENTURE-BACKED STARTUPS</span>
-          <span style="font-family:'IBM Plex Mono',monospace;font-size:13px;font-weight:600;letter-spacing:0.12em;text-transform:uppercase;color:var(--amber,#C8750A);background:var(--paper-dark,#E8E2D6);border:1.5px solid var(--amber,#C8750A);padding:8px 16px;display:inline-block">REAL ECONOMY</span>
+          <span style="font-family:'IBM Plex Mono',monospace;font-size:13px;font-weight:600;letter-spacing:0.12em;text-transform:uppercase;color:var(--ink);background:var(--paper-dark,#E8E2D6);border:1.5px solid var(--rule,#C8C0B0);padding:8px 16px;display:inline-block">FORTUNE 1000 COMPANIES</span>
+          <span style="font-family:'IBM Plex Mono',monospace;font-size:13px;font-weight:600;letter-spacing:0.12em;text-transform:uppercase;color:var(--ink);background:var(--paper-dark,#E8E2D6);border:1.5px solid var(--rule,#C8C0B0);padding:8px 16px;display:inline-block">SMB</span>
+          <span style="font-family:'IBM Plex Mono',monospace;font-size:13px;font-weight:600;letter-spacing:0.12em;text-transform:uppercase;color:var(--ink);background:var(--paper-dark,#E8E2D6);border:1.5px solid var(--rule,#C8C0B0);padding:8px 16px;display:inline-block">FAMILY OWNED &amp; OPERATED</span>
+          <span style="font-family:'IBM Plex Mono',monospace;font-size:13px;font-weight:600;letter-spacing:0.12em;text-transform:uppercase;color:var(--ink);background:var(--paper-dark,#E8E2D6);border:1.5px solid var(--rule,#C8C0B0);padding:8px 16px;display:inline-block">STARTUPS</span>
+          <span style="font-family:'IBM Plex Mono',monospace;font-size:13px;font-weight:600;letter-spacing:0.12em;text-transform:uppercase;color:var(--amber,#C8750A);background:var(--paper-dark,#E8E2D6);border:1.5px solid var(--amber,#C8750A);padding:8px 16px;display:inline-block">PHYSICAL ECONOMY</span>
         </div>
       </div>
     </div>

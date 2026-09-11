@@ -1,8 +1,9 @@
 #!/bin/zsh
 set -euo pipefail
 
-expected_host="Nates-Mac-mini.local"
+expected_host="Nates-Mac-mini"
 current_host="$(hostname)"
+current_host="${current_host%.local}"
 
 if [[ "$current_host" != "$expected_host" && "${EASTBAY_ALLOW_LOCAL:-0}" != "1" ]]; then
   cat >&2 <<EOF
@@ -44,4 +45,3 @@ if (( behind > 0 )); then
 fi
 
 echo "Preflight OK: $current_host $(git rev-parse --short HEAD) matches origin/main."
-
