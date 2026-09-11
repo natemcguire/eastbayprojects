@@ -270,4 +270,4 @@ fake interface text, generic AI office scenes, compliance claims, and unrelated 
 - Added the bounded fit review to the test homepage, clarified the agreement-before-build model, and retained integrated civic work and the existing design language.
 - Added a public-source Sea Trek opportunity study in place of Straus on the study index, and expanded the Kingstowne renewal explanation. No private customer evidence is in the site.
 - Completed two eight-page, print-friendly local proposal PDFs in `output/pdf/`; artifacts and editable builders remain ignored and local-only.
-- Checked PDF page layouts, local website links, desktop layout, and mobile navigation. Test deployment pending; production unchanged.
+- Checked PDF page layouts, local website links, desktop layout, and mobile navigation. Deployed to `https://b8ea5886.eastbayprojects-designs.pages.dev` (source `18703f6`). Production deployment ID is unchanged; direct scripted HTTP verification received a 403, so the deployed pages were checked in the browser.
