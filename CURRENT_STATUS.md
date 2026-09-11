@@ -240,4 +240,4 @@ fake interface text, generic AI office scenes, compliance claims, and unrelated 
 ### Second exact-content style (September 11, 2026)
 
 - Reworked typography, color, service grids, and buttons while preserving all five live pages verbatim. No campaign imagery added to the homepage.
-- Previous ivory/green preview remains available at `https://4b150e4f.eastbayprojects-designs.pages.dev`. New deployment pending.
+- Previous ivory/green preview remains available at `https://4b150e4f.eastbayprojects-designs.pages.dev`. Latest preview: `https://64dc9423.eastbayprojects-designs.pages.dev` from `38f23ff`. Desktop/mobile checks passed; production deployment unchanged.
