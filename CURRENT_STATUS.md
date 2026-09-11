@@ -25,7 +25,8 @@ workspace unless a new handoff explicitly reverses this decision.
 
 - Nate requested ten distinct design directions, following the Seamaphore review approach,
   on a separate test site. Production is not being redesigned or deployed in this change.
-- Test project: `eastbayprojects-designs`, planned URL `https://eastbayprojects-designs.pages.dev`.
+- Test project: `eastbayprojects-designs`, URL `https://eastbayprojects-designs.pages.dev`.
+- Deployed source: `2325d7a`; deployment `https://8245e059.eastbayprojects-designs.pages.dev`.
 - Public source: `design-lab/`; build with `python3 scripts/build-design-lab.py`.
 - The generated `design-dist/` contains only the prototypes and public portfolio/team assets.
   Run the deploy command from `design-lab/`, with explicit project name `eastbayprojects-designs`.
@@ -37,7 +38,12 @@ workspace unless a new handoff explicitly reverses this decision.
   are included as public examples. Copy remains exploratory.
 - Prototype forms stay in the browser. No advertising tags, production Functions, database
   bindings, or private runtime state are included. Indexing is disabled.
-- Production baseline remains deployment `ebee08a6-5604-49e9-aa83-413cda292621` at source `8a88235`.
+- Verification: all ten deployed routes load in the browser; no missing gallery images. Desktop
+  (1440px), phone (390px), and narrow gallery/comparison (320px) checks passed. Shortlisting,
+  comparison selectors, portfolio filters, interactive heroes, and both preview forms were checked.
+  The deployed response includes `X-Robots-Tag: noindex, nofollow`.
+- Production baseline remains deployment `ebee08a6-5604-49e9-aa83-413cda292621` at source `8a88235`,
+  verified unchanged after the test deployment.
 
 ## Live site
 
