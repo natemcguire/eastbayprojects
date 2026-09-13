@@ -249,3 +249,12 @@ fake interface text, generic AI office scenes, compliance claims, and unrelated 
 - Desktop and 390px phone checks passed, including menu toggle, work anchor, image loading, and overflow checks.
 - Production release is staged from the existing live source `8a88235`, with this change's navigation patch and updated `civic.html`. This preserves the live homepage copy and contact behavior; later unreleased team/copy and conversion changes on main are not included.
 - Deployed to `https://12667a46.eastbayprojects-1vq.pages.dev`. Verified the live `/civic` design and all four pages' footer navigation; Cloudflare applies its normal email-address obfuscation.
+
+### Contact forms, site copy, and sitemap (September 13, 2026)
+
+- Primary contact/project buttons now lead to the homepage form. `/contact` remains indexable and linked from the footer, with the homepage's design and mobile navigation.
+- The homepage now submits to `/api/contact` and D1 instead of opening a mail draft. The handler supports JSON responses as well as the standalone form's existing redirect flow. Errors retain homepage form values for retry.
+- Rewrote marketing copy across the homepage, portfolio, Civic, and contact pages to explain the services plainly and remove exaggerated promises. Added sitemap.xml, robots.txt, and matching canonical URLs.
+- Updated AGENTS.md with design, navigation, copy, form verification, and isolated-browser requirements.
+- Verification: isolated headless browser checks passed at 1440px and 390px; both forms saved local D1 records; homepage network failure/retry preserved entered values. Handler checks covered validation, timing, honeypot, JSON success/failure, and existing redirect behavior. Fixed pre-existing homepage grid overflow discovered during testing.
+- Production staging uses current public marketing source/assets while retaining the live `8a88235` founder section and excluding the unpublished contact conversion-tag change. The separate team draft remains in repository source. Operational files and private state are excluded from deployment.

@@ -47,3 +47,13 @@ runtime work resumes.
 - Public marketing pages deploy through the existing Cloudflare Pages project.
 - The ad review/approval application is private and runs on the Mac mini behind Tailscale.
 - Do not expose the approval application, browser-control endpoints, queue, or secrets publicly.
+
+## Public site design and navigation
+
+- The production homepage is the design reference for every marketing page. Match its blue/cream/amber palette, fonts, blueprint grid, header, buttons, and footer; do not introduce separate page themes.
+- Primary Contact and Start a Project links lead to the homepage form (`/#contact`). Keep `/contact` as an indexable standalone page with the same design and a footer link.
+- Civic belongs in the footer, not desktop or mobile primary navigation.
+- Both contact forms must save through `/api/contact` and the existing `LEADS_DB` binding. Verify successful storage and failure behavior; opening an email draft is not a submitted inquiry.
+- Keep `sitemap.xml` and its `robots.txt` reference current for public marketing pages. These files are public source; operational documents and private application state must not be deployed.
+- Write plain, specific copy. Explain the work and terms; avoid formulaic conditional pitches, inflated promises, fear-based claims, and agency jargon.
+- Use an isolated browser/profile for testing. Do not control Nate’s signed-in Chrome unless he explicitly requests it.

@@ -14,12 +14,13 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>East Bay Projects | Digital Services for Real Businesses</title>
   <meta name="description" content="East Bay Projects builds websites, digital systems, and online presence for contractors, trades, government firms, and practices in Austin TX and Washington DC." />
+  <link rel="canonical" href="https://eastbayprojects.com/">
   <meta property="og:title" content="East Bay Projects | Digital Services for Real Businesses" />
-  <meta property="og:description" content="Digital infrastructure for the real economy. Fixed-scope web and digital services for contractors, defense firms, law practices, and real-economy businesses." />
+  <meta property="og:description" content="Websites, software, and technical support for contractors, government firms, and professional practices." />
   <meta property="og:type" content="website" />
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:title" content="East Bay Projects | Digital Services for Real Businesses" />
-  <meta name="twitter:description" content="Digital infrastructure for the real economy." />
+  <meta name="twitter:description" content="Websites and software for your business." />
 
   <style>
     @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=IBM+Plex+Mono:ital,wght@0,300;0,400;0,500;0,600&family=Lora:ital,wght@0,400;0,500;0,600;1,400;1,500&display=swap');
@@ -151,7 +152,7 @@
     .svc-card::before { content: attr(data-n); position: absolute; bottom: 10px; right: 16px; font-family: 'IBM Plex Mono', monospace; font-size: 64px; font-weight: 600; color: rgba(255,255,255,0.04); line-height: 1; letter-spacing: -0.05em; pointer-events: none; }
 
     /* WHY */
-    .why-grid { display: grid; grid-template-columns: 40% 60%; gap: 80px; align-items: start; }
+    .why-grid { display: grid; grid-template-columns: minmax(0, 2fr) minmax(0, 3fr); gap: 80px; align-items: start; }
     .adv-block { margin-bottom: 44px; padding-left: 60px; position: relative; }
     .adv-block:last-child { margin-bottom: 0; }
     .adv-num { font-family: 'Bebas Neue', sans-serif; font-size: 48px; color: var(--amber); line-height: 1; position: absolute; left: 0; top: -4px; }
@@ -210,7 +211,7 @@
     .cred strong { color: var(--ink); font-weight: 600; }
 
     /* CONTACT */
-    .contact-grid { display: grid; grid-template-columns: 55% 45%; gap: 80px; align-items: start; }
+    .contact-grid { display: grid; grid-template-columns: minmax(0, 11fr) minmax(0, 9fr); gap: 80px; align-items: start; }
     .contact-note { font-family: 'IBM Plex Mono', monospace; font-size: 11px; letter-spacing: 0.18em; text-transform: uppercase; color: var(--amber); margin-bottom: 40px; display: block; position: relative; z-index: 1; }
     .f-group { margin-bottom: 20px; }
     .f-group label { font-family: 'IBM Plex Mono', monospace; font-size: 10px; letter-spacing: 0.2em; text-transform: uppercase; color: rgba(15,15,15,0.55); display: block; margin-bottom: 7px; }
@@ -281,9 +282,9 @@
         <li><a href="#why">Why Us</a></li>
         <li><a href="portfolio.html">Portfolio</a></li>
         <li><a href="#about">About</a></li>
-        <li><a href="/contact">Contact</a></li>
+        <li><a href="#contact">Contact</a></li>
       </ul></nav>
-      <a href="/contact" class="btn-header">START A PROJECT &rarr;</a>
+      <a href="#contact" class="btn-header">START A PROJECT &rarr;</a>
       <button class="hamburger" id="hamburger" aria-label="Menu"><span></span><span></span><span></span></button>
     </div>
     <div class="mobile-nav" id="mobile-nav">
@@ -291,8 +292,8 @@
       <a href="#why">Why Us</a>
       <a href="portfolio.html">Portfolio</a>
       <a href="#about">About</a>
-      <a href="/contact">Contact</a>
-      <a href="/contact" class="btn-header" style="align-self:flex-start;margin-top:8px">START A PROJECT &rarr;</a>
+      <a href="#contact">Contact</a>
+      <a href="#contact" class="btn-header" style="align-self:flex-start;margin-top:8px">START A PROJECT &rarr;</a>
     </div>
   </header>
 
@@ -300,15 +301,15 @@
     <div class="hero-inner">
       <div>
         <p class="hero-eyebrow">EST. 2011 &middot; AUSTIN TX &middot; WASHINGTON DC</p>
-        <h1 class="hero-headline">DIGITAL<br>INFRASTRUCTURE<br>FOR THE REAL<br>ECONOMY<span class="amber-period">.</span></h1>
-        <p class="hero-sub">East Bay Projects builds websites, systems, and digital presence for contractors, trades, government firms, and practices that compete in the physical world.</p>
+        <h1 class="hero-headline">WEBSITES<br>AND SOFTWARE<br>FOR YOUR<br>BUSINESS<span class="amber-period">.</span></h1>
+        <p class="hero-sub">We build websites and software for contractors, trades, government firms, and professional practices. We also fix the sites and systems they already rely on.</p>
         <div class="hero-ctas">
-          <a href="/contact" class="btn-fill">START A PROJECT &rarr;</a>
+          <a href="#contact" class="btn-fill">START A PROJECT &rarr;</a>
           <a href="#services" class="btn-ghost">SEE SERVICES &darr;</a>
         </div>
       </div>
       <div>
-        <p class="typewriter-label">CLIENT VERTICAL / ACTIVE</p>
+        <p class="typewriter-label">WHO WE WORK WITH</p>
         <div class="typewriter-box">
           <p class="tw-prefix">SERVING &#9658;</p>
           <div id="tw-display"><span id="tw-word"></span><span class="cursor"></span></div>
@@ -330,18 +331,18 @@
       <div class="problem-grid">
         <div class="prob-card">
           <p class="card-tag">PROBLEM / 01</p>
-          <h3>YOUR COMPETITOR&rsquo;S SITE IS FASTER.</h3>
-          <p>Slow pages frustrate mobile customers, erode trust, and can weaken search performance. We measure the bottlenecks and fix what matters.</p>
+          <h3>A SLOW WEBSITE.</h3>
+          <p>Pages take too long to load, especially on a phone. We find what is slowing them down and check the results after the fixes.</p>
         </div>
         <div class="prob-card">
           <p class="card-tag">PROBLEM / 02</p>
-          <h3>YOUR SSL IS EXPIRED.</h3>
-          <p>A padlock warning in the browser address bar sends customers to your competitors. It costs $500 to fix. Every month you wait is lost revenue.</p>
+          <h3>BROWSER SECURITY WARNINGS.</h3>
+          <p>Expired certificates and mixed-content errors can stop people from reaching your site. We repair the problem and explain what caused it.</p>
         </div>
         <div class="prob-card">
           <p class="card-tag">PROBLEM / 03</p>
-          <h3>YOUR DIGITAL PRESENCE DOESN&rsquo;T MATCH YOUR WORK.</h3>
-          <p>You do $2M in roofing. Your website looks like it was built by your nephew in 2013. The disconnect is costing you jobs.</p>
+          <h3>AN OUTDATED WEBSITE.</h3>
+          <p>Your business has changed, but the website has not kept up. We update the content, design, and contact forms so customers can find what they need.</p>
         </div>
       </div>
     </div>
@@ -353,14 +354,14 @@
         <span class="num-bg light">02</span>
         <h2 class="sec-heading white">SERVICES</h2>
       </div>
-      <span class="svc-subhead">FIXED-SCOPE PROJECTS &middot; NO HOURLY SURPRISES</span>
+      <span class="svc-subhead">SCOPE AND PRICE AGREED BEFORE WORK STARTS</span>
       <div class="services-grid">
         <div class="svc-card" data-n="01">
           <p class="svc-num">SERVICE / 01</p>
           <h3>SSL &amp; SECURITY FIX</h3>
           <div class="svc-rule"></div>
           <p class="svc-price"><span class="cur">$</span>&thinsp;500 &mdash; 1,500</p>
-          <p>Expired SSL, mixed content warnings, Google security flags. Diagnosed and fixed within the week. Includes a full security audit report.</p>
+          <p>We repair expired SSL certificates, mixed-content errors, and browser warnings. You get a written report of the problems we found and the changes we made.</p>
           <div class="tag-row"><span class="pill">SAME WEEK</span><span class="pill">AUDIT INCLUDED</span></div>
         </div>
         <div class="svc-card" data-n="02">
@@ -368,7 +369,7 @@
           <h3>SITE MODERNIZATION</h3>
           <div class="svc-rule"></div>
           <p class="svc-price"><span class="cur">$</span>&thinsp;2,500 &mdash; 5,000</p>
-          <p>Your 2015 WordPress rebuilt as a fast, mobile-first website designed to convert. Performance is measured before and after launch. No subscriptions to bloated page builders.</p>
+          <p>We rebuild older websites to work well on phones, load faster, and make inquiries easier. We measure performance before and after launch.</p>
           <div class="tag-row"><span class="pill">WORDPRESS</span><span class="pill">SHOPIFY</span><span class="pill">CUSTOM</span></div>
         </div>
         <div class="svc-card" data-n="03">
@@ -376,7 +377,7 @@
           <h3>TRADES COMPLETE PACKAGE</h3>
           <div class="svc-rule"></div>
           <p class="svc-price"><span class="cur">$</span>&thinsp;5,000 &mdash; 15,000</p>
-          <p>New site + Google Business Profile optimization + review management system + local SEO. The complete digital play for contractors.</p>
+          <p>A new website, an updated Google Business Profile, and a process for collecting customer reviews. We also help customers find you in local search.</p>
           <div class="tag-row"><span class="pill">LOCAL SEO</span><span class="pill">GOOGLE GBP</span><span class="pill">REVIEWS</span></div>
         </div>
         <div class="svc-card" data-n="04">
@@ -384,7 +385,7 @@
           <h3>GOVERNMENT &amp; DEFENSE WEB</h3>
           <div class="svc-rule"></div>
           <p class="svc-price" style="font-size:1.1rem;letter-spacing:0.08em">CONTACT FOR PRICING</p>
-          <p>Credibility-first web presence for contractors that win federal bids. Cleared-personnel career pages. Capability statement design. SAM.gov aligned presentation.</p>
+          <p>Websites for government and defense contractors, with clear capabilities, past work, recruiting pages, and downloadable capability statements.</p>
           <div class="tag-row"><span class="pill">FEDERAL</span><span class="pill">CLEARED</span><span class="pill">CAPABILITY STMT</span></div>
         </div>
         <div class="svc-card" data-n="05">
@@ -392,7 +393,7 @@
           <h3>PRACTICE TECHNOLOGY</h3>
           <div class="svc-rule"></div>
           <p class="svc-price" style="font-size:1.1rem;letter-spacing:0.08em">CONTACT FOR PRICING</p>
-          <p>Modern sites with intake forms, scheduling, and client portals for law firms and medical practices. HIPAA-aware design.</p>
+          <p>Websites, intake forms, appointment scheduling, and client portals for law firms and medical practices. We discuss privacy requirements and the systems you use before choosing integrations.</p>
           <div class="tag-row"><span class="pill">LAW FIRMS</span><span class="pill">MEDICAL</span><span class="pill">PORTALS</span></div>
         </div>
         <div class="svc-card" data-n="06">
@@ -400,7 +401,7 @@
           <h3>MONTHLY MAINTENANCE</h3>
           <div class="svc-rule"></div>
           <p class="svc-price"><span class="cur">$</span>&thinsp;1,000 &mdash; 10,000<span style="font-size:14px;opacity:0.7;font-weight:400">/mo</span></p>
-          <p>Most of our builds don't need hand-holding. But if you're high maintenance — we're here for you. Hosting, updates, security monitoring, and whatever else keeps you up at night.</p>
+          <p>Ongoing hosting, software updates, security monitoring, and site changes. We agree on the work covered each month and report what we have done.</p>
           <div class="tag-row"><span class="pill">RECURRING</span><span class="pill">MONITORING</span><span class="pill">REPORTS</span></div>
         </div>
       </div>
@@ -418,18 +419,18 @@
           <div style="margin-top:56px">
             <div class="adv-block">
               <span class="adv-num">01</span>
-              <h3 class="adv-title">WE FOCUS ON WHAT MATTERS.</h3>
-              <p class="adv-body">Making your business grow. Not your dev bill. Whether that&rsquo;s a new leads funnel, operational software, a mobile app, or a complete digital overhaul &mdash; we scope it, build it, and ship it.</p>
+              <h3 class="adv-title">START WITH THE JOB.</h3>
+              <p class="adv-body">We start by understanding what you need customers or staff to do. Then we agree on the work, the budget, and how we will know it is working.</p>
             </div>
             <div class="adv-block">
               <span class="adv-num">02</span>
-              <h3 class="adv-title">WE CAN BUILD ANYTHING.</h3>
-              <p class="adv-body">Operational software. Lead funnels. iOS apps. Custom platforms. Anything that moves the needle for your business &mdash; we&rsquo;ve shipped it before at scale, and we can build it for you in weeks, not quarters.</p>
+              <h3 class="adv-title">DESIGN AND DEVELOPMENT TOGETHER.</h3>
+              <p class="adv-body">We build websites, internal tools, and mobile apps. The people designing the work also understand how it will be built and maintained.</p>
             </div>
             <div class="adv-block">
               <span class="adv-num">03</span>
-              <h3 class="adv-title">NO SURPRISES. EVER.</h3>
-              <p class="adv-body">Every project is scoped and priced upfront. No hourly billing. No change-order treadmill. No mystery invoices. You know exactly what you&rsquo;re getting and what it costs before a single line of code is written.</p>
+              <h3 class="adv-title">CLEAR SCOPE AND PRICING.</h3>
+              <p class="adv-body">You receive a scope, price, and schedule before work begins. Any proposed additions are discussed and priced before we take them on.</p>
             </div>
           </div>
         </div>
@@ -473,7 +474,7 @@
               <div class="spec-thead">PROJECT SPECIFICATION SUMMARY</div>
               <div class="spec-tbody">
                 <div class="spec-tr"><span class="spec-k">TIMELINE</span><span class="spec-v a">2&ndash;3 WEEKS</span></div>
-                <div class="spec-tr"><span class="spec-k">REVISIONS</span><span class="spec-v">UNLIMITED (SCOPED)</span></div>
+                <div class="spec-tr"><span class="spec-k">REVISIONS</span><span class="spec-v">AGREED IN SCOPE</span></div>
                 <div class="spec-tr"><span class="spec-k">BILLING MODEL</span><span class="spec-v a">FIXED-PRICE</span></div>
                 <div class="spec-tr"><span class="spec-k">MOBILE FIRST</span><span class="spec-v">YES &middot; ALL BREAKPOINTS</span></div>
                 <div class="spec-tr"><span class="spec-k">PERFORMANCE</span><span class="spec-v a">MEASURED &amp; REPORTED</span></div>
@@ -491,19 +492,19 @@
         <div class="crew-member">
           <img src="nate.jpg" alt="Nate McGuire" style="width:112px;height:112px;border-radius:50%;object-fit:cover;object-position:center top;border:3px solid #C8750A;display:block;position:relative;z-index:1">
           <p class="crew-name">NATE McGUIRE</p>
-          <p class="about-role" style="margin-bottom:0">FOUNDER &middot; BUILD</p>
+          <p class="about-role" style="margin-bottom:0">FOUNDER &middot; ENGINEERING</p>
         </div>
         <div class="crew-member">
           <img src="assets/josh.png" alt="Josh McGuire" style="width:112px;height:112px;border-radius:50%;object-fit:cover;object-position:center top;border:3px solid #C8750A;display:block;position:relative;z-index:1">
           <p class="crew-name">JOSH McGUIRE</p>
-          <p class="about-role" style="margin-bottom:0">DELIVERY &middot; SHIP</p>
+          <p class="about-role" style="margin-bottom:0">PROJECT DELIVERY</p>
         </div>
       </div>
       <div class="about-rule" style="margin-top:32px"></div>
       <a href="mailto:contact@eastbayprojects.com" class="about-email">contact@eastbayprojects.com</a>
     </div>
     <div class="about-r">
-      <p class="about-body" style="margin-bottom:1.25rem">East Bay Projects works like a general contractor for software: one team that scopes the job, brings the right crew, and delivers &mdash; small jobs and large, for a growing roster of clients who need it done right.</p>
+      <p class="about-body" style="margin-bottom:1.25rem">East Bay Projects handles design, development, and delivery for websites and software projects. Nate leads the technical work, and Josh manages delivery.</p>
       <p class="about-body" style="margin-bottom:1.25rem"><strong><a href="https://natemcguire.com">Nate McGuire</a></strong> is a Distinguished Engineer with 15+ years building digital systems that work. He founded Mayven Studios &mdash; the agency behind projects for Google, Facebook, IBM, Airbnb, and Andreessen Horowitz &mdash; which was acquired by Saltwater, founded by Uber&rsquo;s first employee.</p>
       <p class="about-body"><strong>Josh McGuire</strong> is a Certified Scrum Master with 9+ years running complex delivery programs across Big Four consulting and venture-backed teams. He led delivery at Mayven and now runs technology programs at Deloitte and manages the Lightspeed Venture Partners account.</p>
       <div class="creds">
@@ -525,17 +526,17 @@
         <span class="num-bg">05</span>
         <h2 class="sec-heading">START A PROJECT</h2>
       </div>
-      <span class="contact-note">FREE AUDIT &middot; FIXED-SCOPE QUOTE &middot; NO COMMITMENT</span>
+      <span class="contact-note">TELL US WHAT YOU NEED HELP WITH</span>
       <div class="contact-grid">
         <div>
-          <form id="contact-form" action="mailto:contact@eastbayprojects.com" method="post" enctype="text/plain">
+          <form id="contact-form" action="/api/contact" method="post">
             <div class="f-group"><label for="fn">Name</label><input type="text" id="fn" name="name" placeholder="Your name" required></div>
             <div class="f-group"><label for="fe">Email</label><input type="email" id="fe" name="email" placeholder="you@company.com" required></div>
             <div class="f-group"><label for="fc">Company</label><input type="text" id="fc" name="company" placeholder="Your company"></div>
             <div class="f-group"><label for="fp">Phone</label><input type="tel" id="fp" name="phone" placeholder="(512) 555-0100"></div>
             <div class="f-group">
               <label for="fs">Service Needed</label>
-              <select id="fs" name="service">
+              <select id="fs" name="project_type" required>
                 <option value="">Select a service&hellip;</option>
                 <option>SSL Fix</option>
                 <option>Site Modernization</option>
@@ -546,10 +547,13 @@
                 <option>Not Sure</option>
               </select>
             </div>
-            <div class="f-group"><label for="fm">Message</label><textarea id="fm" name="message" rows="4" placeholder="Tell me about your project&hellip;"></textarea></div>
+            <div class="f-group"><label for="fm">Message</label><textarea id="fm" name="message" rows="4" required minlength="10" maxlength="4000" placeholder="Tell me about your project&hellip;"></textarea></div>
+            <input type="hidden" name="form_started_at" id="form-started-at">
+            <input type="hidden" name="source_page" value="homepage">
+            <div hidden aria-hidden="true"><label>Leave blank<input name="company_url" tabindex="-1" autocomplete="off"></label></div>
             <button type="submit" class="f-submit">SEND MESSAGE &rarr;</button>
           </form>
-          <div class="f-success" id="f-success" aria-live="polite">YOUR EMAIL APP HAS BEEN OPENED. SEND THE DRAFT TO COMPLETE YOUR INQUIRY.</div>
+          <div class="f-success" id="f-success" role="status" aria-live="polite">THANK YOU. WE HAVE RECEIVED YOUR MESSAGE.</div>
         </div>
         <div class="contact-info">
           <div class="cinfo-block">
@@ -596,6 +600,7 @@
       <span class="footer-logo">EAST BAY PROJECTS</span>
       <span class="footer-ctr">&copy; 2026 &middot; <strong style="color:var(--amber,#C8750A)">MADE IN USA</strong></span>
       <a href="mailto:contact@eastbayprojects.com" class="footer-email">contact@eastbayprojects.com</a>
+      <a href="/contact" class="footer-email">Contact</a>
       <a href="/civic.html" class="footer-email">Civic &amp; Campaigns</a>
     </div>
   </footer>
@@ -621,23 +626,39 @@
       });
     });
 
-    // Contact form: open a populated email draft without requiring a backend.
+    // Save inquiries through the same handler as the direct contact landing page.
     const contactForm = document.getElementById('contact-form');
-    contactForm.addEventListener('submit', e => {
+    const startedAt = document.getElementById('form-started-at');
+    const formStatus = document.getElementById('f-success');
+    startedAt.value = Date.now();
+    contactForm.addEventListener('submit', async e => {
       e.preventDefault();
-      const data = new FormData(contactForm);
-      const subject = `East Bay Projects inquiry from ${data.get('name')}`;
-      const body = [
-        `Name: ${data.get('name')}`,
-        `Email: ${data.get('email')}`,
-        `Company: ${data.get('company') || 'Not provided'}`,
-        `Phone: ${data.get('phone') || 'Not provided'}`,
-        `Service: ${data.get('service') || 'Not selected'}`,
-        '',
-        data.get('message') || 'No message provided'
-      ].join('\n');
-      window.location.href = `mailto:contact@eastbayprojects.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
-      document.getElementById('f-success').style.display = 'block';
+      if (!contactForm.reportValidity()) return;
+      const button = contactForm.querySelector('button[type="submit"]');
+      button.disabled = true;
+      button.textContent = 'SENDING…';
+      formStatus.style.display = 'none';
+      try {
+        const data = new FormData(contactForm);
+        data.set('source_page', location.href);
+        data.set('referrer', document.referrer);
+        const params = new URLSearchParams(location.search);
+        ['utm_source', 'utm_medium', 'utm_campaign', 'utm_term', 'utm_content', 'gclid'].forEach(key => data.set(key, params.get(key) || ''));
+        const response = await fetch(contactForm.action, {
+          method: 'POST', body: data, headers: { Accept: 'application/json' }
+        });
+        const result = await response.json();
+        if (!response.ok || !result.ok) throw new Error('Submission failed');
+        contactForm.reset();
+        startedAt.value = Date.now();
+        formStatus.textContent = 'THANK YOU. WE HAVE RECEIVED YOUR MESSAGE.';
+      } catch {
+        formStatus.textContent = 'WE COULD NOT CONFIRM YOUR MESSAGE WAS SAVED. PLEASE TRY AGAIN OR EMAIL CONTACT@EASTBAYPROJECTS.COM.';
+      } finally {
+        formStatus.style.display = 'block';
+        button.disabled = false;
+        button.textContent = 'SEND MESSAGE →';
+      }
     });
 
     // Typewriter

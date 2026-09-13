@@ -5,6 +5,11 @@ function text(form, key, maxLength = 500) {
 }
 
 function redirect(request, state) {
+  if (request.headers.get('accept')?.includes('application/json')) {
+    return Response.json({ ok: state === 'submitted' }, {
+      status: state === 'submitted' ? 200 : 400
+    });
+  }
   const url = new URL('/contact', request.url);
   url.searchParams.set(state, '1');
   return Response.redirect(url.toString(), 303);
