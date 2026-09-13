@@ -1,6 +1,6 @@
 # East Bay Projects — Current Status
 
-Last updated: September 11, 2026
+Last updated: September 13, 2026
 
 ## Source of truth
 
@@ -241,3 +241,10 @@ fake interface text, generic AI office scenes, compliance claims, and unrelated 
 
 - Reworked typography, color, service grids, and buttons while preserving all five live pages verbatim. No campaign imagery added to the homepage.
 - Previous ivory/green preview remains available at `https://4b150e4f.eastbayprojects-designs.pages.dev`. Latest preview: `https://64dc9423.eastbayprojects-designs.pages.dev` from `38f23ff`. Desktop/mobile checks passed; production deployment unchanged.
+
+### Civic navigation and design alignment (September 13, 2026)
+
+- Removed Civic from desktop and mobile primary navigation on the homepage, portfolio, contact, and Civic pages; added Civic & Campaigns to their footers.
+- Civic now uses the production homepage's palette, blueprint hero, typography, buttons, fixed header, responsive menu, and footer. Existing Civic content and project links are preserved.
+- Desktop and 390px phone checks passed, including menu toggle, work anchor, image loading, and overflow checks.
+- Production release is staged from the existing live source `8a88235`, with this change's navigation patch and updated `civic.html`. This preserves the live homepage copy and contact behavior; later unreleased team/copy and conversion changes on main are not included.
