@@ -10,10 +10,10 @@ Last updated: September 13, 2026
 - `nates-mac-mini` is the canonical development and runtime host, not the canonical Git history.
 - Only cloud-safe source and documentation belong in GitHub. Approval records, browser sessions,
   generated drafts, credentials, contact data, logs, and queue state remain private on the mini.
-- Current deployment source: `65ee309` (Civic changes applied to the live `8a88235` baseline; see September 13 checkpoint)
+- Current deployment source: `7912d3c` (contact forms, shared design, copy, and sitemap; retained live founder section as noted below)
 - Production: `https://eastbayprojects.com`
 - Cloudflare Pages project: `eastbayprojects`
-- Latest deployment URL: `https://12667a46.eastbayprojects-1vq.pages.dev`
+- Latest deployment URL: `https://740efb10.eastbayprojects-1vq.pages.dev`
 - Google Ads tag `AW-18335868802` is installed immediately after `<head>` on every public HTML page.
 - Production routes were verified after the September 13 deployment.
 
@@ -258,3 +258,4 @@ fake interface text, generic AI office scenes, compliance claims, and unrelated 
 - Updated AGENTS.md with design, navigation, copy, form verification, and isolated-browser requirements.
 - Verification: isolated headless browser checks passed at 1440px and 390px; both forms saved local D1 records; homepage network failure/retry preserved entered values. Handler checks covered validation, timing, honeypot, JSON success/failure, and existing redirect behavior. Fixed pre-existing homepage grid overflow discovered during testing.
 - Production staging uses current public marketing source/assets while retaining the live `8a88235` founder section and excluding the unpublished contact conversion-tag change. The separate team draft remains in repository source. Operational files and private state are excluded from deployment.
+- Deployed to `https://740efb10.eastbayprojects-1vq.pages.dev`. Both live forms saved labeled test inquiries in production D1; the two test records were then removed. Sitemap, robots.txt, and all five canonical URLs were verified live.
