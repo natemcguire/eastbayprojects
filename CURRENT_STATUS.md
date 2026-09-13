@@ -259,3 +259,10 @@ fake interface text, generic AI office scenes, compliance claims, and unrelated 
 - Verification: isolated headless browser checks passed at 1440px and 390px; both forms saved local D1 records; homepage network failure/retry preserved entered values. Handler checks covered validation, timing, honeypot, JSON success/failure, and existing redirect behavior. Fixed pre-existing homepage grid overflow discovered during testing.
 - Production staging uses current public marketing source/assets while retaining the live `8a88235` founder section and excluding the unpublished contact conversion-tag change. The separate team draft remains in repository source. Operational files and private state are excluded from deployment.
 - Deployed to `https://740efb10.eastbayprojects-1vq.pages.dev`. Both live forms saved labeled test inquiries in production D1; the two test records were then removed. Sitemap, robots.txt, and all five canonical URLs were verified live.
+
+### Google Search Console submission (September 13, 2026)
+
+- Used the existing verified `sc-domain:eastbayprojects.com` property. Submitted `https://eastbayprojects.com/sitemap.xml`; Google reported Success and discovered all five pages.
+- Requested homepage indexing; Google confirmed it was added to the priority crawl queue. The prior August 27 crawl had selected the www homepage as canonical; the newly deployed homepage declares the non-www canonical explicitly.
+- Requested `/contact` indexing; Google also confirmed it was added to the priority crawl queue.
+- Crawl requests are not confirmation that pages have been indexed.
