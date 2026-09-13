@@ -10,12 +10,12 @@ Last updated: September 13, 2026
 - `nates-mac-mini` is the canonical development and runtime host, not the canonical Git history.
 - Only cloud-safe source and documentation belong in GitHub. Approval records, browser sessions,
   generated drafts, credentials, contact data, logs, and queue state remain private on the mini.
-- Current deployment commit: `8a88235` (`Strengthen founder proof and performance copy`)
+- Current deployment source: `65ee309` (Civic changes applied to the live `8a88235` baseline; see September 13 checkpoint)
 - Production: `https://eastbayprojects.com`
 - Cloudflare Pages project: `eastbayprojects`
-- Latest deployment URL: `https://ebee08a6.eastbayprojects-1vq.pages.dev`
+- Latest deployment URL: `https://12667a46.eastbayprojects-1vq.pages.dev`
 - Google Ads tag `AW-18335868802` is installed immediately after `<head>` on every public HTML page.
-- The Cloudflare cache for `eastbayprojects.com` was purged after deployment.
+- Production routes were verified after the September 13 deployment.
 
 After the July 20 handoff, development should continue from the Mac mini checkout at
 `~/Projects/eastbayprojects`. Do not treat the laptop checkout as the active development
@@ -248,3 +248,4 @@ fake interface text, generic AI office scenes, compliance claims, and unrelated 
 - Civic now uses the production homepage's palette, blueprint hero, typography, buttons, fixed header, responsive menu, and footer. Existing Civic content and project links are preserved.
 - Desktop and 390px phone checks passed, including menu toggle, work anchor, image loading, and overflow checks.
 - Production release is staged from the existing live source `8a88235`, with this change's navigation patch and updated `civic.html`. This preserves the live homepage copy and contact behavior; later unreleased team/copy and conversion changes on main are not included.
+- Deployed to `https://12667a46.eastbayprojects-1vq.pages.dev`. Verified the live `/civic` design and all four pages' footer navigation; Cloudflare applies its normal email-address obfuscation.
