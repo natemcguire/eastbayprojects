@@ -10,10 +10,10 @@ Last updated: September 14, 2026
 - `nates-mac-mini` is the canonical development and runtime host, not the canonical Git history.
 - Only cloud-safe source and documentation belong in GitHub. Approval records, browser sessions,
   generated drafts, credentials, contact data, logs, and queue state remain private on the mini.
-- Current deployment source: `9973875` (approved design, service landing page, About, and detailed Careers roles)
+- Current deployment source: `d8cf165` (editorial portfolio plus approved site, service landing page, About, and Careers)
 - Production: `https://eastbayprojects.com`
 - Cloudflare Pages project: `eastbayprojects`
-- Latest deployment URL: `https://e964fb77.eastbayprojects-1vq.pages.dev`
+- Latest deployment URL: `https://1089716e.eastbayprojects-1vq.pages.dev`
 - Google Ads tag `AW-18335868802` is installed immediately after `<head>` on every public HTML page.
 - Production routes were verified after the September 13 deployment.
 
@@ -306,3 +306,5 @@ fake interface text, generic AI office scenes, compliance claims, and unrelated 
 - Added two short, sourced customer-review excerpts labeled “Former Customer,” explicitly identified as earlier Mayven engagements. Each links to its original review; provenance is recorded in `assets/portfolio/README.md`.
 - Public project captures are optimized WebP files. Source credentials, profiles, and runtime state are excluded from the build.
 - Desktop, phone, and narrow-phone checks passed: ten projects, all images decoded, source links, no overflow or JavaScript errors, and working mobile navigation. Homepage contact links and existing form handlers remain unchanged.
+
+- Deployed the editorial portfolio to `https://1089716e.eastbayprojects-1vq.pages.dev` from `d8cf165`. Normal production URL confirms ten projects and Craig’s credit; live desktop/phone checks verified all imagery, navigation, and both review sources.
