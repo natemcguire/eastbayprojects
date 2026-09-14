@@ -279,3 +279,12 @@ fake interface text, generic AI office scenes, compliance claims, and unrelated 
 - Uses the approved ivory/green design, an inquiry form with the service label, practical FAQs, and clear ownership, deployment, and handoff copy. Added homepage and footer links, contact service options, canonical/social metadata, and sitemap entry.
 - Local verification passed at 1440, 390, and 320px: no overflow or JavaScript errors; menu, FAQ, CTA, failed-submission recovery, successful save, and reset checked. Confirmed service label and source URL in local D1. Existing homepage and contact form regression checks passed.
 - Production design promotion completed at `https://0c86e761.eastbayprojects-1vq.pages.dev`; the public stylesheet hash matches the exact approved preview.
+
+### Family business, careers, and landing page refinement (September 14, 2026)
+
+- Removed founder photos and biographies from the homepage. Added `/about` for Nate and Josh, the family-led business, and its network of senior engineers across the U.S. and internationally. All primary About links now point there.
+- Published `/careers` with the existing Forward-Deployed Engineer and Operations Expert roles plus Senior Backend Engineer, Senior DevOps Engineer, and Senior Product Engineer. Role links preselect the inquiry form, which saves through the existing D1 contact handler.
+- Reworked `/vibe-code-to-production` around “We turn vibe-coded apps into production-quality software” and Nate’s opening about useful prototypes, enterprise tools, and not knowing what help is needed. Replaced the offset note layout with a full-width headline and three-stage overview.
+- All eight public pages are included in the safe marketing build and sitemap. The builder no longer restores a founder section on the homepage.
+- Local desktop, phone, and narrow-phone checks passed for the revised landing page, homepage, About, and Careers. Verified loaded portraits only on About, no overflow or JavaScript errors, and successful Careers inquiry storage.
+- Earlier landing deployment `https://ee96eefc.eastbayprojects-1vq.pages.dev` passed live form failure/retry and storage checks. The single labeled live test record was verified and removed.

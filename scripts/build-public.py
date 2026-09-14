@@ -3,11 +3,10 @@
 from pathlib import Path
 import re
 import shutil
-import subprocess
 
 ROOT = Path(__file__).resolve().parents[1]
 OUT = ROOT / 'public-dist'
-PAGES = ['index.html', 'portfolio.html', 'civic.html', 'contact.html', 'privacy.html', 'vibe-code-to-production.html']
+PAGES = ['index.html', 'portfolio.html', 'civic.html', 'contact.html', 'privacy.html', 'vibe-code-to-production.html', 'about.html', 'careers.html']
 if OUT.is_symlink():
     raise SystemExit('Refusing symlink output')
 if OUT.exists():
@@ -15,11 +14,6 @@ if OUT.exists():
 OUT.mkdir()
 for name in PAGES:
     text = (ROOT / name).read_text()
-    if name == 'index.html':
-        # The team biography is an unpublished draft. Retain the live founder section.
-        live = subprocess.check_output(['git', 'show', '8a88235:index.html'], cwd=ROOT, text=True)
-        pattern = r'<section id="about">.*?</section>'
-        text = re.sub(pattern, lambda _: re.search(pattern, live, re.S).group(), text, flags=re.S)
     if name == 'contact.html':
         # Preserve the live analytics configuration; this conversion event is unpublished.
         text = re.sub(r"      if \(typeof gtag === 'function'\) \{.*?\n      \}\n", '', text, flags=re.S)
@@ -34,6 +28,6 @@ for name in PAGES:
             target = OUT / path
             target.parent.mkdir(parents=True, exist_ok=True)
             shutil.copy2(source, target)
-for name in ['style.css', 'vibe-code-to-production.css', 'robots.txt', 'sitemap.xml']:
+for name in ['style.css', 'vibe-code-to-production.css', 'people.css', 'robots.txt', 'sitemap.xml']:
     shutil.copy2(ROOT / name, OUT / name)
-print('Built six marketing pages and their public assets in public-dist/')
+print('Built eight marketing pages and their public assets in public-dist/')

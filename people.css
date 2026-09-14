@@ -1,0 +1,16 @@
+.people-page .launch-hero {padding-bottom:35px}
+.people-page .launch-hero .launch-copy {max-width:820px}
+.people-grid {display:grid;grid-template-columns:1fr 1fr;gap:60px}
+.person {border-top:1px solid var(--rule);padding-top:30px}
+.person img {display:block;width:180px;height:180px;object-fit:cover;object-position:center top;border-radius:5px;margin-bottom:28px}
+.person h2 {font-size:36px!important;margin-bottom:25px}
+.person p:not(.launch-kicker) {font-size:17px;line-height:1.8;color:#566052;margin-bottom:18px}
+.network-copy {font-size:18px;line-height:1.8;color:#c7d1c2;margin-bottom:20px}
+.people-actions {display:flex;align-items:center;gap:28px;flex-wrap:wrap}
+.career-role {display:grid;grid-template-columns:1fr 1fr;gap:90px;padding:40px 0;border-top:1px solid var(--rule)}
+.career-role h3 {font-size:32px;line-height:1.15;margin-bottom:20px}
+.career-role p,.career-role li {font-size:16px;line-height:1.75;color:#566052}
+.career-role h4 {font-size:13px;text-transform:uppercase;letter-spacing:.05em;margin-bottom:15px}
+.career-role ul {padding-left:20px;margin-bottom:25px}
+.career-role .launch-text-link {margin-top:22px}
+@media(max-width:768px){.people-grid,.career-role{grid-template-columns:1fr;gap:30px}.person img{width:140px;height:140px}.person h2{font-size:30px!important}.career-role h3{font-size:28px}.people-page .launch-hero{padding-bottom:0}}

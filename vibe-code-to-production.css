@@ -56,3 +56,17 @@
 .skip-link:focus {transform:translateY(0)}
 @media(max-width:1100px){.launch-hero-grid{gap:40px;grid-template-columns:1.3fr 1fr}.launch-section-heading{gap:40px}.launch-delivery,.launch-project-grid{gap:50px}.launch-note{padding:24px}.launch-page h1{font-size:clamp(44px,6vw,72px)}}
 @media(max-width:768px){.launch-hero{padding:120px 24px 0}.launch-hero-grid{grid-template-columns:1fr;gap:45px}.launch-page h1{font-size:clamp(40px,10.5vw,70px)}.launch-intro{font-size:21px}.launch-copy{font-size:16px}.launch-note{transform:none}.launch-note h2{font-size:32px}.launch-ownership{margin-top:40px!important;gap:15px;flex-direction:column}.launch-section{padding:65px 24px}.launch-section-heading,.launch-cards,.launch-delivery,.launch-project-grid{grid-template-columns:1fr;gap:30px}.launch-section-heading>p{font-size:16px}.launch-cards{gap:5px}.launch-steps article{grid-template-columns:30px 1fr;gap:15px}.launch-steps h3{font-size:24px}.launch-faq summary{font-size:17px}.launch-project-grid{gap:35px}.launch-page .launch-kicker{font-size:10px}.launch-page .hero-ctas{align-items:flex-start}.launch-text-link{overflow-wrap:anywhere}}
+.launch-hero-focused {padding-bottom:45px}
+.launch-hero-focused h1 {font-size:clamp(42px,5.5vw,79px);max-width:1250px;line-height:1.06}
+.launch-hero-focused .launch-intro {max-width:850px;font-size:23px;line-height:1.55;margin-top:32px}
+.launch-hero-focused .launch-copy {max-width:790px;font-size:18px}
+.launch-hero-focused .hero-ctas {margin-top:30px}
+.launch-bridge {display:grid;grid-template-columns:repeat(3,minmax(0,1fr));margin-top:65px;border:1px solid #bec7b2;border-radius:4px;overflow:hidden}
+.launch-bridge>div {padding:32px;background:#e9ede1}
+.launch-bridge>div+div {border-left:1px solid #bec7b2}
+.launch-bridge h2 {font-size:28px;line-height:1.14;margin-bottom:20px}
+.launch-bridge p:not(.launch-kicker) {font-size:15px;line-height:1.7;max-width:300px;color:#566052}
+.launch-bridge .launch-bridge-middle {background:#202d26;color:#fafbf7}
+.launch-bridge-middle .launch-kicker {color:#bcd48e}
+.launch-bridge .launch-bridge-middle p:not(.launch-kicker) {color:#c7d1c2}
+@media(max-width:768px){.launch-hero-focused h1{font-size:clamp(36px,9.6vw,62px)}.launch-hero-focused h1 br{display:none}.launch-hero-focused .launch-intro{font-size:20px}.launch-hero-focused .launch-copy{font-size:16px}.launch-bridge{grid-template-columns:1fr;margin-top:40px}.launch-bridge>div{padding:26px}.launch-bridge>div+div{border-left:0;border-top:1px solid #bec7b2}.launch-bridge h2{font-size:26px}.launch-hero-focused{padding-bottom:0}}

@@ -57,3 +57,6 @@ runtime work resumes.
 - Keep `sitemap.xml` and its `robots.txt` reference current for public marketing pages. These files are public source; operational documents and private application state must not be deployed.
 - Write plain, specific copy. Explain the work and terms; avoid formulaic conditional pitches, inflated promises, fear-based claims, and agency jargon.
 - Use an isolated browser/profile for testing. Do not control Nate’s signed-in Chrome unless he explicitly requests it.
+
+- Keep founder photos and biographies on `/about`, not the homepage. Present East Bay Projects as a family-led business with a network of senior engineers in the U.S. and internationally.
+- `/careers` lists the current roles and accepts inquiries through the existing contact handler.
