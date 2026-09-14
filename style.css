@@ -40,3 +40,11 @@ a,button { transition:background .2s,color .2s,transform .2s; }
 .form-kicker,.section-kicker { color:#566D40; }
 .plain-dark .section-kicker,.section-dark .section-kicker { color:#BCD48E; }
 .card .card-tag { color:#BDCAB4; }.card .card-num,.card .card-url { color:#BCD48E; }
+
+/* Featured custom software service. */
+.svc-card.svc-feature { grid-column:1 / -1; display:grid; grid-template-columns:minmax(0,1fr) minmax(0,1fr); gap:48px; padding:48px; background:#D9E5C6; border-color:#D9E5C6; margin-bottom:12px; }
+.svc-feature .svc-num { color:#50633D; font-size:10px; letter-spacing:.1em; flex:none; margin-bottom:24px; }
+.svc-feature h3 { color:var(--ink); font-size:clamp(32px,3.6vw,52px); line-height:1.06; margin:0; }
+.svc-feature-copy p { color:#384831; font-size:17px; flex:none; margin-bottom:20px; }
+.svc-feature-copy .btn-fill { display:inline-flex; align-items:center; gap:16px; margin-top:8px; }
+@media(max-width:768px) { .svc-card.svc-feature { grid-template-columns:1fr; gap:28px; padding:28px; }.svc-feature-copy p { font-size:16px; }.svc-feature-copy .btn-fill { padding:16px 18px; font-size:11px; } }
