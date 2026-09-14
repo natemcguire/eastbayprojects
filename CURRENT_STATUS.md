@@ -10,10 +10,10 @@ Last updated: September 14, 2026
 - `nates-mac-mini` is the canonical development and runtime host, not the canonical Git history.
 - Only cloud-safe source and documentation belong in GitHub. Approval records, browser sessions,
   generated drafts, credentials, contact data, logs, and queue state remain private on the mini.
-- Current deployment source: `cf70e7b` (approved ivory/green design, refined production-service landing page, About, and Careers)
+- Current deployment source: `9973875` (approved design, service landing page, About, and detailed Careers roles)
 - Production: `https://eastbayprojects.com`
 - Cloudflare Pages project: `eastbayprojects`
-- Latest deployment URL: `https://5223dd3b.eastbayprojects-1vq.pages.dev`
+- Latest deployment URL: `https://e964fb77.eastbayprojects-1vq.pages.dev`
 - Google Ads tag `AW-18335868802` is installed immediately after `<head>` on every public HTML page.
 - Production routes were verified after the September 13 deployment.
 
@@ -296,3 +296,5 @@ fake interface text, generic AI office scenes, compliance claims, and unrelated 
 - Expanded all five Careers roles with ownership, relevant experience, delivery expectations, and role-specific work samples. Forward-Deployed Engineer includes direct customer discovery, implementation, integration, and launch responsibility.
 - Added shared expectations for client judgment, dependable delivery, maintainable handoffs, and accountability for AI-assisted work. No unconfirmed compensation, benefits, or fixed experience thresholds were introduced.
 - Added role jump links and retained application links that select the correct role in the existing inquiry form.
+
+- Verified all five detailed descriptions on production at `https://e964fb77.eastbayprojects-1vq.pages.dev` (source `9973875`). Desktop and mobile layout and role-selection checks passed; form submission logic is unchanged.
