@@ -60,3 +60,5 @@ runtime work resumes.
 
 - Keep founder photos and biographies on `/about`, not the homepage. Present East Bay Projects as a family-led business with a network of senior engineers in the U.S. and internationally.
 - `/careers` lists the current roles and accepts inquiries through the existing contact handler.
+
+- Mention Mayven Studios only once in public site copy: Nate’s About biography, as founder of the award-winning engineering firm. Keep his personal website out of the project portfolio.

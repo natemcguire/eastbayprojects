@@ -308,3 +308,9 @@ fake interface text, generic AI office scenes, compliance claims, and unrelated 
 - Desktop, phone, and narrow-phone checks passed: ten projects, all images decoded, source links, no overflow or JavaScript errors, and working mobile navigation. Homepage contact links and existing form handlers remain unchanged.
 
 - Deployed the editorial portfolio to `https://1089716e.eastbayprojects-1vq.pages.dev` from `d8cf165`. Normal production URL confirms ten projects and Craig’s credit; live desktop/phone checks verified all imagery, navigation, and both review sources.
+
+### Portfolio and biography corrections (September 14, 2026)
+
+- Removed Austin’s Heating & AC after Nate identified it as an incorrect attribution, and removed his personal website from the portfolio.
+- Kept the verified review excerpts and “Former Customer” labels; removed the review links and testimonial subheading at Nate’s request. Original provenance remains in local repository documentation.
+- Limited public-site Mayven wording to one mention in Nate’s About biography: founder of award-winning engineering firm Mayven Studios. Removed it from Josh’s biography and recorded the copy rule in AGENTS.md.
