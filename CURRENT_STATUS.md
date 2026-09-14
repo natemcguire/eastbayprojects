@@ -314,3 +314,5 @@ fake interface text, generic AI office scenes, compliance claims, and unrelated 
 - Removed Austin’s Heating & AC after Nate identified it as an incorrect attribution, and removed his personal website from the portfolio.
 - Kept the verified review excerpts and “Former Customer” labels; removed the review links and testimonial subheading at Nate’s request. Original provenance remains in local repository documentation.
 - Limited public-site Mayven wording to one mention in Nate’s About biography: founder of award-winning engineering firm Mayven Studios. Removed it from Josh’s biography and recorded the copy rule in AGENTS.md.
+
+- Nate also requested removal of Nate’s Software. The portfolio now contains seven projects; project numbering was updated.
