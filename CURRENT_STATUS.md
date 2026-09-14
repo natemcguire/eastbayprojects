@@ -10,10 +10,10 @@ Last updated: September 14, 2026
 - `nates-mac-mini` is the canonical development and runtime host, not the canonical Git history.
 - Only cloud-safe source and documentation belong in GitHub. Approval records, browser sessions,
   generated drafts, credentials, contact data, logs, and queue state remain private on the mini.
-- Current deployment source: `b3cf512` (homepage headline: SOFTWARE FOR YOUR BUSINESS)
+- Current deployment source: `4b0fbf1` (custom software service and revised production landing copy)
 - Production: `https://eastbayprojects.com`
 - Cloudflare Pages project: `eastbayprojects`
-- Latest deployment URL: `https://45cb0935.eastbayprojects-1vq.pages.dev`
+- Latest deployment URL: `https://701dcc63.eastbayprojects-1vq.pages.dev`
 - Google Ads tag `AW-18335868802` is installed immediately after `<head>` on every public HTML page.
 - Production routes were verified after the September 13 deployment.
 
@@ -330,3 +330,11 @@ fake interface text, generic AI office scenes, compliance claims, and unrelated 
 ## Homepage headline — September 14, 2026
 
 - Changed the hero headline to “SOFTWARE FOR YOUR BUSINESS” at Nate’s request. Public build and diff checks passed; verified the new headline on the live homepage. Deployment: `https://45cb0935.eastbayprojects-1vq.pages.dev`, source `b3cf512`.
+
+## Custom software offer — September 14, 2026
+
+- Homepage introduction now addresses slow websites, cluttered or broken internal tools, and expensive CRMs like Salesforce, offering custom software built with AI and deployed by experienced engineers.
+- Added a prominent full-width “Custom Software, Built with AI” service at the top of the services grid, linking to Vibe Code to Production. Consolidated the former standalone promo into this service.
+- Reduced finish/finishing language on the landing page to one call to action; other sections describe code review, integrations, testing, deployment, and ownership.
+- Public build and diff checks passed. Checked the service card spans its grid, its destination, and both pages for horizontal overflow at 1440, 390, and 320 pixels. Contact form action is preserved. Verified deployed copy on both live routes.
+- Deployment: `https://701dcc63.eastbayprojects-1vq.pages.dev`, source `4b0fbf1`.
