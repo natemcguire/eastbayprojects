@@ -50,7 +50,7 @@ runtime work resumes.
 
 ## Public site design and navigation
 
-- The production homepage is the design reference for every marketing page. Match its blue/cream/amber palette, fonts, blueprint grid, header, buttons, and footer; do not introduce separate page themes.
+- The production homepage is the design reference for every marketing page. Match its approved ivory/green palette, DM Sans and Space Grotesk fonts, header, buttons, and footer using `/style.css`; do not introduce separate page themes.
 - Primary Contact and Start a Project links lead to the homepage form (`/#contact`). Keep `/contact` as an indexable standalone page with the same design and a footer link.
 - Civic belongs in the footer, not desktop or mobile primary navigation.
 - Both contact forms must save through `/api/contact` and the existing `LEADS_DB` binding. Verify successful storage and failure behavior; opening an email draft is not a submitted inquiry.

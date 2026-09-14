@@ -1,6 +1,6 @@
 # East Bay Projects — Current Status
 
-Last updated: September 13, 2026
+Last updated: September 14, 2026
 
 ## Source of truth
 
@@ -266,3 +266,9 @@ fake interface text, generic AI office scenes, compliance claims, and unrelated 
 - Requested homepage indexing; Google confirmed it was added to the priority crawl queue. The prior August 27 crawl had selected the www homepage as canonical; the newly deployed homepage declares the non-www canonical explicitly.
 - Requested `/contact` indexing; Google also confirmed it was added to the priority crawl queue.
 - Crawl requests are not confirmation that pages have been indexed.
+
+### Approved design promotion (September 14, 2026)
+
+- Nate approved the ivory/green preview at `4b150e4f.eastbayprojects-designs.pages.dev`. Its exact stylesheet is now shared by all five production pages.
+- Retained the September 13 contact forms, footer navigation, plain copy, and SEO changes. The public builder preserves the published founder biography and analytics boundary.
+- Added `scripts/build-public.py` to stage only marketing assets. Desktop and phone checks passed on all five routes with no overflow, missing images, or preview indexing restrictions.
