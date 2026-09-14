@@ -10,10 +10,10 @@ Last updated: September 14, 2026
 - `nates-mac-mini` is the canonical development and runtime host, not the canonical Git history.
 - Only cloud-safe source and documentation belong in GitHub. Approval records, browser sessions,
   generated drafts, credentials, contact data, logs, and queue state remain private on the mini.
-- Current deployment source: `858f241` (approved ivory/green design; retained live founder section as noted below)
+- Current deployment source: `cf70e7b` (approved ivory/green design, refined production-service landing page, About, and Careers)
 - Production: `https://eastbayprojects.com`
 - Cloudflare Pages project: `eastbayprojects`
-- Latest deployment URL: `https://0c86e761.eastbayprojects-1vq.pages.dev`
+- Latest deployment URL: `https://5223dd3b.eastbayprojects-1vq.pages.dev`
 - Google Ads tag `AW-18335868802` is installed immediately after `<head>` on every public HTML page.
 - Production routes were verified after the September 13 deployment.
 
@@ -288,3 +288,5 @@ fake interface text, generic AI office scenes, compliance claims, and unrelated 
 - All eight public pages are included in the safe marketing build and sitemap. The builder no longer restores a founder section on the homepage.
 - Local desktop, phone, and narrow-phone checks passed for the revised landing page, homepage, About, and Careers. Verified loaded portraits only on About, no overflow or JavaScript errors, and successful Careers inquiry storage.
 - Earlier landing deployment `https://ee96eefc.eastbayprojects-1vq.pages.dev` passed live form failure/retry and storage checks. The single labeled live test record was verified and removed.
+
+- Final deployment: `https://5223dd3b.eastbayprojects-1vq.pages.dev` from `cf70e7b`. After brief cache propagation, normal production URLs passed desktop/phone checks. Confirmed eight-page sitemap, homepage without portraits, and live Careers inquiry storage with correct role/source; removed the single synthetic application.
