@@ -10,10 +10,10 @@ Last updated: September 14, 2026
 - `nates-mac-mini` is the canonical development and runtime host, not the canonical Git history.
 - Only cloud-safe source and documentation belong in GitHub. Approval records, browser sessions,
   generated drafts, credentials, contact data, logs, and queue state remain private on the mini.
-- Current deployment source: `7912d3c` (contact forms, shared design, copy, and sitemap; retained live founder section as noted below)
+- Current deployment source: `858f241` (approved ivory/green design; retained live founder section as noted below)
 - Production: `https://eastbayprojects.com`
 - Cloudflare Pages project: `eastbayprojects`
-- Latest deployment URL: `https://740efb10.eastbayprojects-1vq.pages.dev`
+- Latest deployment URL: `https://0c86e761.eastbayprojects-1vq.pages.dev`
 - Google Ads tag `AW-18335868802` is installed immediately after `<head>` on every public HTML page.
 - Production routes were verified after the September 13 deployment.
 
@@ -272,3 +272,10 @@ fake interface text, generic AI office scenes, compliance claims, and unrelated 
 - Nate approved the ivory/green preview at `4b150e4f.eastbayprojects-designs.pages.dev`. Its exact stylesheet is now shared by all five production pages.
 - Retained the September 13 contact forms, footer navigation, plain copy, and SEO changes. The public builder preserves the published founder biography and analytics boundary.
 - Added `scripts/build-public.py` to stage only marketing assets. Desktop and phone checks passed on all five routes with no overflow, missing images, or preview indexing restrictions.
+
+### Vibe Code to Production landing page (September 14, 2026)
+
+- Added `/vibe-code-to-production`: work directly with an East Bay Projects engineer to finish an existing app and deploy in client-controlled accounts. Adapted the supplied OWN copy to the existing brand and scoped engagement model.
+- Uses the approved ivory/green design, an inquiry form with the service label, practical FAQs, and clear ownership, deployment, and handoff copy. Added homepage and footer links, contact service options, canonical/social metadata, and sitemap entry.
+- Local verification passed at 1440, 390, and 320px: no overflow or JavaScript errors; menu, FAQ, CTA, failed-submission recovery, successful save, and reset checked. Confirmed service label and source URL in local D1. Existing homepage and contact form regression checks passed.
+- Production design promotion completed at `https://0c86e761.eastbayprojects-1vq.pages.dev`; the public stylesheet hash matches the exact approved preview.

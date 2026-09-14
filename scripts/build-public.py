@@ -7,7 +7,7 @@ import subprocess
 
 ROOT = Path(__file__).resolve().parents[1]
 OUT = ROOT / 'public-dist'
-PAGES = ['index.html', 'portfolio.html', 'civic.html', 'contact.html', 'privacy.html']
+PAGES = ['index.html', 'portfolio.html', 'civic.html', 'contact.html', 'privacy.html', 'vibe-code-to-production.html']
 if OUT.is_symlink():
     raise SystemExit('Refusing symlink output')
 if OUT.exists():
@@ -34,6 +34,6 @@ for name in PAGES:
             target = OUT / path
             target.parent.mkdir(parents=True, exist_ok=True)
             shutil.copy2(source, target)
-for name in ['style.css', 'robots.txt', 'sitemap.xml']:
+for name in ['style.css', 'vibe-code-to-production.css', 'robots.txt', 'sitemap.xml']:
     shutil.copy2(ROOT / name, OUT / name)
-print('Built five marketing pages and their public assets in public-dist/')
+print('Built six marketing pages and their public assets in public-dist/')
