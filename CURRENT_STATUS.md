@@ -10,10 +10,10 @@ Last updated: September 14, 2026
 - `nates-mac-mini` is the canonical development and runtime host, not the canonical Git history.
 - Only cloud-safe source and documentation belong in GitHub. Approval records, browser sessions,
   generated drafts, credentials, contact data, logs, and queue state remain private on the mini.
-- Current deployment source: `d8cf165` (editorial portfolio plus approved site, service landing page, About, and Careers)
+- Current deployment source: `f093d79` (corrected portfolio, SailScan app screenshot, and biography wording)
 - Production: `https://eastbayprojects.com`
 - Cloudflare Pages project: `eastbayprojects`
-- Latest deployment URL: `https://1089716e.eastbayprojects-1vq.pages.dev`
+- Latest deployment URL: `https://88923df8.eastbayprojects-1vq.pages.dev`
 - Google Ads tag `AW-18335868802` is installed immediately after `<head>` on every public HTML page.
 - Production routes were verified after the September 13 deployment.
 
@@ -318,3 +318,5 @@ fake interface text, generic AI office scenes, compliance claims, and unrelated 
 - Nate also requested removal of Nate’s Software. The portfolio now contains seven projects; project numbering was updated.
 
 - Replaced SailScan’s website preview with its published App Store results screen showing traced stripes and sail measurements. Updated portrait image layout and closed the grid gap left by removals.
+
+- Corrections deployed to `https://88923df8.eastbayprojects-1vq.pages.dev` (source `f093d79`). Verified seven projects, the SailScan app image, removed entries/links/subheading, and one Mayven mention in Nate’s bio. Desktop and mobile layout checks passed.
