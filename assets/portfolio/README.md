@@ -20,3 +20,5 @@ Quotes are short verbatim excerpts from published Mayven reviews, presented as f
 Prop Q is excluded from this portfolio. These captures show the public sites at the capture date; live sites may subsequently change.
 
 Droptics was added after Nate confirmed the collaboration with Craig Fowler. Project art is from https://howler.studio/work/droptics (Sanity asset c7c62a77631145a1dafe51b12ed9d928298c5923-2400x1552.webp). The portfolio explicitly credits Craig’s digital design and art direction and links to his complete project credits.
+
+SailScan’s portfolio image now uses the actual app results screenshot from its App Store listing (https://apps.apple.com/us/app/sail-scan/id6762089009), retrieved through Apple’s lookup API on September 14, 2026. The website capture is no longer deployed.

@@ -316,3 +316,5 @@ fake interface text, generic AI office scenes, compliance claims, and unrelated 
 - Limited public-site Mayven wording to one mention in Nate’s About biography: founder of award-winning engineering firm Mayven Studios. Removed it from Josh’s biography and recorded the copy rule in AGENTS.md.
 
 - Nate also requested removal of Nate’s Software. The portfolio now contains seven projects; project numbering was updated.
+
+- Replaced SailScan’s website preview with its published App Store results screen showing traced stripes and sail measurements. Updated portrait image layout and closed the grid gap left by removals.
