@@ -10,10 +10,10 @@ Last updated: September 14, 2026
 - `nates-mac-mini` is the canonical development and runtime host, not the canonical Git history.
 - Only cloud-safe source and documentation belong in GitHub. Approval records, browser sessions,
   generated drafts, credentials, contact data, logs, and queue state remain private on the mini.
-- Current deployment source: `f093d79` (corrected portfolio, SailScan app screenshot, and biography wording)
+- Current deployment source: `b4d7160` (SailScan iOS marketing screen device composition)
 - Production: `https://eastbayprojects.com`
 - Cloudflare Pages project: `eastbayprojects`
-- Latest deployment URL: `https://88923df8.eastbayprojects-1vq.pages.dev`
+- Latest deployment URL: `https://9240a11c.eastbayprojects-1vq.pages.dev`
 - Google Ads tag `AW-18335868802` is installed immediately after `<head>` on every public HTML page.
 - Production routes were verified after the September 13 deployment.
 
@@ -320,3 +320,9 @@ fake interface text, generic AI office scenes, compliance claims, and unrelated 
 - Replaced SailScan’s website preview with its published App Store results screen showing traced stripes and sail measurements. Updated portrait image layout and closed the grid gap left by removals.
 
 - Corrections deployed to `https://88923df8.eastbayprojects-1vq.pages.dev` (source `f093d79`). Verified seven projects, the SailScan app image, removed entries/links/subheading, and one Mayven mention in Nate’s bio. Desktop and mobile layout checks passed.
+
+## SailScan portfolio presentation — September 14, 2026
+
+- Replaced the plain portrait screenshot with an ocean-blue, two-phone composition using the iOS marketing camera and results screens, with Droptics as the art-direction reference. Built-in image generation produced the device mockup; source roles and prompt are documented in `assets/portfolio/README.md`.
+- The optimized 105 KB WebP fills the portfolio tile edge to edge. Verified production at 1440, 390, and 320 pixels: image loads, seven projects remain, no horizontal overflow or JavaScript errors, and mobile navigation works.
+- Deployed source `b4d7160` to `https://9240a11c.eastbayprojects-1vq.pages.dev` and verified `eastbayprojects.com/portfolio`.
