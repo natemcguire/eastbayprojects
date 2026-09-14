@@ -290,3 +290,9 @@ fake interface text, generic AI office scenes, compliance claims, and unrelated 
 - Earlier landing deployment `https://ee96eefc.eastbayprojects-1vq.pages.dev` passed live form failure/retry and storage checks. The single labeled live test record was verified and removed.
 
 - Final deployment: `https://5223dd3b.eastbayprojects-1vq.pages.dev` from `cf70e7b`. After brief cache propagation, normal production URLs passed desktop/phone checks. Confirmed eight-page sitemap, homepage without portraits, and live Careers inquiry storage with correct role/source; removed the single synthetic application.
+
+### Detailed senior role descriptions (September 14, 2026)
+
+- Expanded all five Careers roles with ownership, relevant experience, delivery expectations, and role-specific work samples. Forward-Deployed Engineer includes direct customer discovery, implementation, integration, and launch responsibility.
+- Added shared expectations for client judgment, dependable delivery, maintainable handoffs, and accountability for AI-assisted work. No unconfirmed compensation, benefits, or fixed experience thresholds were introduced.
+- Added role jump links and retained application links that select the correct role in the existing inquiry form.
