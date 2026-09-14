@@ -10,234 +10,350 @@
 
     gtag('config', 'AW-18335868802');
   </script>
-  <meta charset="UTF-8"/>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Portfolio | East Bay Projects</title>
-  <meta name="description" content="Selected work by East Bay Projects — brand platforms, local services, professional practices, and personal sites."/>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Selected Work — Portfolio | East Bay Projects</title>
+  <meta name="description" content="Selected websites, software, and apps: SailScan, Seamaphore, Recipeas, Nate’s Software, Steven Brown for Austin, and more.">
+  <link rel="canonical" href="https://eastbayprojects.com/portfolio">
+  <meta property="og:title" content="Selected Work | East Bay Projects" />
+  <meta property="og:description" content="Selected websites, software, and apps: SailScan, Seamaphore, Recipeas, Nate’s Software, Steven Brown for Austin, and more." />
+  <meta property="og:url" content="https://eastbayprojects.com/portfolio">
+  <meta property="og:type" content="website" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Vibe Code to Production Code | East Bay Projects" />
+  <meta name="twitter:description" content="Websites and software for your business." />
+
   <style>
-    @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=IBM+Plex+Mono:wght@400;500;600&family=Lora:ital,wght@0,400;0,600;1,400&display=swap');
+    @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=IBM+Plex+Mono:ital,wght@0,300;0,400;0,500;0,600&family=Lora:ital,wght@0,400;0,500;0,600;1,400;1,500&display=swap');
+
     :root {
-      --paper: #F4EFE6; --ink: #0F0F0F; --blue: #1A3A5C; --blue-mid: #2D5FA6;
-      --amber: #C8750A; --amber-light: #E8971A; --rule: #C8C0B0;
-      --paper-dark: #E8E2D6; --white: #FDFCFA;
+      --paper:       #F4EFE6;
+      --ink:         #0F0F0F;
+      --blue:        #1A3A5C;
+      --blue-mid:    #2D5FA6;
+      --amber:       #C8750A;
+      --amber-light: #E8971A;
+      --rule:        #C8C0B0;
+      --paper-dark:  #E8E2D6;
+      --white:       #FDFCFA;
     }
+
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
     html { scroll-behavior: smooth; }
-    body { font-family: 'Lora', Georgia, serif; background: var(--paper); color: var(--ink); }
+    body { font-family: 'Lora', Georgia, serif; background: var(--paper); color: var(--ink); overflow-x: hidden; }
     a { color: inherit; text-decoration: none; }
 
     /* HEADER */
-    header {
-      position: sticky; top: 0; z-index: 100;
+    #site-header {
+      position: fixed; top: 0; left: 0; right: 0; z-index: 1000;
       background: var(--blue); border-bottom: 1px solid var(--amber);
-      padding: 0 40px; height: 64px;
-      display: flex; align-items: center; justify-content: space-between;
+      transition: box-shadow 0.3s;
     }
-    .logo { font-family: 'Bebas Neue', sans-serif; font-size: 22px; letter-spacing: 0.15em; color: var(--white); }
-    .logo em { color: var(--amber); font-style: normal; }
-    nav { display: flex; gap: 32px; list-style: none; align-items: center; }
-    nav a { font-family: 'IBM Plex Mono', monospace; font-size: 11px; letter-spacing: 0.12em; text-transform: uppercase; color: rgba(253,252,250,0.7); transition: color 0.2s; }
-    nav a:hover, nav a.active { color: var(--amber); }
-    .btn-nav { background: var(--amber); color: var(--white) !important; padding: 8px 18px; font-family: 'Bebas Neue', sans-serif !important; font-size: 14px !important; letter-spacing: 0.1em !important; }
+    #site-header.scrolled { box-shadow: 0 4px 32px rgba(0,0,0,0.45); }
+    .header-inner {
+      display: flex; align-items: center; justify-content: space-between;
+      padding: 0 40px; height: 64px; max-width: 1400px; margin: 0 auto;
+    }
+    .header-logo { font-family: 'Bebas Neue', sans-serif; font-size: 22px; letter-spacing: 0.15em; color: var(--white); white-space: nowrap; }
+    .header-logo em { color: var(--amber); font-style: normal; }
+    .header-nav { display: flex; align-items: center; gap: 36px; list-style: none; }
+    .header-nav a { font-family: 'IBM Plex Mono', monospace; font-size: 11px; letter-spacing: 0.12em; text-transform: uppercase; color: rgba(253,252,250,0.75); transition: color 0.2s; }
+    .header-nav a:hover { color: var(--amber); }
+    .btn-header { font-family: 'Bebas Neue', sans-serif; font-size: 15px; letter-spacing: 0.1em; color: var(--blue); background: var(--amber); padding: 10px 20px; border: 2px solid var(--amber); border-radius: 0; cursor: pointer; white-space: nowrap; transition: background 0.2s, color 0.2s; display: inline-block; }
+    .btn-header:hover { background: transparent; color: var(--amber); }
+    .hamburger { display: none; flex-direction: column; gap: 5px; background: none; border: none; cursor: pointer; padding: 4px; }
+    .hamburger span { display: block; width: 26px; height: 2px; background: var(--white); transition: transform 0.3s, opacity 0.3s; }
+    .hamburger.open span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+    .hamburger.open span:nth-child(2) { opacity: 0; }
+    .hamburger.open span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
+    .mobile-nav { display: none; flex-direction: column; background: var(--blue); border-top: 1px solid rgba(200,117,10,0.3); padding: 24px 40px; gap: 20px; }
+    .mobile-nav.open { display: flex; }
+    .mobile-nav a { font-family: 'IBM Plex Mono', monospace; font-size: 13px; letter-spacing: 0.12em; text-transform: uppercase; color: rgba(253,252,250,0.8); }
 
     /* HERO */
-    .page-hero { background: var(--blue); padding: 80px 40px 60px; position: relative; overflow: hidden; }
-    .page-hero::before {
+    #hero {
+      min-height: 100vh; background: var(--blue); position: relative; overflow: hidden;
+      display: flex; flex-direction: column; justify-content: center; padding: 120px 40px 80px;
+    }
+    #hero::before {
       content: ''; position: absolute; inset: 0; pointer-events: none;
-      background-image: repeating-linear-gradient(0deg, rgba(255,255,255,0.05) 0px, rgba(255,255,255,0.05) 1px, transparent 1px, transparent 60px),
-        repeating-linear-gradient(90deg, rgba(255,255,255,0.05) 0px, rgba(255,255,255,0.05) 1px, transparent 1px, transparent 60px);
+      background-image:
+        repeating-linear-gradient(0deg, rgba(255,255,255,0.055) 0px, rgba(255,255,255,0.055) 1px, transparent 1px, transparent 60px),
+        repeating-linear-gradient(90deg, rgba(255,255,255,0.055) 0px, rgba(255,255,255,0.055) 1px, transparent 1px, transparent 60px);
     }
-    .page-hero-inner { max-width: 1200px; margin: 0 auto; position: relative; z-index: 1; }
-    .eyebrow { font-family: 'IBM Plex Mono', monospace; font-size: 11px; letter-spacing: 0.2em; text-transform: uppercase; color: var(--amber); margin-bottom: 20px; }
-    .page-title { font-family: 'Bebas Neue', sans-serif; font-size: clamp(60px, 8vw, 100px); line-height: 0.92; letter-spacing: 0.02em; color: var(--white); margin-bottom: 24px; }
-    .page-title em { color: var(--amber); font-style: normal; }
-    .page-sub { font-family: 'Lora', Georgia, serif; font-size: 18px; color: rgba(253,252,250,0.78); max-width: 540px; line-height: 1.6; }
-    .rule { width: 100%; height: 1px; background: var(--amber); opacity: 0.5; margin-top: 48px; }
-
-    /* GRID */
-    .grid-section { max-width: 1200px; margin: 0 auto; padding: 64px 40px; }
-    .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(340px, 1fr)); gap: 2px; }
-
-    /* CARD */
-    .card {
-      background: var(--blue); position: relative; overflow: hidden;
-      transition: transform 0.25s, box-shadow 0.25s;
-      border: 1px solid rgba(200,117,10,0.15);
+    #hero::after {
+      content: ''; position: absolute; top: -10%; left: -5%; width: 70%; height: 120%; pointer-events: none;
+      background: radial-gradient(ellipse at 30% 40%, rgba(45,95,166,0.35) 0%, transparent 65%);
     }
-    .card:hover { transform: translateY(-4px); box-shadow: 0 16px 48px rgba(0,0,0,0.35); border-color: rgba(200,117,10,0.5); }
-    .card-inner { padding: 36px; display: flex; flex-direction: column; height: 100%; min-height: 320px; }
-    .card-num { font-family: 'IBM Plex Mono', monospace; font-size: 10px; letter-spacing: 0.2em; text-transform: uppercase; color: var(--amber); margin-bottom: 6px; }
-    .card-tag { font-family: 'IBM Plex Mono', monospace; font-size: 10px; letter-spacing: 0.15em; text-transform: uppercase; color: rgba(253,252,250,0.45); margin-bottom: 20px; }
-    .card-title { font-family: 'Bebas Neue', sans-serif; font-size: 36px; letter-spacing: 0.04em; color: var(--amber); line-height: 1; margin-bottom: 4px; }
-    .card-url { font-family: 'IBM Plex Mono', monospace; font-size: 10px; letter-spacing: 0.1em; color: rgba(200,117,10,0.6); margin-bottom: 20px; }
-    .card-rule { width: 40px; height: 2px; background: var(--amber); margin-bottom: 20px; }
-    .card-body { font-family: 'Lora', Georgia, serif; font-size: 15px; line-height: 1.65; color: rgba(253,252,250,0.75); flex: 1; }
-    .card-footer { margin-top: 28px; display: flex; justify-content: space-between; align-items: flex-end; }
-    .tag-row { display: flex; flex-wrap: wrap; gap: 6px; }
-    .pill { font-family: 'IBM Plex Mono', monospace; font-size: 9px; letter-spacing: 0.12em; text-transform: uppercase; padding: 4px 10px; background: rgba(45,95,166,0.4); color: rgba(253,252,250,0.75); border: 1px solid rgba(45,95,166,0.6); }
-    .pill.amber { background: rgba(200,117,10,0.15); color: var(--amber); border-color: rgba(200,117,10,0.4); }
-    .visit-link { font-family: 'IBM Plex Mono', monospace; font-size: 11px; letter-spacing: 0.1em; color: var(--amber); white-space: nowrap; padding: 8px 16px; border: 1px solid var(--amber); transition: background 0.2s; flex-shrink: 0; }
-    .visit-link:hover { background: var(--amber); color: var(--white); }
+    .hero-inner {
+      position: relative; z-index: 2; max-width: 1400px; margin: 0 auto; width: 100%;
+      display: grid; grid-template-columns: 1fr 380px; gap: 60px; align-items: center;
+    }
+    .hero-eyebrow { font-family: 'IBM Plex Mono', monospace; font-size: 11px; letter-spacing: 0.18em; text-transform: uppercase; color: var(--amber); margin-bottom: 32px; }
+    .hero-headline { font-family: 'Bebas Neue', sans-serif; font-size: clamp(72px, 10vw, 130px); line-height: 0.92; letter-spacing: 0.02em; color: var(--white); margin-bottom: 32px; }
+    .amber-period { color: var(--amber); }
+    .hero-sub { font-family: 'Lora', Georgia, serif; font-size: 18px; line-height: 1.65; color: rgba(253,252,250,0.82); max-width: 540px; margin-bottom: 40px; }
+    .hero-ctas { display: flex; gap: 16px; flex-wrap: wrap; }
+    .btn-fill { font-family: 'Bebas Neue', sans-serif; font-size: 17px; letter-spacing: 0.1em; background: var(--amber); color: var(--white); padding: 14px 28px; border: 2px solid var(--amber); border-radius: 0; cursor: pointer; transition: background 0.2s; display: inline-block; white-space: nowrap; }
+    .btn-fill:hover { background: var(--amber-light); border-color: var(--amber-light); }
+    .btn-ghost { font-family: 'Bebas Neue', sans-serif; font-size: 17px; letter-spacing: 0.1em; background: transparent; color: var(--white); padding: 14px 28px; border: 2px solid rgba(253,252,250,0.55); border-radius: 0; cursor: pointer; transition: border-color 0.2s; display: inline-block; white-space: nowrap; }
+    .btn-ghost:hover { border-color: var(--white); }
+    .typewriter-label { font-family: 'IBM Plex Mono', monospace; font-size: 10px; letter-spacing: 0.2em; text-transform: uppercase; color: rgba(253,252,250,0.4); border-bottom: 1px solid rgba(253,252,250,0.15); padding-bottom: 8px; width: 100%; }
+    .typewriter-box { background: rgba(10,25,45,0.6); border: 1px solid rgba(45,95,166,0.5); border-top: 3px solid var(--amber); padding: 28px 24px; width: 100%; min-height: 136px; margin-top: 12px; }
+    .tw-prefix { font-family: 'IBM Plex Mono', monospace; font-size: 10px; letter-spacing: 0.15em; color: var(--amber); text-transform: uppercase; margin-bottom: 10px; }
+    #tw-display { font-family: 'Bebas Neue', sans-serif; font-size: 36px; letter-spacing: 0.04em; color: var(--amber-light); line-height: 1.15; min-height: 80px; display: flex; align-items: flex-start; flex-wrap: wrap; }
+    .cursor { display: inline-block; width: 3px; height: 0.85em; background: var(--amber); margin-left: 4px; animation: blink 0.9s step-end infinite; vertical-align: middle; flex-shrink: 0; }
+    @keyframes blink { 0%,100%{opacity:1} 50%{opacity:0} }
+    .hero-bottom { position: relative; z-index: 2; max-width: 1400px; margin: 60px auto 0; width: 100%; }
+    .hero-rule { width: 100%; height: 1px; background: var(--amber); opacity: 0.7; margin-bottom: 14px; }
+    .hero-byline { font-family: 'IBM Plex Mono', monospace; font-size: 10px; letter-spacing: 0.18em; color: rgba(253,252,250,0.55); text-transform: uppercase; }
 
-    /* BIG number watermark */
-    .card-bg-num { position: absolute; bottom: -10px; right: 8px; font-family: 'Bebas Neue', sans-serif; font-size: 120px; line-height: 1; color: rgba(255,255,255,0.03); pointer-events: none; user-select: none; }
+    /* SECTIONS */
+    .sec-cream { background: var(--paper); padding: 100px 40px; }
+    .sec-dark { background: var(--blue); padding: 100px 40px; position: relative; overflow: hidden; }
+    .sec-dark::before {
+      content: ''; position: absolute; inset: 0; pointer-events: none;
+      background-image:
+        repeating-linear-gradient(0deg, rgba(255,255,255,0.03) 0px, rgba(255,255,255,0.03) 1px, transparent 1px, transparent 80px),
+        repeating-linear-gradient(90deg, rgba(255,255,255,0.03) 0px, rgba(255,255,255,0.03) 1px, transparent 1px, transparent 80px);
+    }
+    .sec-inner { max-width: 1400px; margin: 0 auto; position: relative; z-index: 1; }
+    .num-wrap { position: relative; margin-bottom: 8px; }
+    .num-bg {
+      font-family: 'Bebas Neue', sans-serif; font-size: clamp(100px, 14vw, 160px); line-height: 1;
+      color: var(--rule); opacity: 0.45; position: absolute; top: -30px; left: -12px;
+      pointer-events: none; z-index: 0; letter-spacing: -0.02em;
+    }
+    .num-bg.light { color: rgba(253,252,250,0.1); opacity: 1; }
+    .sec-heading { font-family: 'Bebas Neue', sans-serif; font-size: 56px; letter-spacing: 0.04em; color: var(--ink); position: relative; z-index: 1; padding-top: 24px; }
+    .sec-heading.white { color: var(--white); }
 
-    /* CTA section */
-    .cta-section { background: var(--blue); padding: 80px 40px; text-align: center; position: relative; overflow: hidden; }
-    .cta-section::before { content: ''; position: absolute; inset: 0; background-image: repeating-linear-gradient(0deg, rgba(255,255,255,0.04) 0px, rgba(255,255,255,0.04) 1px, transparent 1px, transparent 60px), repeating-linear-gradient(90deg, rgba(255,255,255,0.04) 0px, rgba(255,255,255,0.04) 1px, transparent 1px, transparent 60px); pointer-events: none; }
-    .cta-inner { position: relative; z-index: 1; max-width: 600px; margin: 0 auto; }
-    .cta-label { font-family: 'IBM Plex Mono', monospace; font-size: 10px; letter-spacing: 0.2em; text-transform: uppercase; color: var(--amber); margin-bottom: 20px; }
-    .cta-title { font-family: 'Bebas Neue', sans-serif; font-size: 56px; letter-spacing: 0.04em; color: var(--white); margin-bottom: 16px; }
-    .cta-sub { font-family: 'Lora', serif; font-size: 17px; color: rgba(253,252,250,0.7); margin-bottom: 36px; }
-    .btn-cta { font-family: 'Bebas Neue', sans-serif; font-size: 18px; letter-spacing: 0.12em; background: var(--amber); color: var(--white); padding: 16px 36px; border: 2px solid var(--amber); display: inline-block; transition: background 0.2s; }
-    .btn-cta:hover { background: var(--amber-light); }
+    /* PROBLEM */
+    .problem-grid { display: grid; grid-template-columns: repeat(3,1fr); border-top: 3px solid var(--ink); border-left: 3px solid var(--ink); margin-top: 60px; }
+    .prob-card { padding: 36px 32px 40px; border-right: 3px solid var(--ink); border-bottom: 3px solid var(--ink); position: relative; overflow: hidden; background: var(--paper); transition: background 0.25s; }
+    .prob-card:hover { background: var(--paper-dark); }
+    .card-tag { font-family: 'IBM Plex Mono', monospace; font-size: 10px; letter-spacing: 0.2em; color: var(--amber); text-transform: uppercase; margin-bottom: 20px; }
+    .prob-card h3 { font-family: 'Bebas Neue', sans-serif; font-size: 30px; letter-spacing: 0.03em; color: var(--ink); line-height: 1.1; margin-bottom: 16px; }
+    .prob-card p { font-family: 'Lora', Georgia, serif; font-size: 16px; line-height: 1.7; color: rgba(15,15,15,0.8); }
+    .prob-card::after { content: ''; position: absolute; top: 0; right: 0; width: 0; height: 0; border-style: solid; border-width: 0 28px 28px 0; border-color: transparent var(--amber) transparent transparent; opacity: 0.6; }
+
+    /* SERVICES */
+    .services-grid { display: grid; grid-template-columns: repeat(3,1fr); gap: 2px; }
+    .svc-subhead { font-family: 'IBM Plex Mono', monospace; font-size: 11px; letter-spacing: 0.18em; color: var(--amber); text-transform: uppercase; margin-bottom: 56px; display: block; }
+    .svc-card { background: #0F2340; border-top: 3px solid var(--amber); padding: 32px 28px 28px; position: relative; overflow: hidden; display: flex; flex-direction: column; transition: transform 0.25s, box-shadow 0.25s; }
+    .svc-card:hover { transform: translateY(-4px); box-shadow: 0 12px 40px rgba(0,0,0,0.45); z-index: 2; }
+    .svc-num { font-family: 'IBM Plex Mono', monospace; font-size: 9px; letter-spacing: 0.22em; color: var(--amber); text-transform: uppercase; margin-bottom: 14px; }
+    .svc-card h3 { font-family: 'Bebas Neue', sans-serif; font-size: 30px; letter-spacing: 0.04em; color: var(--amber); line-height: 1.1; margin-bottom: 14px; }
+    .svc-rule { width: 100%; height: 1px; background: rgba(200,192,176,0.25); margin-bottom: 14px; }
+    .svc-price { font-family: 'IBM Plex Mono', monospace; font-size: 22px; font-weight: 500; color: var(--amber); letter-spacing: 0.04em; margin-bottom: 16px; }
+    .svc-price .cur { font-size: 14px; vertical-align: top; margin-top: 4px; display: inline-block; opacity: 0.8; }
+    .svc-card p { font-family: 'Lora', Georgia, serif; font-size: 14px; line-height: 1.65; color: rgba(253,252,250,0.75); flex: 1; margin-bottom: 20px; }
+    .tag-row { display: flex; flex-wrap: wrap; gap: 6px; margin-top: auto; }
+    .pill { font-family: 'IBM Plex Mono', monospace; font-size: 10px; letter-spacing: 0.12em; text-transform: uppercase; background: var(--blue-mid); color: rgba(253,252,250,0.85); padding: 4px 8px; border: 1px solid rgba(45,95,166,0.8); }
+    .svc-card::before { content: attr(data-n); position: absolute; bottom: 10px; right: 16px; font-family: 'IBM Plex Mono', monospace; font-size: 64px; font-weight: 600; color: rgba(255,255,255,0.04); line-height: 1; letter-spacing: -0.05em; pointer-events: none; }
+
+    /* WHY */
+    .why-grid { display: grid; grid-template-columns: minmax(0, 2fr) minmax(0, 3fr); gap: 80px; align-items: start; }
+    .adv-block { margin-bottom: 44px; padding-left: 60px; position: relative; }
+    .adv-block:last-child { margin-bottom: 0; }
+    .adv-num { font-family: 'Bebas Neue', sans-serif; font-size: 48px; color: var(--amber); line-height: 1; position: absolute; left: 0; top: -4px; }
+    .adv-title { font-family: 'Bebas Neue', sans-serif; font-size: 26px; letter-spacing: 0.04em; color: var(--ink); margin-bottom: 10px; }
+    .adv-body { font-family: 'Lora', Georgia, serif; font-size: 16px; line-height: 1.7; color: rgba(15,15,15,0.75); }
+
+    /* Spec wireframe */
+    .spec-box { position: relative; background: var(--paper-dark); border: 2px solid var(--rule); padding: 48px 36px 36px; }
+    .spec-corner-l { font-family: 'IBM Plex Mono', monospace; font-size: 9px; letter-spacing: 0.25em; color: var(--amber); position: absolute; top: 16px; left: 20px; }
+    .spec-corner-r { font-family: 'IBM Plex Mono', monospace; font-size: 9px; letter-spacing: 0.18em; color: rgba(15,15,15,0.35); position: absolute; top: 16px; right: 20px; }
+    .spec-titlebar { background: var(--blue); color: var(--white); font-family: 'Bebas Neue', sans-serif; font-size: 14px; letter-spacing: 0.1em; padding: 10px 16px; margin-bottom: 24px; display: flex; justify-content: space-between; align-items: center; }
+    .spec-dwg { font-family: 'IBM Plex Mono', monospace; font-size: 9px; color: var(--amber); letter-spacing: 0.12em; }
+    .wf-page { border: 1.5px solid rgba(15,15,15,0.25); background: var(--white); padding: 12px; }
+    .wf-hdr { height: 24px; background: var(--blue); margin-bottom: 8px; display: flex; align-items: center; padding: 0 10px; }
+    .wf-hdr::after { content: 'WEBSITE HEADER / NAV / CTA'; font-family: 'IBM Plex Mono', monospace; font-size: 7px; letter-spacing: 0.1em; color: rgba(253,252,250,0.6); }
+    .wf-hero-area { background: rgba(26,58,92,0.1); border: 1px dashed rgba(26,58,92,0.35); height: 68px; margin-bottom: 8px; display: flex; align-items: center; justify-content: center; }
+    .wf-hero-area::before { content: 'HERO / ABOVE THE FOLD'; font-family: 'IBM Plex Mono', monospace; font-size: 7px; letter-spacing: 0.1em; color: rgba(26,58,92,0.55); }
+    .wf-row { display: grid; grid-template-columns: repeat(3,1fr); gap: 5px; margin-bottom: 8px; }
+    .wf-block { background: rgba(200,117,10,0.08); border: 1px dashed rgba(200,117,10,0.4); height: 44px; display: flex; align-items: center; justify-content: center; }
+    .wf-block::before { content: attr(data-l); font-family: 'IBM Plex Mono', monospace; font-size: 6px; letter-spacing: 0.1em; color: rgba(200,117,10,0.8); }
+    .wf-ft { height: 18px; background: rgba(26,58,92,0.12); display: flex; align-items: center; justify-content: center; }
+    .wf-ft::before { content: 'FOOTER'; font-family: 'IBM Plex Mono', monospace; font-size: 6px; letter-spacing: 0.15em; color: rgba(26,58,92,0.5); }
+    .ann-grid { margin-top: 20px; display: grid; grid-template-columns: 1fr 1fr; gap: 12px 20px; }
+    .ann-row { margin-bottom: 4px; }
+    .ann-line { display: flex; align-items: flex-start; gap: 8px; }
+    .ann-lbl { font-family: 'IBM Plex Mono', monospace; font-size: 9px; color: var(--amber); letter-spacing: 0.08em; white-space: nowrap; padding-top: 1px; flex-shrink: 0; }
+    .ann-dash { flex: 1; height: 1px; background: var(--amber); opacity: 0.35; margin-top: 6px; position: relative; }
+    .ann-dash::before { content: ''; position: absolute; left: 0; top: -3px; width: 6px; height: 6px; border-left: 1.5px solid var(--amber); border-bottom: 1.5px solid var(--amber); transform: rotate(45deg); opacity: 0.55; }
+    .ann-txt { font-family: 'IBM Plex Mono', monospace; font-size: 8px; color: rgba(15,15,15,0.5); letter-spacing: 0.06em; }
+    .spec-table { margin-top: 20px; border: 1.5px solid rgba(200,192,176,0.5); }
+    .spec-thead { background: rgba(200,192,176,0.2); padding: 6px 14px; font-family: 'IBM Plex Mono', monospace; font-size: 8px; letter-spacing: 0.2em; color: rgba(15,15,15,0.5); text-transform: uppercase; }
+    .spec-tbody { padding: 12px 14px; }
+    .spec-tr { display: flex; justify-content: space-between; padding: 7px 0; border-bottom: 1px solid rgba(200,192,176,0.4); align-items: baseline; }
+    .spec-tr:last-child { border-bottom: none; }
+    .spec-k { font-family: 'IBM Plex Mono', monospace; font-size: 9px; letter-spacing: 0.12em; text-transform: uppercase; color: rgba(15,15,15,0.5); }
+    .spec-v { font-family: 'IBM Plex Mono', monospace; font-size: 16px; letter-spacing: 0.06em; color: var(--ink); font-weight: 600; }
+    .spec-v.a { color: var(--amber); }
+
+    /* ABOUT */
+    #about { display: grid; grid-template-columns: 45% 55%; }
+    .about-l { background: #0F2340; padding: 80px 60px; display: flex; flex-direction: column; justify-content: center; position: relative; overflow: hidden; }
+    .about-l::before { content: ''; position: absolute; inset: 0; pointer-events: none; background-image: repeating-linear-gradient(0deg, rgba(255,255,255,0.03) 0px, rgba(255,255,255,0.03) 1px, transparent 1px, transparent 60px), repeating-linear-gradient(90deg, rgba(255,255,255,0.03) 0px, rgba(255,255,255,0.03) 1px, transparent 1px, transparent 60px); }
+    .about-name { font-family: 'Bebas Neue', sans-serif; font-size: clamp(52px, 6vw, 72px); line-height: 0.92; letter-spacing: 0.03em; color: var(--white); margin-bottom: 16px; position: relative; z-index: 1; }
+    .about-role { font-family: 'IBM Plex Mono', monospace; font-size: 13px; letter-spacing: 0.2em; text-transform: uppercase; color: var(--amber); margin-bottom: 24px; position: relative; z-index: 1; }
+    .about-rule { width: 80px; height: 2px; background: var(--amber); margin-bottom: 20px; position: relative; z-index: 1; }
+    .crew { display: flex; gap: 40px; flex-wrap: wrap; position: relative; z-index: 1; }
+    .crew-member { display: flex; flex-direction: column; }
+    .crew-name { font-family: 'IBM Plex Mono', monospace; font-size: 15px; font-weight: 600; letter-spacing: 0.1em; color: #fff; margin: 16px 0 6px; }
+    .about-email { font-family: 'IBM Plex Mono', monospace; font-size: 12px; letter-spacing: 0.08em; color: rgba(253,252,250,0.7); position: relative; z-index: 1; }
+    .about-r { background: var(--paper); padding: 80px 60px; display: flex; flex-direction: column; justify-content: center; }
+    .about-body { font-family: 'Lora', Georgia, serif; font-size: 17px; line-height: 1.75; color: rgba(15,15,15,0.82); margin-bottom: 40px; }
+    .about-body a { color: inherit; text-decoration-color: var(--amber); text-decoration-thickness: 2px; text-underline-offset: 3px; }
+    .about-body a:hover { color: var(--amber); }
+    .creds { display: flex; flex-direction: column; gap: 8px; border-top: 2px solid var(--rule); padding-top: 24px; }
+    .cred { font-family: 'IBM Plex Mono', monospace; font-size: 11px; letter-spacing: 0.15em; text-transform: uppercase; color: rgba(15,15,15,0.55); }
+    .cred strong { color: var(--ink); font-weight: 600; }
+
+    /* CONTACT */
+    .contact-grid { display: grid; grid-template-columns: minmax(0, 11fr) minmax(0, 9fr); gap: 80px; align-items: start; }
+    .contact-note { font-family: 'IBM Plex Mono', monospace; font-size: 11px; letter-spacing: 0.18em; text-transform: uppercase; color: var(--amber); margin-bottom: 40px; display: block; position: relative; z-index: 1; }
+    .f-group { margin-bottom: 20px; }
+    .f-group label { font-family: 'IBM Plex Mono', monospace; font-size: 10px; letter-spacing: 0.2em; text-transform: uppercase; color: rgba(15,15,15,0.55); display: block; margin-bottom: 7px; }
+    .f-group input, .f-group select, .f-group textarea { width: 100%; background: var(--white); border: 2px solid var(--rule); border-radius: 0; padding: 12px 14px; font-family: 'Lora', Georgia, serif; font-size: 16px; color: var(--ink); outline: none; transition: border-color 0.2s; appearance: none; -webkit-appearance: none; }
+    .f-group select { background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8'%3E%3Cpath d='M1 1l5 5 5-5' stroke='%23C8750A' stroke-width='2' fill='none'/%3E%3C/svg%3E"); background-repeat: no-repeat; background-position: right 14px center; background-color: var(--white); padding-right: 40px; }
+    .f-group input:focus, .f-group select:focus, .f-group textarea:focus { border-color: var(--amber); }
+    .f-group textarea { resize: vertical; min-height: 120px; }
+    .f-submit { font-family: 'Bebas Neue', sans-serif; font-size: 20px; letter-spacing: 0.1em; background: var(--amber); color: var(--white); padding: 16px 36px; border: none; border-radius: 0; cursor: pointer; width: 100%; transition: background 0.2s; }
+    .f-submit:hover { background: var(--amber-light); }
+    .f-success { display: none; background: var(--blue); border: 2px solid var(--amber); padding: 28px; font-family: 'IBM Plex Mono', monospace; font-size: 13px; letter-spacing: 0.1em; color: var(--amber); text-transform: uppercase; line-height: 1.6; margin-top: 16px; }
+    .contact-info { padding-top: 100px; }
+    .cinfo-block { margin-bottom: 36px; padding-bottom: 36px; border-bottom: 1px solid var(--rule); }
+    .cinfo-block:last-of-type { border-bottom: none; margin-bottom: 0; padding-bottom: 0; }
+    .cinfo-label { font-family: 'IBM Plex Mono', monospace; font-size: 10px; letter-spacing: 0.25em; text-transform: uppercase; color: var(--amber); margin-bottom: 8px; }
+    .cinfo-val { font-family: 'IBM Plex Mono', monospace; font-size: 14px; letter-spacing: 0.06em; color: var(--ink); line-height: 1.6; }
+    .stamp-wrap { margin-top: 44px; display: flex; justify-content: center; }
 
     /* FOOTER */
-    footer { background: var(--blue); border-top: 2px solid var(--amber); padding: 24px 40px; display: flex; align-items: center; justify-content: space-between; }
-    .f-logo { font-family: 'Bebas Neue', sans-serif; font-size: 18px; letter-spacing: 0.15em; color: rgba(253,252,250,0.6); }
-    .f-logo em { color: var(--amber); font-style: normal; }
-    .f-copy { font-family: 'IBM Plex Mono', monospace; font-size: 10px; letter-spacing: 0.12em; color: rgba(253,252,250,0.35); text-transform: uppercase; }
-    .f-copy strong { color: var(--amber); }
-    .f-email { font-family: 'IBM Plex Mono', monospace; font-size: 11px; letter-spacing: 0.08em; color: var(--amber); }
+    #footer { background: var(--blue); border-top: 2px solid var(--amber); }
+    .footer-inner { max-width: 1400px; margin: 0 auto; padding: 32px 40px; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 16px; }
+    .footer-logo { font-family: 'Bebas Neue', sans-serif; font-size: 18px; letter-spacing: 0.12em; color: rgba(253,252,250,0.6); }
+    .footer-ctr { font-family: 'IBM Plex Mono', monospace; font-size: 10px; letter-spacing: 0.15em; color: rgba(253,252,250,0.5); text-transform: uppercase; }
+    .footer-email { font-family: 'IBM Plex Mono', monospace; font-size: 11px; letter-spacing: 0.08em; color: rgba(253,252,250,0.55); }
 
+    /* REVEAL */
+    .d1 { transition-delay: 0.1s; }
+    .d2 { transition-delay: 0.2s; }
+    .d3 { transition-delay: 0.3s; }
+    .d4 { transition-delay: 0.4s; }
+
+    /* RESPONSIVE */
+    @media (max-width: 1100px) {
+      .services-grid { grid-template-columns: repeat(2,1fr); }
+      .why-grid { grid-template-columns: 1fr; gap: 48px; }
+      .contact-grid { grid-template-columns: 1fr; gap: 48px; }
+      .contact-info { padding-top: 0; }
+    }
+    @media (max-width: 900px) {
+      .hero-inner { grid-template-columns: 1fr; }
+      #about { grid-template-columns: 1fr; }
+      .problem-grid { grid-template-columns: 1fr; }
+    }
     @media (max-width: 768px) {
-      header { padding: 0 20px; }
-      nav { display: none; }
-      .page-hero, .grid-section, .cta-section { padding-left: 20px; padding-right: 20px; }
-      .grid { grid-template-columns: 1fr; }
-      footer { flex-direction: column; gap: 12px; text-align: center; }
+      .header-nav, .btn-header { display: none; }
+      .hamburger { display: flex; }
+      .services-grid { grid-template-columns: 1fr; }
+      .sec-cream, .sec-dark { padding: 72px 24px; }
+      #hero { padding: 100px 24px 64px; }
+      .num-bg { font-size: 100px; }
+      .header-inner { padding: 0 24px; }
+      .footer-inner { padding: 24px; flex-direction: column; text-align: center; }
+      .about-l, .about-r { padding: 56px 32px; }
+    }
+    @media (max-width: 480px) {
+      .hero-headline { font-size: 58px; }
+      .sec-heading { font-size: 44px; }
+      .hero-ctas { flex-direction: column; }
     }
   </style>
-  <link rel="canonical" href="https://eastbayprojects.com/portfolio">
 <link rel="stylesheet" href="/style.css">
+<link rel="stylesheet" href="/vibe-code-to-production.css">
+<link rel="stylesheet" href="/portfolio.css">
 </head>
-<body>
-
-<header>
-  <a href="index.html" class="logo">EAST BAY <em>PROJECTS</em></a>
-  <nav>
-    <li><a href="index.html#services">Services</a></li>
-    <li><a href="index.html#why">Why Us</a></li>
-    <li><a href="portfolio.html" class="active">Portfolio</a></li>
-    <li><a href="/about">About</a></li>
-    <li><a href="/#contact" class="btn-nav">Start a Project</a></li>
-  </nav>
-</header>
-
-<section class="page-hero">
-  <div class="page-hero-inner">
-    <p class="eyebrow">Selected Work · East Bay Projects</p>
-    <h1 class="page-title">BUILT.<br>SHIPPED.<br><em>LIVE.</em></h1>
-    <p class="page-sub">A selection of websites for manufacturers, local businesses, and professional services.</p>
-    <div class="rule"></div>
-  </div>
-</section>
-
-<div class="grid-section">
-  <div class="grid">
-
-    <div class="card">
-      <div class="card-inner">
-        <p class="card-num">PROJECT / 01</p>
-        <p class="card-tag">Brand Platform · Fortune 500 · Automotive</p>
-        <h2 class="card-title">PERTRONIX BRANDS</h2>
-        <p class="card-url">pertronixbrands.com</p>
-        <div class="card-rule"></div>
-        <p class="card-body">A website and online store for an automotive aftermarket manufacturer, bringing its ignition and exhaust brands together for customers and dealers.</p>
-        <div class="card-footer">
-          <div class="tag-row">
-            <span class="pill amber">FORTUNE 500</span>
-            <span class="pill">E-COMMERCE</span>
-            <span class="pill">BRAND PLATFORM</span>
-          </div>
-          <a href="https://pertronixbrands.com" target="_blank" rel="noopener" class="visit-link">VISIT →</a>
-        </div>
-      </div>
-      <span class="card-bg-num">01</span>
+<body class="portfolio-page"><a class="skip-link" href="#main">Skip to content</a><header id="site-header">
+    <div class="header-inner">
+      <a href="/" class="header-logo">EAST BAY <em>PROJECTS</em></a>
+      <nav><ul class="header-nav">
+        <li><a href="/#services">Services</a></li>
+        <li><a href="/#why">Why Us</a></li>
+        <li><a href="portfolio.html">Portfolio</a></li>
+        <li><a href="/about">About</a></li>
+        <li><a href="/#contact">Contact</a></li>
+      </ul></nav>
+      <a href="/#contact" class="btn-header">START A PROJECT &rarr;</a>
+      <button class="hamburger" id="hamburger" aria-expanded="false" aria-controls="mobile-nav" aria-label="Menu"><span></span><span></span><span></span></button>
     </div>
-
-    <div class="card">
-      <div class="card-inner">
-        <p class="card-num">PROJECT / 02</p>
-        <p class="card-tag">Personal Brand · Distinguished Engineer · Portfolio</p>
-        <h2 class="card-title">NATE McGUIRE</h2>
-        <p class="card-url">natemcguire.com</p>
-        <div class="card-rule"></div>
-        <p class="card-body">Nate’s personal website, covering his engineering experience, companies, projects, and advisory work.</p>
-        <div class="card-footer">
-          <div class="tag-row">
-            <span class="pill amber">PERSONAL BRAND</span>
-            <span class="pill">PORTFOLIO</span>
-            <span class="pill">LEAD FUNNEL</span>
-          </div>
-          <a href="https://natemcguire.com" target="_blank" rel="noopener" class="visit-link">VISIT →</a>
-        </div>
-      </div>
-      <span class="card-bg-num">02</span>
+    <div class="mobile-nav" id="mobile-nav">
+      <a href="/#services">Services</a>
+      <a href="/#why">Why Us</a>
+      <a href="portfolio.html">Portfolio</a>
+      <a href="/about">About</a>
+      <a href="/#contact">Contact</a>
+      <a href="/#contact" class="btn-header" style="align-self:flex-start;margin-top:8px">START A PROJECT &rarr;</a>
     </div>
-
-    <div class="card">
-      <div class="card-inner">
-        <p class="card-num">PROJECT / 03</p>
-        <p class="card-tag">Local Services · HVAC · Real Economy</p>
-        <h2 class="card-title">AUSTIN'S HEATING &amp; AC</h2>
-        <p class="card-url">austinsheatingandac.com</p>
-        <div class="card-rule"></div>
-        <p class="card-body">A website for an HVAC business serving Solano, Napa, and Yolo counties since 1979. It helps customers find its services, coverage area, and contact details.</p>
-        <div class="card-footer">
-          <div class="tag-row">
-            <span class="pill amber">REAL ECONOMY</span>
-            <span class="pill">HVAC</span>
-            <span class="pill">LOCAL SEO</span>
-          </div>
-          <a href="https://www.austinsheatingandac.com/" target="_blank" rel="noopener" class="visit-link">VISIT →</a>
-        </div>
-      </div>
-      <span class="card-bg-num">03</span>
+  </header><main id="main"><section class="work-intro"><div class="work-intro-top"><p>THE EAST BAY PROJECTS PORTFOLIO</p><p>WEBSITES · SOFTWARE · APPS</p></div><h1>Selected work<span class="work-period">.</span></h1><div class="work-intro-bottom"><p>From the water to the workshop.<br>Ideas made useful, out in the world.</p><a href="#droptics">EXPLORE THE WORK <span aria-hidden="true">↓</span></a></div></section><article class="work-project work-lead work-droptics" id="droptics"><a class="work-image" href="https://howler.studio/work/droptics" target="_blank" rel="noopener noreferrer" aria-label="View Droptics with Craig Fowler (opens in a new tab)"><img src="/assets/portfolio/droptics.webp" alt="Droptics mobile website presented on a vivid green background" width="1600" height="1035" fetchpriority="high"><span class="work-visit" aria-hidden="true">VIEW PROJECT ↗</span></a><div class="work-caption"><div><p class="work-meta">01 / Eye care / Website collaboration</p><h2><a href="https://howler.studio/work/droptics" target="_blank" rel="noopener noreferrer">Droptics <span aria-hidden="true">↗</span></a></h2></div><div><h3>A fresh look at everyday eye care.</h3><p>A website collaboration with <a class="work-credit" href="https://howler.studio/work/droptics" target="_blank" rel="noopener noreferrer">Craig Fowler</a>, who led digital design and art direction. A bold digital presence for a modern eye-care brand.</p></div></div></article><div class="work-grid"><article class="work-project work-navy" id="sailscan">
+<a class="work-image" href="https://sailscanapp.com/" target="_blank" rel="noopener noreferrer" aria-label="Visit SailScan (opens in a new tab)"><img src="/assets/portfolio/sailscan.webp" alt="SailScan website" width="1600" height="1100" loading="lazy"><span class="work-visit" aria-hidden="true">VIEW PROJECT ↗</span></a>
+<div class="work-caption"><div><p class="work-meta">02 / Sailing / Mobile app</p><h2><a href="https://sailscanapp.com/" target="_blank" rel="noopener noreferrer">SailScan <span aria-hidden="true">↗</span></a></h2></div><div><h3>Sail shape, in numbers.</h3><p>An app that reads sail stripes from a photograph, measures shape, and helps sailors compare their scans.</p></div></div>
+</article><article class="work-project work-sand" id="recipeas">
+<a class="work-image" href="https://recipeasapp.com/" target="_blank" rel="noopener noreferrer" aria-label="Visit Recipeas (opens in a new tab)"><img src="/assets/portfolio/recipeas.webp" alt="Recipeas website" width="1600" height="1100" loading="lazy"><span class="work-visit" aria-hidden="true">VIEW PROJECT ↗</span></a>
+<div class="work-caption"><div><p class="work-meta">03 / Food &amp; drink / Mobile app</p><h2><a href="https://recipeasapp.com/" target="_blank" rel="noopener noreferrer">Recipeas <span aria-hidden="true">↗</span></a></h2></div><div><h3>Something good from what you have.</h3><p>A recipe app with ingredient search, meal planning, and an AI chef that helps turn what’s in the kitchen into a meal.</p></div></div>
+</article><article class="work-project work-mint" id="software">
+<a class="work-image" href="https://nates-software.com/" target="_blank" rel="noopener noreferrer" aria-label="Visit Nate’s Software (opens in a new tab)"><img src="/assets/portfolio/software.webp" alt="Nate’s Software website" width="1600" height="1100" loading="lazy"><span class="work-visit" aria-hidden="true">VIEW PROJECT ↗</span></a>
+<div class="work-caption"><div><p class="work-meta">04 / Independent software / Interactive website</p><h2><a href="https://nates-software.com/" target="_blank" rel="noopener noreferrer">Nate’s Software <span aria-hidden="true">↗</span></a></h2></div><div><h3>A software shop with a mind of its own.</h3><p>A playful desktop interface for exploring independent software, experiments, and tools.</p></div></div>
+</article><article class="work-project work-blue" id="brown">
+<a class="work-image" href="https://brownforaustind1.com/" target="_blank" rel="noopener noreferrer" aria-label="Visit Steven Brown for Austin (opens in a new tab)"><img src="/assets/portfolio/brown.webp" alt="Steven Brown for Austin website" width="1600" height="1100" loading="lazy"><span class="work-visit" aria-hidden="true">VIEW PROJECT ↗</span></a>
+<div class="work-caption"><div><p class="work-meta">05 / Public life / Campaign website</p><h2><a href="https://brownforaustind1.com/" target="_blank" rel="noopener noreferrer">Steven Brown for Austin <span aria-hidden="true">↗</span></a></h2></div><div><h3>A campaign with a clear voice.</h3><p>The website for Steven Brown’s Austin City Council District 1 campaign, bringing its platform, events, news, and ways to participate together.</p></div></div>
+</article></div><article class="work-project work-lead" id="seamaphore">
+<a class="work-image" href="https://www.seamaphore.com/" target="_blank" rel="noopener noreferrer" aria-label="Visit Seamaphore (opens in a new tab)"><img src="/assets/portfolio/seamaphore.webp" alt="Seamaphore website" width="1600" height="1100" loading="lazy"><span class="work-visit" aria-hidden="true">VIEW PROJECT ↗</span></a>
+<div class="work-caption"><div><p class="work-meta">06 / Maritime technology / Brand &amp; website</p><h2><a href="https://www.seamaphore.com/" target="_blank" rel="noopener noreferrer">Seamaphore <span aria-hidden="true">↗</span></a></h2></div><div><h3>A home for the next wave of maritime founders.</h3><p>A digital home for a technology incubator, studio, and workspace on San Francisco Bay.</p></div></div>
+</article><section class="work-quotes" aria-labelledby="feedback-title"><div class="work-quotes-heading"><h2 id="feedback-title">In their words.</h2><p>Feedback from Nate’s former clients at Mayven Studios.</p></div><div class="work-quotes-grid"><figure><blockquote>“they’re quick, the code is clean and they’re great communicators.”</blockquote><figcaption><span>Former Customer</span><a href="https://www.designrush.com/agency/profile/mayven-studios" target="_blank" rel="noopener noreferrer">Read original review ↗</a></figcaption></figure><figure><blockquote>“They were a great solution when we needed things done efficiently.”</blockquote><figcaption><span>Former Customer</span><a href="https://clutch.co/profile/mayven-studios" target="_blank" rel="noopener noreferrer">Read original review ↗</a></figcaption></figure></div></section><div class="work-section-label"><h2>More from the studio.</h2><p>Commerce, local businesses, and personal projects.</p></div><div class="work-grid"><article class="work-project work-charcoal" id="pertronix">
+<a class="work-image" href="https://pertronixbrands.com/" target="_blank" rel="noopener noreferrer" aria-label="Visit PerTronix Brands (opens in a new tab)"><img src="/assets/portfolio/pertronix.webp" alt="PerTronix Brands website" width="1600" height="1100" loading="lazy"><span class="work-visit" aria-hidden="true">VIEW PROJECT ↗</span></a>
+<div class="work-caption"><div><p class="work-meta">07 / Automotive / E-commerce</p><h2><a href="https://pertronixbrands.com/" target="_blank" rel="noopener noreferrer">PerTronix Brands <span aria-hidden="true">↗</span></a></h2></div><div><h3>One home for a family of performance brands.</h3><p>A website and online store bringing ignition and exhaust products together for customers and dealers.</p></div></div>
+</article><article class="work-project work-stone" id="studio680">
+<a class="work-image" href="https://studio-680.com/" target="_blank" rel="noopener noreferrer" aria-label="Visit Studio 680 (opens in a new tab)"><img src="/assets/portfolio/studio680.webp" alt="Studio 680 website" width="1600" height="1100" loading="lazy"><span class="work-visit" aria-hidden="true">VIEW PROJECT ↗</span></a>
+<div class="work-caption"><div><p class="work-meta">08 / Architecture / Professional services</p><h2><a href="https://studio-680.com/" target="_blank" rel="noopener noreferrer">Studio 680 <span aria-hidden="true">↗</span></a></h2></div><div><h3>A clear view of the practice.</h3><p>A website presenting an architectural firm’s services, project work, and quality-control expertise.</p></div></div>
+</article><article class="work-project work-slate" id="austins">
+<a class="work-image" href="https://www.austinsheatingandac.com/" target="_blank" rel="noopener noreferrer" aria-label="Visit Austin’s Heating &amp; AC (opens in a new tab)"><img src="/assets/portfolio/austins.webp" alt="Austin’s Heating &amp; AC website" width="1600" height="1100" loading="lazy"><span class="work-visit" aria-hidden="true">VIEW PROJECT ↗</span></a>
+<div class="work-caption"><div><p class="work-meta">09 / Local business / Services website</p><h2><a href="https://www.austinsheatingandac.com/" target="_blank" rel="noopener noreferrer">Austin’s Heating &amp; AC <span aria-hidden="true">↗</span></a></h2></div><div><h3>Helping customers find their local experts.</h3><p>A website for an HVAC business serving Solano, Napa, and Yolo counties, with service information and ways to get in touch.</p></div></div>
+</article><article class="work-project work-paper" id="nate">
+<a class="work-image" href="https://natemcguire.com/" target="_blank" rel="noopener noreferrer" aria-label="Visit Nate McGuire (opens in a new tab)"><img src="/assets/portfolio/nate.webp" alt="Nate McGuire website" width="1600" height="1100" loading="lazy"><span class="work-visit" aria-hidden="true">VIEW PROJECT ↗</span></a>
+<div class="work-caption"><div><p class="work-meta">10 / Personal site / Engineering</p><h2><a href="https://natemcguire.com/" target="_blank" rel="noopener noreferrer">Nate McGuire <span aria-hidden="true">↗</span></a></h2></div><div><h3>An engineer’s work, in his own format.</h3><p>A personal website covering Nate’s engineering experience, companies, projects, and advisory work.</p></div></div>
+</article></div><section class="work-end"><p>YOUR PROJECT COULD BE NEXT</p><h2>What are<br>you working on?</h2><a href="/#contact">LET’S TALK <span aria-hidden="true">↗</span></a></section></main><footer id="footer">
+    <div class="footer-inner">
+      <span class="footer-logo">EAST BAY PROJECTS</span>
+      <span class="footer-ctr">&copy; 2026 &middot; <strong style="color:var(--amber,#C8750A)">MADE IN USA</strong></span>
+      <a href="mailto:contact@eastbayprojects.com" class="footer-email">contact@eastbayprojects.com</a>
+      <a href="/vibe-code-to-production" class="footer-email">Vibe Code to Production</a>
+      <a href="/about" class="footer-email">About</a>
+<a href="/careers" class="footer-email">Careers</a>
+<a href="/contact" class="footer-email">Contact</a>
+      <a href="/civic.html" class="footer-email">Civic &amp; Campaigns</a>
     </div>
+  </footer><script>
+// Sticky header
+    const hdr = document.getElementById('site-header');
+    window.addEventListener('scroll', () => hdr.classList.toggle('scrolled', scrollY > 20), {passive:true});
 
-    <div class="card">
-      <div class="card-inner">
-        <p class="card-num">PROJECT / 04</p>
-        <p class="card-tag">Architecture · Professional Services · QC</p>
-        <h2 class="card-title">STUDIO 680</h2>
-        <p class="card-url">studio-680.com</p>
-        <div class="card-rule"></div>
-        <p class="card-body">A website for an architectural firm with 45 years of experience. It explains the firm’s design, document review, and third-party quality-control services.</p>
-        <div class="card-footer">
-          <div class="tag-row">
-            <span class="pill amber">PROFESSIONAL SVC</span>
-            <span class="pill">ARCHITECTURE</span>
-            <span class="pill">CREDIBILITY</span>
-          </div>
-          <a href="https://studio-680.com/" target="_blank" rel="noopener" class="visit-link">VISIT →</a>
-        </div>
-      </div>
-      <span class="card-bg-num">04</span>
-    </div>
+    // Hamburger
+    const ham = document.getElementById('hamburger');
+    const mnav = document.getElementById('mobile-nav');
+    ham.addEventListener('click', () => { const open=mnav.classList.toggle('open'); ham.classList.toggle('open',open); ham.setAttribute('aria-expanded',String(open)); });
+    mnav.querySelectorAll('a').forEach(a => a.addEventListener('click', () => { ham.classList.remove('open'); mnav.classList.remove('open'); ham.setAttribute('aria-expanded','false'); }));
 
-  </div>
-</div>
+    // Smooth scroll
+    document.querySelectorAll('a[href^="#"]').forEach(a => {
+      a.addEventListener('click', e => {
+        const href = a.getAttribute('href');
+        if (!href || href === '#') return;
+        const t = document.querySelector(href);
+        if (t) { e.preventDefault(); window.scrollTo({top: t.getBoundingClientRect().top + scrollY - 64, behavior:'smooth'}); }
+      });
+    });
 
-<section class="cta-section">
-  <div class="cta-inner">
-    <p class="cta-label">Have a project in mind?</p>
-    <h2 class="cta-title">TELL US ABOUT IT.</h2>
-    <p class="cta-sub">Tell us what you need and when you need it. We will follow up with questions, a proposed scope, and a price.</p>
-    <a href="/#contact" class="btn-cta">START A PROJECT →</a>
-  </div>
-</section>
-
-<footer>
-  <span class="f-logo">EAST BAY <em>PROJECTS</em></span>
-  <span class="f-copy">&copy; 2026 &middot; <strong>MADE IN USA</strong></span>
-  <a href="mailto:contact@eastbayprojects.com" class="f-email">contact@eastbayprojects.com</a>
-  <a href="/vibe-code-to-production" class="f-email">Vibe Code to Production</a>
-      <a href="/about" class="f-email">About</a>
-<a href="/careers" class="f-email">Careers</a>
-<a href="/contact" class="f-email">Contact</a>
-      <a href="/civic.html" class="f-email">Civic &amp; Campaigns</a>
-</footer>
-
-</body>
-</html>
+    </script></body></html>

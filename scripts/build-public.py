@@ -28,6 +28,6 @@ for name in PAGES:
             target = OUT / path
             target.parent.mkdir(parents=True, exist_ok=True)
             shutil.copy2(source, target)
-for name in ['style.css', 'vibe-code-to-production.css', 'people.css', 'robots.txt', 'sitemap.xml']:
+for name in ['style.css', 'vibe-code-to-production.css', 'people.css', 'portfolio.css', 'robots.txt', 'sitemap.xml']:
     shutil.copy2(ROOT / name, OUT / name)
 print('Built eight marketing pages and their public assets in public-dist/')

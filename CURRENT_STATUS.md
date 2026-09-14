@@ -298,3 +298,11 @@ fake interface text, generic AI office scenes, compliance claims, and unrelated 
 - Added role jump links and retained application links that select the correct role in the existing inquiry form.
 
 - Verified all five detailed descriptions on production at `https://e964fb77.eastbayprojects-1vq.pages.dev` (source `9973875`). Desktop and mobile layout and role-selection checks passed; form submission logic is unchanged.
+
+### Editorial portfolio (September 14, 2026)
+
+- Replaced text cards with full-width project features, paired image spreads, editorial captions, and the shared responsive navigation. The page keeps the ivory/green site identity while taking an image-led direction from Craig Fowler’s Howler portfolio.
+- Added Droptics after Nate confirmed the collaboration with Craig; it opens the page with project artwork and explicitly credits Craig’s digital design/art direction. Added SailScan, Seamaphore, Recipeas, Nate’s Software, and Steven Brown’s campaign; retained the four existing projects. Prop Q is excluded.
+- Added two short, sourced customer-review excerpts labeled “Former Customer,” explicitly identified as earlier Mayven engagements. Each links to its original review; provenance is recorded in `assets/portfolio/README.md`.
+- Public project captures are optimized WebP files. Source credentials, profiles, and runtime state are excluded from the build.
+- Desktop, phone, and narrow-phone checks passed: ten projects, all images decoded, source links, no overflow or JavaScript errors, and working mobile navigation. Homepage contact links and existing form handlers remain unchanged.
