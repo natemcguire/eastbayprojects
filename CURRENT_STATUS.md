@@ -1,6 +1,6 @@
 # East Bay Projects — Current Status
 
-Last updated: September 14, 2026
+Last updated: September 15, 2026
 
 ## Source of truth
 
@@ -10,10 +10,10 @@ Last updated: September 14, 2026
 - `nates-mac-mini` is the canonical development and runtime host, not the canonical Git history.
 - Only cloud-safe source and documentation belong in GitHub. Approval records, browser sessions,
   generated drafts, credentials, contact data, logs, and queue state remain private on the mini.
-- Current deployment source: `28a3b68` (architectural drafting-paper texture)
+- Current deployment source: `622910f` (remove Josh from About page)
 - Production: `https://eastbayprojects.com`
 - Cloudflare Pages project: `eastbayprojects`
-- Latest deployment URL: `https://1094485b.eastbayprojects-1vq.pages.dev`
+- Latest deployment URL: `https://7267903b.eastbayprojects-1vq.pages.dev`
 - Google Ads tag `AW-18335868802` is installed immediately after `<head>` on every public HTML page.
 - Production routes were verified after the September 13 deployment.
 
@@ -373,7 +373,7 @@ fake interface text, generic AI office scenes, compliance claims, and unrelated 
 - Replaced small torn graph-paper scraps with broad fading grid fields behind the homepage hero, services, and Why Us, plus selected landing/portfolio intros. Lowered line opacity and removed rotated panel styling. Native touch scrolling and reduced-motion behavior remain intact.
 - Added the requested italic hour-long conversation note after How We Work step 2.
 - Build/SEO checks, nine-page layouts at 1440/390/320, desktop motion, reduced-motion and touch fallback checks passed. Visually reviewed the broad desktop grid. Live note and stylesheet verified.
-- Deployed `edcc063`: `https://1094485b.eastbayprojects-1vq.pages.dev`.
+- Deployed `edcc063`: `https://7267903b.eastbayprojects-1vq.pages.dev`.
 - Pending: create Google appointment booking page and replace the How We Work contact CTA with Book a Call. Latest user direction is to use Nate’s calendar for now (originally Josh), 30 minutes, 9am–5pm every day, America/Chicago. The existing branded Workspace connector has Gmail scopes only; no Calendar/admin authorization is available. Google Calendar connection was suggested but not confirmed. The legacy auth tool opened a consent flow containing only Gmail scopes, so it does not resolve this. No booking calendar or URL has been created; existing contact CTA remains functional.
 
 
@@ -383,3 +383,8 @@ fake interface text, generic AI office scenes, compliance claims, and unrelated 
 - Preserved native touch scrolling and reduced-motion support; subtle parallax is desktop-only. Checked all nine routes at 1440, 390, and 320 pixels with no horizontal overflow or browser errors, plus touch/reduced-motion behavior. Inspected desktop/mobile hero and How We Work screenshots.
 - Public build, SEO/link/404 checks, and diff checks passed. Deployed source `28a3b68`; verified production CSS and texture bytes. Initial asset propagation returned a transient 404 before the new asset became available.
 - Booking setup remains pending Calendar authorization as documented above; no appointment schedule has been created.
+
+## Team page update (September 15, 2026)
+
+- Removed Josh’s profile and references from About, including metadata. Adjusted Nate’s profile into a single-founder layout.
+- Public build and SEO checks passed; inspected desktop and mobile profile layouts and verified no overflow. Production About confirms one profile and no Josh references. Deployed source `622910f`.
