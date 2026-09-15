@@ -10,10 +10,10 @@ Last updated: September 14, 2026
 - `nates-mac-mini` is the canonical development and runtime host, not the canonical Git history.
 - Only cloud-safe source and documentation belong in GitHub. Approval records, browser sessions,
   generated drafts, credentials, contact data, logs, and queue state remain private on the mini.
-- Current deployment source: `43494eb` (marketing copy review, complete metadata, and real 404 handling)
+- Current deployment source: `c98c24b` (grid-paper depth and calmer homepage help section)
 - Production: `https://eastbayprojects.com`
 - Cloudflare Pages project: `eastbayprojects`
-- Latest deployment URL: `https://4b8e3ac3.eastbayprojects-1vq.pages.dev`
+- Latest deployment URL: `https://ff25cea0.eastbayprojects-1vq.pages.dev`
 - Google Ads tag `AW-18335868802` is installed immediately after `<head>` on every public HTML page.
 - Production routes were verified after the September 13 deployment.
 
@@ -349,3 +349,11 @@ fake interface text, generic AI office scenes, compliance claims, and unrelated 
 - Added `python3 scripts/check-public-seo.py` to verify built metadata, local assets, links, anchors, sitemap completeness, and 404 indexing rules.
 - Verification: build and SEO checker passed; all nine page layouts checked at 1440/390/320. Form actions remain `/api/contact`; handlers were not changed or resubmitted. Live checks passed for eight pages, robots, sitemap, social assets, and two missing paths. HTTP and .html URLs redirect correctly. The www host serves content with canonical tags pointing to the apex domain; no host redirect was configured.
 - Deployment: `https://4b8e3ac3.eastbayprojects-1vq.pages.dev`, source `43494eb`.
+
+## Grid-paper layers and homepage transition — September 14, 2026
+
+- Added subtle torn graph-paper corners across hero sections and small paper-stack shadows to homepage panels. Preserved ivory/green styling and readable foreground content.
+- Shared `paper-depth.js` adds decorative, aria-hidden layers and restrained desktop parallax (24px maximum). Scroll listeners are passive and updates are frame-scheduled. Touch devices and reduced-motion preferences use static layers; native touch scrolling is preserved, with no wheel/touch interception or scrolling library. Existing animated anchor handlers now respect reduced motion.
+- Changed “The Problem” to “Where We Can Help,” with calm, concrete cards about usable websites, connected internal tools, and a CRM that fits the business.
+- Verified nine page layouts at 1440/390/320; desktop parallax, touch static layers, and reduced-motion behavior passed. Build, SEO, and JavaScript syntax checks passed. Live homepage verified at desktop and mobile widths. Physical-device scroll feel was not measured.
+- Deployment: `https://ff25cea0.eastbayprojects-1vq.pages.dev`, source `c98c24b`.
