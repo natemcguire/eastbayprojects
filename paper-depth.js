@@ -1,9 +1,9 @@
 /* Decorative graph-paper layers; touch scrolling always stays browser-native. */
 (() => {
-  const stages = [...document.querySelectorAll('#hero, .launch-hero, .work-intro, .page-hero, .pitch, #services, #why')];
+  const stages = [...document.querySelectorAll('#hero, .launch-hero, .work-intro, #services, #why')];
   for (const stage of stages) {
     stage.classList.add('paper-stage');
-    for (const side of ['corner', 'edge']) {
+    for (const side of ['corner']) {
       const layer = document.createElement('div');
       layer.className = `paper-layer paper-${side}`;
       layer.setAttribute('aria-hidden', 'true');
