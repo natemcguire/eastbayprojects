@@ -338,23 +338,23 @@
     <div class="sec-inner">
       <div class="num-wrap">
         <span class="num-bg">01</span>
-        <h2 class="sec-heading">THE PROBLEM</h2>
+        <h2 class="sec-heading">WHERE WE CAN HELP</h2>
       </div>
       <div class="problem-grid">
         <div class="prob-card">
-          <p class="card-tag">PROBLEM / 01</p>
-          <h3>A SLOW WEBSITE.</h3>
-          <p>Customers wait for pages to load or struggle to send an inquiry from their phone. We repair the slow pages and broken forms.</p>
+          <p class="card-tag">YOUR WEBSITE</p>
+          <h3>A WEBSITE CUSTOMERS CAN USE.</h3>
+          <p>Make it easy for customers to find what they need and get in touch. We improve slow pages, confusing navigation, and forms that don’t work well on a phone.</p>
         </div>
         <div class="prob-card">
-          <p class="card-tag">PROBLEM / 02</p>
-          <h3>TOOLS THAT GET IN THE WAY.</h3>
-          <p>Your team copies data between systems, hunts through cluttered screens, or works around broken features. We build tools around the job they need to do.</p>
+          <p class="card-tag">YOUR INTERNAL TOOLS</p>
+          <h3>TOOLS THAT WORK TOGETHER.</h3>
+          <p>Give your team one place to do the job, with the right information at hand. We connect existing systems and build the missing pieces around your workflow.</p>
         </div>
         <div class="prob-card">
-          <p class="card-tag">PROBLEM / 03</p>
-          <h3>TOO MUCH CRM. TOO MUCH COST.</h3>
-          <p>You pay for features you don’t use and still need spreadsheets to fill the gaps. We can build a custom CRM around your customers, sales process, and reporting.</p>
+          <p class="card-tag">YOUR CUSTOMER RELATIONSHIPS</p>
+          <h3>A CRM THAT FITS YOUR BUSINESS.</h3>
+          <p>Track customers, follow-ups, and sales in a system that fits how you work. We help you decide what to keep, what to connect, and where a custom tool makes sense.</p>
         </div>
       </div>
     </div>
@@ -617,7 +617,7 @@
         const href = a.getAttribute('href');
         if (!href || href === '#') return;
         const t = document.querySelector(href);
-        if (t) { e.preventDefault(); window.scrollTo({top: t.getBoundingClientRect().top + scrollY - 64, behavior:'smooth'}); }
+        if (t) { e.preventDefault(); window.scrollTo({top: t.getBoundingClientRect().top + scrollY - 64, behavior:matchMedia('(prefers-reduced-motion: reduce)').matches ? 'auto' : 'smooth'}); }
       });
     });
 
@@ -680,5 +680,6 @@ send();
 addEventListener("pageshow",function(e){if(e.persisted)send();}); // bfcache restore (back/fwd) — else undercounts
 }catch(e){}})();
 </script>
+<script src="/paper-depth.js" defer></script>
 </body>
 </html>

@@ -318,8 +318,9 @@
         const href = a.getAttribute('href');
         if (!href || href === '#') return;
         const t = document.querySelector(href);
-        if (t) { e.preventDefault(); window.scrollTo({top: t.getBoundingClientRect().top + scrollY - 64, behavior:'smooth'}); }
+        if (t) { e.preventDefault(); window.scrollTo({top: t.getBoundingClientRect().top + scrollY - 64, behavior:matchMedia('(prefers-reduced-motion: reduce)').matches ? 'auto' : 'smooth'}); }
       });
     });
 
-    </script></body></html>
+    </script><script src="/paper-depth.js" defer></script>
+</body></html>

@@ -369,7 +369,7 @@
         const href = a.getAttribute('href');
         if (!href || href === '#') return;
         const t = document.querySelector(href);
-        if (t) { e.preventDefault(); window.scrollTo({top: t.getBoundingClientRect().top + scrollY - 64, behavior:'smooth'}); }
+        if (t) { e.preventDefault(); window.scrollTo({top: t.getBoundingClientRect().top + scrollY - 64, behavior:matchMedia('(prefers-reduced-motion: reduce)').matches ? 'auto' : 'smooth'}); }
       });
     });
 
@@ -410,4 +410,5 @@
 
     
 document.querySelectorAll('[data-role]').forEach(a=>a.addEventListener('click',()=>document.getElementById('career-role').value=a.dataset.role));
-</script></body></html>
+</script><script src="/paper-depth.js" defer></script>
+</body></html>
