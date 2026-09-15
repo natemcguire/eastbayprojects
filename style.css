@@ -74,3 +74,13 @@ a,button { transition:background .2s,color .2s,transform .2s; }
   html { scroll-behavior:auto!important; }
   .paper-layer { --paper-shift:0px!important; }
 }
+
+.how-work-panel { padding:36px; background:#E9EDE1; border:1px solid #BEC7B2; border-radius:4px; box-shadow:5px 6px 0 #dbe0d2; }
+.how-work-panel h2 { font-size:clamp(28px,3vw,40px); line-height:1.1; margin-bottom:30px; }
+.how-work-steps { list-style:none; counter-reset:work-step; }
+.how-work-steps li { counter-increment:work-step; position:relative; padding:22px 0 22px 40px; border-top:1px solid #bec7b2; }
+.how-work-steps li::before { content:counter(work-step,decimal-leading-zero); position:absolute; left:0; top:24px; font-size:12px; color:#63754F; }
+.how-work-steps h3 { font-size:22px; line-height:1.2; margin-bottom:10px; }
+.how-work-steps p,.how-work-note { font-size:16px; line-height:1.65; color:#566052; }
+.how-work-note { padding-top:22px; border-top:1px solid #bec7b2; margin-bottom:24px; }
+@media(max-width:768px) { .how-work-panel { padding:26px 22px; }.how-work-steps li { padding-left:32px; }.how-work-steps h3 { font-size:21px; } }
