@@ -10,10 +10,10 @@ Last updated: September 14, 2026
 - `nates-mac-mini` is the canonical development and runtime host, not the canonical Git history.
 - Only cloud-safe source and documentation belong in GitHub. Approval records, browser sessions,
   generated drafts, credentials, contact data, logs, and queue state remain private on the mini.
-- Current deployment source: `ac99323` (How We Work consultation panel)
+- Current deployment source: `edcc063` (broader faint grid and consultation note)
 - Production: `https://eastbayprojects.com`
 - Cloudflare Pages project: `eastbayprojects`
-- Latest deployment URL: `https://eef67710.eastbayprojects-1vq.pages.dev`
+- Latest deployment URL: `https://5316f13e.eastbayprojects-1vq.pages.dev`
 - Google Ads tag `AW-18335868802` is installed immediately after `<head>` on every public HTML page.
 - Production routes were verified after the September 13 deployment.
 
@@ -367,3 +367,11 @@ fake interface text, generic AI office scenes, compliance claims, and unrelated 
 
 - Replaced the technical-specification graphic with a three-step How We Work panel: free no-obligation consult, 30-minute review of current work, and a fixed-fee quote/timeline reviewed on a follow-up call. Added the conditional first-call preview note and a link to the homepage contact form.
 - Build, SEO, and layout checks passed at 1440/390/320. Verified the panel and removal of the specification document on production. Deployment: `https://eef67710.eastbayprojects-1vq.pages.dev`, source `ac99323`.
+
+## Grid revision and booking request — September 14, 2026
+
+- Replaced small torn graph-paper scraps with broad fading grid fields behind the homepage hero, services, and Why Us, plus selected landing/portfolio intros. Lowered line opacity and removed rotated panel styling. Native touch scrolling and reduced-motion behavior remain intact.
+- Added the requested italic hour-long conversation note after How We Work step 2.
+- Build/SEO checks, nine-page layouts at 1440/390/320, desktop motion, reduced-motion and touch fallback checks passed. Visually reviewed the broad desktop grid. Live note and stylesheet verified.
+- Deployed `edcc063`: `https://5316f13e.eastbayprojects-1vq.pages.dev`.
+- Pending: create Google appointment booking page and replace the How We Work contact CTA with Book a Call. Latest user direction is to use Nate’s calendar for now (originally Josh), 30 minutes, 9am–5pm every day, America/Chicago. The existing branded Workspace connector has Gmail scopes only; no Calendar/admin authorization is available. Google Calendar connection was suggested but not confirmed. The legacy auth tool opened a consent flow containing only Gmail scopes, so it does not resolve this. No booking calendar or URL has been created; existing contact CTA remains functional.
