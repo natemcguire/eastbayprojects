@@ -6,7 +6,7 @@ import shutil
 
 ROOT = Path(__file__).resolve().parents[1]
 OUT = ROOT / 'public-dist'
-PAGES = ['index.html', 'portfolio.html', 'civic.html', 'contact.html', 'privacy.html', 'vibe-code-to-production.html', 'about.html', 'careers.html']
+PAGES = ['index.html', 'portfolio.html', 'civic.html', 'contact.html', 'privacy.html', 'vibe-code-to-production.html', 'about.html', 'careers.html', '404.html']
 if OUT.is_symlink():
     raise SystemExit('Refusing symlink output')
 if OUT.exists():
@@ -17,7 +17,7 @@ for name in PAGES:
     if name == 'contact.html':
         # Preserve the live analytics configuration; this conversion event is unpublished.
         text = re.sub(r"      if \(typeof gtag === 'function'\) \{.*?\n      \}\n", '', text, flags=re.S)
-    assert 'noindex' not in text and '/preview.js' not in text
+    assert (name == '404.html' or 'noindex' not in text) and '/preview.js' not in text
     (OUT / name).write_text(text)
     for url in re.findall(r'(?:src|href)=["\']([^"\']+)["\']', text):
         if url.startswith(('http:', 'https:', 'mailto:', '#', 'data:')):
@@ -30,4 +30,5 @@ for name in PAGES:
             shutil.copy2(source, target)
 for name in ['style.css', 'vibe-code-to-production.css', 'people.css', 'portfolio.css', 'robots.txt', 'sitemap.xml']:
     shutil.copy2(ROOT / name, OUT / name)
-print('Built eight marketing pages and their public assets in public-dist/')
+shutil.copy2(ROOT / 'assets/brand/social-card.png', OUT / 'assets/brand/social-card.png')
+print('Built eight marketing pages, a 404 page, and their public assets in public-dist/')
