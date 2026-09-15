@@ -10,10 +10,10 @@ Last updated: September 14, 2026
 - `nates-mac-mini` is the canonical development and runtime host, not the canonical Git history.
 - Only cloud-safe source and documentation belong in GitHub. Approval records, browser sessions,
   generated drafts, credentials, contact data, logs, and queue state remain private on the mini.
-- Current deployment source: `ded22db` (East Bay origins and service to American companies)
+- Current deployment source: `ac99323` (How We Work consultation panel)
 - Production: `https://eastbayprojects.com`
 - Cloudflare Pages project: `eastbayprojects`
-- Latest deployment URL: `https://da378f23.eastbayprojects-1vq.pages.dev`
+- Latest deployment URL: `https://eef67710.eastbayprojects-1vq.pages.dev`
 - Google Ads tag `AW-18335868802` is installed immediately after `<head>` on every public HTML page.
 - Production routes were verified after the September 13 deployment.
 
@@ -362,3 +362,8 @@ fake interface text, generic AI office scenes, compliance claims, and unrelated 
 
 - Replaced Austin/DC service-area copy in the homepage eyebrow, byline, contact details, and stamp with East Bay founding and service to American companies. Updated the civic service-area label and saved the preference in marketing context. Project locations remain factual.
 - Public build, SEO checker, and live homepage copy verification passed. Deployment: `https://da378f23.eastbayprojects-1vq.pages.dev`, source `ded22db`.
+
+## How We Work — September 14, 2026
+
+- Replaced the technical-specification graphic with a three-step How We Work panel: free no-obligation consult, 30-minute review of current work, and a fixed-fee quote/timeline reviewed on a follow-up call. Added the conditional first-call preview note and a link to the homepage contact form.
+- Build, SEO, and layout checks passed at 1440/390/320. Verified the panel and removal of the specification document on production. Deployment: `https://eef67710.eastbayprojects-1vq.pages.dev`, source `ac99323`.
