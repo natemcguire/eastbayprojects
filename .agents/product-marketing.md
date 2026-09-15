@@ -11,3 +11,5 @@ Public brand guidance, not private operational state.
 - Proof: use only confirmed portfolio projects and existing sourced quotations. Do not invent customer endorsements, savings, guarantees, or response deadlines. Keep the former agency mention only in Nate's About bio, per AGENTS.md.
 - Commercial terms: retain published service prices. Scope, price, and schedule are agreed before work starts. Hosting and third-party usage can have ongoing costs.
 - Design stays ivory/green with shared styles. Civic is footer-only. Personal sites and rejected projects stay out of the portfolio.
+
+- Geographic positioning: “Founded in the East Bay of San Francisco, Serving American Companies.” Use this instead of Austin/DC service-area messaging. Preserve factual locations in project names and case studies.
