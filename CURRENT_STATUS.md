@@ -10,10 +10,10 @@ Last updated: September 15, 2026
 - `nates-mac-mini` is the canonical development and runtime host, not the canonical Git history.
 - Only cloud-safe source and documentation belong in GitHub. Approval records, browser sessions,
   generated drafts, credentials, contact data, logs, and queue state remain private on the mini.
-- Current deployment source: `622910f` (remove Josh from About page)
+- Current deployment source: `4609df4` (privacy notice and McGuire LLC legal identity)
 - Production: `https://eastbayprojects.com`
 - Cloudflare Pages project: `eastbayprojects`
-- Latest deployment URL: `https://7267903b.eastbayprojects-1vq.pages.dev`
+- Latest deployment URL: `https://61b33161.eastbayprojects-1vq.pages.dev`
 - Google Ads tag `AW-18335868802` is installed immediately after `<head>` on every public HTML page.
 - Production routes were verified after the September 13 deployment.
 
@@ -373,7 +373,7 @@ fake interface text, generic AI office scenes, compliance claims, and unrelated 
 - Replaced small torn graph-paper scraps with broad fading grid fields behind the homepage hero, services, and Why Us, plus selected landing/portfolio intros. Lowered line opacity and removed rotated panel styling. Native touch scrolling and reduced-motion behavior remain intact.
 - Added the requested italic hour-long conversation note after How We Work step 2.
 - Build/SEO checks, nine-page layouts at 1440/390/320, desktop motion, reduced-motion and touch fallback checks passed. Visually reviewed the broad desktop grid. Live note and stylesheet verified.
-- Deployed `edcc063`: `https://7267903b.eastbayprojects-1vq.pages.dev`.
+- Deployed `edcc063`: `https://61b33161.eastbayprojects-1vq.pages.dev`.
 - Pending: create Google appointment booking page and replace the How We Work contact CTA with Book a Call. Latest user direction is to use Nate’s calendar for now (originally Josh), 30 minutes, 9am–5pm every day, America/Chicago. The existing branded Workspace connector has Gmail scopes only; no Calendar/admin authorization is available. Google Calendar connection was suggested but not confirmed. The legacy auth tool opened a consent flow containing only Gmail scopes, so it does not resolve this. No booking calendar or URL has been created; existing contact CTA remains functional.
 
 
@@ -388,3 +388,9 @@ fake interface text, generic AI office scenes, compliance claims, and unrelated 
 
 - Removed Josh’s profile and references from About, including metadata. Adjusted Nate’s profile into a single-founder layout.
 - Public build and SEO checks passed; inspected desktop and mobile profile layouts and verified no overflow. Production About confirms one profile and no Josh references. Deployed source `622910f`.
+
+## Privacy and legal identity (September 15, 2026)
+
+- Privacy notice now identifies McGuire LLC (DBA East Bay Projects), uses the shared site design/navigation, and covers project/career inquiries, stored request metadata, and the existing Google Ads tag. Added advertising preference and Google data-use links. Existing retention and inquiry rights wording retained.
+- All nine public page footers identify McGuire LLC and link to /privacy. No separate terms page exists in the public build; archived design experiments and unrelated app policies were not changed. Privacy was already in the sitemap.
+- Verified public build, SEO/local links, all nine footers at desktop and two mobile widths, and privacy appearance. Production privacy content confirmed after deployment of `4609df4`. This change does not certify jurisdiction-specific legal compliance.
