@@ -30,5 +30,6 @@ for name in PAGES:
             shutil.copy2(source, target)
 for name in ['style.css', 'vibe-code-to-production.css', 'people.css', 'portfolio.css', 'robots.txt', 'sitemap.xml', 'paper-depth.js']:
     shutil.copy2(ROOT / name, OUT / name)
-shutil.copy2(ROOT / 'assets/brand/social-card.png', OUT / 'assets/brand/social-card.png')
+for name in ['social-card.png', 'drafting-paper.webp']:
+    shutil.copy2(ROOT / 'assets/brand' / name, OUT / 'assets/brand' / name)
 print('Built eight marketing pages, a 404 page, and their public assets in public-dist/')
