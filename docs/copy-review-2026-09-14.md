@@ -33,3 +33,7 @@ The approved homepage headline remains unchanged.
 ## Brand context
 
 Saved the established audience, offer, voice, evidence rules, and user preferences in `.agents/product-marketing.md` for future copy passes.
+
+## Technical SEO follow-up
+
+Verified all eight canonical sitemap routes and robots.txt. Added complete social metadata, public social artwork, favicon, and a noindex 404 page. Root and nested missing URLs return 404 on production. The implementation follows [Cloudflare Pages serving behavior](https://developers.cloudflare.com/pages/configuration/serving-pages/). Run `python3 scripts/build-public.py` then `python3 scripts/check-public-seo.py` for future checks.

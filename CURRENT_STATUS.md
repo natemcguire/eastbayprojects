@@ -10,10 +10,10 @@ Last updated: September 14, 2026
 - `nates-mac-mini` is the canonical development and runtime host, not the canonical Git history.
 - Only cloud-safe source and documentation belong in GitHub. Approval records, browser sessions,
   generated drafts, credentials, contact data, logs, and queue state remain private on the mini.
-- Current deployment source: `4b0fbf1` (custom software service and revised production landing copy)
+- Current deployment source: `43494eb` (marketing copy review, complete metadata, and real 404 handling)
 - Production: `https://eastbayprojects.com`
 - Cloudflare Pages project: `eastbayprojects`
-- Latest deployment URL: `https://701dcc63.eastbayprojects-1vq.pages.dev`
+- Latest deployment URL: `https://4b8e3ac3.eastbayprojects-1vq.pages.dev`
 - Google Ads tag `AW-18335868802` is installed immediately after `<head>` on every public HTML page.
 - Production routes were verified after the September 13 deployment.
 
@@ -338,3 +338,14 @@ fake interface text, generic AI office scenes, compliance claims, and unrelated 
 - Reduced finish/finishing language on the landing page to one call to action; other sections describe code review, integrations, testing, deployment, and ownership.
 - Public build and diff checks passed. Checked the service card spans its grid, its destination, and both pages for horizontal overflow at 1440, 390, and 320 pixels. Contact form action is preserved. Verified deployed copy on both live routes.
 - Deployment: `https://701dcc63.eastbayprojects-1vq.pages.dev`, source `4b0fbf1`.
+
+## Copywriting and technical SEO — September 14, 2026
+
+- Installed and applied Corey Haines’s Copywriting and Copy Editing skills. Aligned homepage problems with the custom software offer, clarified delivery and inquiry copy, and reduced generic wording across marketing pages. Approved headlines, quotes, prices, and founder credentials remain intact.
+- Added public brand context in `.agents/product-marketing.md` and review notes in `docs/copy-review-2026-09-14.md`; neither is deployed.
+- All eight indexable pages have unique titles/descriptions, canonical URLs, matching Open Graph/Twitter metadata, a shared 1200×630 social card, and favicon. Internal HTML links use canonical extensionless routes.
+- Added a branded noindex `404.html`; missing root and nested URLs now return HTTP 404 instead of the homepage with HTTP 200.
+- Sitemap already listed the correct eight canonical URLs; validated it against the actual build and verified robots.txt points to it. The 404 page is excluded.
+- Added `python3 scripts/check-public-seo.py` to verify built metadata, local assets, links, anchors, sitemap completeness, and 404 indexing rules.
+- Verification: build and SEO checker passed; all nine page layouts checked at 1440/390/320. Form actions remain `/api/contact`; handlers were not changed or resubmitted. Live checks passed for eight pages, robots, sitemap, social assets, and two missing paths. HTTP and .html URLs redirect correctly. The www host serves content with canonical tags pointing to the apex domain; no host redirect was configured.
+- Deployment: `https://4b8e3ac3.eastbayprojects-1vq.pages.dev`, source `43494eb`.
