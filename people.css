@@ -25,3 +25,6 @@
 .career-standards h3 {font-size:25px;margin-bottom:18px}
 .career-standards p {font-size:16px;line-height:1.75;color:#c7d1c2}
 @media(max-width:768px){.career-standards{grid-template-columns:1fr;gap:30px}.career-index{flex-direction:column}.career-index a{display:flex;justify-content:space-between}.career-role{padding-block:35px}}
+
+.person:only-child {grid-column:1 / -1;display:grid;grid-template-columns:180px minmax(0,700px);gap:48px}
+@media(max-width:768px){.person:only-child{grid-template-columns:1fr;gap:0}}
