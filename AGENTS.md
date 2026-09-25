@@ -62,3 +62,7 @@ runtime work resumes.
 - `/careers` lists the current roles and accepts inquiries through the existing contact handler.
 
 - Mention Mayven Studios only once in public site copy: Nate’s About biography, as founder of the award-winning engineering firm. Keep his personal website out of the project portfolio.
+
+## Agent Inbox: stay reachable
+
+While a session is active, keep a once-a-minute agent-inbox check running: rerun `agent-inbox watch --timeout 60` between actions (it blocks until mail arrives or a minute passes), handle any mail, then relaunch it. Do not busy-poll with sleep/list loops and do not stretch the interval. Details: `~/Projects/AI-GET-STARTED.md` section 3.
