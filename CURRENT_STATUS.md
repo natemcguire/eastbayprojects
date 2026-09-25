@@ -1,6 +1,6 @@
 # East Bay Projects — Current Status
 
-Last updated: September 15, 2026
+Last updated: September 25, 2026
 
 ## Source of truth
 
@@ -10,16 +10,26 @@ Last updated: September 15, 2026
 - `nates-mac-mini` is the canonical development and runtime host, not the canonical Git history.
 - Only cloud-safe source and documentation belong in GitHub. Approval records, browser sessions,
   generated drafts, credentials, contact data, logs, and queue state remain private on the mini.
-- Current deployment source: `4609df4` (privacy notice and McGuire LLC legal identity)
+- Current deployment source: `1202b5f` (revised consultancy copy and security hardening)
 - Production: `https://eastbayprojects.com`
 - Cloudflare Pages project: `eastbayprojects`
-- Latest deployment URL: `https://61b33161.eastbayprojects-1vq.pages.dev`
+- Latest deployment URL: `https://507c9e9a.eastbayprojects-1vq.pages.dev`
 - Google Ads tag `AW-18335868802` is installed immediately after `<head>` on every public HTML page.
-- Production routes were verified after the September 13 deployment.
+- Production routes, security headers, and live lead storage were verified after the September 25 deployment.
+- Deploy only with `wrangler pages deploy public-dist --project-name eastbayprojects`; `wrangler.toml` now defaults to `public-dist`.
 
 After the July 20 handoff, development should continue from the Mac mini checkout at
 `~/Projects/eastbayprojects`. Do not treat the laptop checkout as the active development
 workspace unless a new handoff explicitly reverses this decision.
+
+## Revised consultancy copy and security hardening (September 25, 2026)
+
+- Applied the marketer's revised copy (September 25 document) to Home, CIVIC, Portfolio, Vibe Code to Production, About, Contact, and Careers, plus metadata, header CTA ("CONTACT US"), and footer ("U.S.-LED", "CIVIC").
+- Home: six consultancy services with no public prices; free-consult, preview, and Salesforce copy removed. CIVIC: tax-rate election removed, pro-bono nonprofit and paid campaign services added, Steven Brown featured only there. Portfolio: Brown entry replaced by a campaign-services section linking to CIVIC.
+- Nate's About bio: Distinguished Engineer; software for Silicon Valley startups and Fortune 100 technology companies; founder of award-winning Mayven Studios.
+- Security: `_headers` adds HSTS (apex only), `X-Frame-Options: DENY`, Permissions-Policy, and a CSP limited to frame-ancestors/form-action/base-uri/object-src so Google Ads tracking is unaffected; wildcard CORS removed. The build refuses non-web file types in `public-dist/`. `/api/contact` returns 403 for opaque origins. `downloads/` is gitignored.
+- Audit: production, www, `pages.dev`, all prior production deployments, and design previews returned 404 for private repository paths.
+- Open: homepage and Contact service dropdowns still list the older service names; the homepage stamp still reads "Serving American Companies / Est. 2011". Consider a Cloudflare rate-limit rule on `/api/contact`.
 
 ## Active test revision (September 11, 2026)
 
