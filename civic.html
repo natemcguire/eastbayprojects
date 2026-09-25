@@ -12,26 +12,26 @@
   </script>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Civic &amp; Campaign Digital | East Bay Projects</title>
+  <title>CIVIC | East Bay Projects</title>
   <meta name="robots" content="index, follow">
   <link rel="canonical" href="https://eastbayprojects.com/civic">
   <link rel="icon" href="/assets/brand/favicon.svg" type="image/svg+xml">
   <meta property="og:type" content="website">
   <meta property="og:site_name" content="East Bay Projects">
   <meta property="og:locale" content="en_US">
-  <meta property="og:title" content="Civic &amp; Campaign Digital | East Bay Projects">
-  <meta property="og:description" content="Rapid-response websites, campaign platforms, public-data tools, and digital operations for candidates, ballot measures, coalitions, and public-affairs teams.">
+  <meta property="og:title" content="CIVIC | East Bay Projects">
+  <meta property="og:description" content="Paid campaign websites and marketing, plus pro-bono website and technical services for nonprofits involved in their local communities.">
   <meta property="og:url" content="https://eastbayprojects.com/civic">
   <meta property="og:image" content="https://eastbayprojects.com/assets/brand/social-card.png">
   <meta property="og:image:width" content="1200">
   <meta property="og:image:height" content="630">
   <meta property="og:image:alt" content="East Bay Projects — Software for your business">
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="Civic &amp; Campaign Digital | East Bay Projects">
-  <meta name="twitter:description" content="Rapid-response websites, campaign platforms, public-data tools, and digital operations for candidates, ballot measures, coalitions, and public-affairs teams.">
+  <meta name="twitter:title" content="CIVIC | East Bay Projects">
+  <meta name="twitter:description" content="Paid campaign websites and marketing, plus pro-bono website and technical services for nonprofits involved in their local communities.">
   <meta name="twitter:image" content="https://eastbayprojects.com/assets/brand/social-card.png">
   <meta name="twitter:image:alt" content="East Bay Projects — Software for your business">
-  <meta name="description" content="Rapid-response websites, campaign platforms, public-data tools, and digital operations for candidates, ballot measures, coalitions, and public-affairs teams.">
+  <meta name="description" content="Paid campaign websites and marketing, plus pro-bono website and technical services for nonprofits involved in their local communities.">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&amp;family=IBM+Plex+Mono:wght@400;500;600&amp;family=Lora:ital,wght@0,400;0,600;1,400&amp;display=swap" rel="stylesheet">
@@ -182,8 +182,15 @@
     .cta h2 { font-size: 56px; letter-spacing: .04em; }
     .cta .btn-fill { white-space: normal; }
     a:focus-visible, button:focus-visible { outline: 3px solid var(--amber-light); outline-offset: 5px; }
+    .section-title + .case-grid, .section-title + .service-grid, .section-title + .process-grid { margin-top: 48px; }
+    #who { padding-bottom: 0; }
+    .case-feature { display: grid; grid-template-columns: minmax(0, 1.15fr) minmax(0, 1fr); }
+    .case-feature .case-shot { aspect-ratio: auto; height: 100%; min-height: 420px; border-bottom: 0; border-right: 2px solid var(--ink); }
+    .case-feature .case-body { align-self: center; }
     @media (max-width: 900px) {
       .hero-inner { grid-template-columns: 1fr; }
+      .case-feature { grid-template-columns: 1fr; }
+      .case-feature .case-shot { aspect-ratio: 16/10; min-height: 0; height: auto; border-right: 0; border-bottom: 2px solid var(--ink); }
       .case-grid, .service-grid { grid-template-columns: 1fr; }
       .case + .case { border-left: 0; border-top: 2px solid var(--ink); }
       .process-grid { grid-template-columns: 1fr 1fr; }
@@ -220,7 +227,7 @@
         <li><a href="/about">About</a></li>
         <li><a href="/#contact">Contact</a></li>
       </ul></nav>
-      <a href="/#contact" class="btn-header">START A PROJECT &rarr;</a>
+      <a href="/#contact" class="btn-header">CONTACT US &rarr;</a>
       <button class="hamburger" id="hamburger" aria-label="Menu" aria-expanded="false" aria-controls="mobile-nav"><span></span><span></span><span></span></button>
     </div>
     <div class="mobile-nav" id="mobile-nav">
@@ -229,154 +236,142 @@
       <a href="/portfolio">Portfolio</a>
       <a href="/about">About</a>
       <a href="/#contact">Contact</a>
-      <a href="/#contact" class="btn-header" style="align-self:flex-start;margin-top:8px">START A PROJECT &rarr;</a>
+      <a href="/#contact" class="btn-header" style="align-self:flex-start;margin-top:8px">CONTACT US &rarr;</a>
     </div>
   </header>
 
   <main>
     <section id="hero">
-      <div class="hero-inner">
-        <div>
-          <p class="hero-eyebrow">Civic &amp; Campaign Digital / Serving American Companies</p>
-          <h1 class="hero-headline">WEBSITES FOR<br><em>CIVIC WORK.</em></h1>
-          <p class="hero-sub">We build websites and tools for candidates, ballot measures, and community organizations. That includes donations, volunteer signups, public information, and updates throughout a campaign.</p>
-          <div class="hero-ctas">
-            <a class="btn-fill" href="/#contact">Discuss a project &rarr;</a>
-            <a class="btn-ghost" href="#work">See the work &darr;</a>
-          </div>
+    <div class="hero-inner">
+      <div>
+        <p class="hero-eyebrow">East Bay Projects</p>
+        <h1 class="hero-headline">CIVIC</h1>
+        <p class="hero-sub">We build websites and manage paid marketing for political campaigns. We also offer pro-bono services to nonprofits and not-for-profit organizations involved in their local communities.</p>
+        <div class="hero-ctas">
+          <a class="btn-fill" href="/#contact">Discuss a project &rarr;</a>
+          <a class="btn-ghost" href="#work">See our work &darr;</a>
         </div>
-        <aside class="hero-proof" aria-label="Selected proof">
-          <p class="proof-label">Recent work / Austin, Texas</p>
-          <p class="proof-stat">2 LIVE CIVIC PLATFORMS</p>
-          <p class="proof-note">An information site about an Austin ballot measure and a city-council candidate’s campaign website. Nate built and runs both.</p>
-        </aside>
-      </div>
-    </section>
-
-    <div class="trust-bar">
-      <div class="trust-inner">
-        <span>Rapid response</span>
-        <span>Candidate platforms</span>
-        <span>Public-data tools</span>
-        <span>Donations + volunteer signups</span>
-        <span>Cloud operations</span>
       </div>
     </div>
+  </section>
 
-    <section class="section" id="work">
-      <div class="section-inner">
-        <p class="section-kicker">Selected Austin work / Live</p>
-        <h2 class="section-title">TWO AUSTIN PROJECTS.</h2>
-        <p class="section-intro">One site explains a tax-rate election. The other helps a candidate share his platform, collect donations, and organize volunteers.</p>
+  <div class="trust-bar">
+    <div class="trust-inner">
+      <span>Campaign websites</span>
+      <span>Paid marketing</span>
+      <span>Updates &amp; technical support</span>
+      <span>Pro-bono nonprofit services</span>
+    </div>
+  </div>
 
-        <div class="case-grid">
-          <article class="case">
-            <div class="case-shot">
-              <img src="assets/civic/austin-tax-rate-election-desktop.png" alt="Austin Tax Rate Election website showing the final Proposition Q results" width="1440" height="1000">
-            </div>
-            <div class="case-body">
-              <p class="case-tag">Ballot measure / Rapid response / Public data</p>
-              <h3>Austin Tax Rate Election</h3>
-              <p>A public-information site explaining the tax-rate election through figures, short explanations, and published results. The site also received local media coverage.</p>
-              <div class="case-metrics">
-                <div class="metric"><strong>HOURS</strong><span>Initial launch</span></div>
-                <div class="metric"><strong>$12</strong><span>Original domain cost</span></div>
-                <div class="metric"><strong>63.48%</strong><span>Final against vote</span></div>
-              </div>
-              <a class="case-link" href="https://austintaxrateelection.com/" target="_blank" rel="noopener noreferrer">View live project &rarr;</a>
-            </div>
-          </article>
-
-          <article class="case">
-            <div class="case-shot">
-              <img src="assets/civic/brown-for-austin-d1-desktop.png" alt="Steven Brown for Austin City Council District 1 campaign website and donation experience" width="1440" height="1000">
-            </div>
-            <div class="case-body">
-              <p class="case-tag">Candidate campaign / Full platform / Operations</p>
-              <h3>Steven Brown for Austin D1</h3>
-              <p>A campaign website for Austin City Council District 1, with donations, volunteer and email signups, endorsements, events, and news. It also includes tools for managing updates and a framework for additional languages.</p>
-              <div class="case-metrics">
-                <div class="metric"><strong>7+</strong><span>Campaign sections</span></div>
-                <div class="metric"><strong>24/7</strong><span>Production monitoring</span></div>
-                <div class="metric"><strong>3</strong><span>Language framework</span></div>
-              </div>
-              <a class="case-link" href="https://brownforaustind1.com/" target="_blank" rel="noopener noreferrer">View live project &rarr;</a>
-            </div>
-          </article>
-        </div>
+  <section class="section" id="who">
+    <div class="section-inner">
+      <h2 class="section-title">WHO WE WORK WITH</h2>
+      <div class="case-grid">
+        <article class="case">
+          <div class="case-body">
+            <h3>Nonprofits &amp; Community Organizations</h3>
+            <p>We offer pro-bono website and technical services to nonprofits and not-for-profit organizations involved in their local communities. This can include updating a website, setting up forms, or improving the tools used to organize their work.</p>
+            <p>Tell us about your organization and the help you need. We consider requests based on the work involved and our availability.</p>
+          </div>
+        </article>
+        <article class="case">
+          <div class="case-body">
+            <h3>Political Campaigns</h3>
+            <p>We provide paid website development, marketing, and technical support for political campaigns. We agree on the work, fees, advertising budget, and schedule with your team before starting.</p>
+          </div>
+        </article>
       </div>
-    </section>
+    </div>
+  </section>
 
-    <section class="section services" id="services">
-      <div class="section-inner">
-        <p class="section-kicker">Fixed-scope engagements</p>
-        <h2 class="section-title">HOW WE CAN HELP.</h2>
-        <p class="section-intro">Choose a starting point below. We agree on the pages, features, price, and launch date with your campaign team before work starts.</p>
-        <div class="service-grid">
-          <article class="service">
-            <span class="service-num">SERVICE / 01</span>
-            <h3>Issue Website</h3>
-            <p class="price">FROM $7,500</p>
-            <p>A website for a ballot question or public issue. Includes organizing the content, building pages for phones and desktops, setting up analytics and social previews, and launching the site.</p>
-            <span class="service-time">Typical launch: 3–5 days</span>
-          </article>
-          <article class="service">
-            <span class="service-num">SERVICE / 02</span>
-            <h3>Candidate Platform</h3>
-            <p class="price">$12,500–25,000</p>
-            <p>A candidate website with a biography, platform, endorsements, events, news, donations, and volunteer signups. Campaign staff can manage updates.</p>
-            <span class="service-time">Typical launch: 1–3 weeks</span>
-          </article>
-          <article class="service">
-            <span class="service-num">SERVICE / 03</span>
-            <h3>Donation &amp; Signup Improvements</h3>
-            <p class="price">$2,500–5,000</p>
-            <p>Improvements to an existing campaign site’s donation and signup forms. We check the steps on mobile, repair integrations, and add measurement so the team can see where people drop off.</p>
-            <span class="service-time">Typical turnaround: 3–7 days</span>
-          </article>
-        </div>
+  <section class="section" id="work">
+    <div class="section-inner">
+      <h2 class="section-title">CAMPAIGN WEBSITE</h2>
+      <div class="case-grid" style="grid-template-columns:minmax(0,1fr)">
+        <article class="case case-feature">
+          <div class="case-shot">
+            <img src="assets/civic/brown-for-austin-d1-desktop.png" alt="Steven Brown for Austin City Council District 1 campaign website and donation experience" width="1440" height="1000">
+          </div>
+          <div class="case-body">
+            <p class="case-tag">Website development</p>
+            <h3>Steven Brown for Austin D1</h3>
+            <p>A campaign website with candidate information, news, events, donation links, and volunteer and email signups. It includes tools for campaign staff to manage updates.</p>
+            <div class="case-metrics">
+              <div class="metric"><strong>Campaign information</strong><span>Candidate information, news, and events</span></div>
+              <div class="metric"><strong>Donations &amp; signups</strong><span>Donation links and volunteer forms</span></div>
+              <div class="metric"><strong>Content management</strong><span>Staff access to publish updates</span></div>
+            </div>
+            <a class="case-link" href="https://brownforaustind1.com/" target="_blank" rel="noopener noreferrer">View website &rarr;</a>
+          </div>
+        </article>
       </div>
-    </section>
+    </div>
+  </section>
 
-    <section class="section" id="process">
-      <div class="section-inner">
-        <p class="section-kicker">How it works</p>
-        <h2 class="section-title">WORKING TOWARD YOUR DEADLINE.</h2>
-        <p class="section-intro">Tell us the date that matters: a campaign launch, debate, the start of early voting, or election day. We plan the work around it.</p>
-        <div class="process-grid">
-          <article class="step"><strong>01</strong><h3>Decision</h3><p>Agree on the audience, the information they need, and what the site should help them do.</p></article>
-          <article class="step"><strong>02</strong><h3>Source</h3><p>Gather the approved text, source material, images, disclosures, and account access.</p></article>
-          <article class="step"><strong>03</strong><h3>Build</h3><p>Review working pages as we build them, with time for the campaign team to check the details.</p></article>
-          <article class="step"><strong>04</strong><h3>Operate</h3><p>Launch the site, check that forms and integrations work, and keep the information up to date.</p></article>
-        </div>
+  <section class="section services" id="services">
+    <div class="section-inner">
+      <h2 class="section-title">CAMPAIGN SERVICES</h2>
+      <div class="service-grid">
+        <article class="service">
+          <span class="service-num">SERVICE / 01</span>
+          <h3>Campaign Websites</h3>
+          <p>We build campaign websites with candidate information, positions, news, events, donation links, and volunteer signups. We set up editing tools so campaign staff can publish updates.</p>
+          <span class="service-time">Websites &middot; Donations &middot; Volunteer signups</span>
+        </article>
+        <article class="service">
+          <span class="service-num">SERVICE / 02</span>
+          <h3>Paid Marketing</h3>
+          <p>We plan and manage online advertising. That includes ad text and graphics, account setup, placement, budget management, and reporting. Your team approves the ads before they run.</p>
+          <span class="service-time">Ad production &middot; Ad management &middot; Reporting</span>
+        </article>
+        <article class="service">
+          <span class="service-num">SERVICE / 03</span>
+          <h3>Updates &amp; Technical Support</h3>
+          <p>We publish approved updates, maintain the website, and fix problems with pages, forms, and integrations. We agree on the support needed for the campaign’s schedule.</p>
+          <span class="service-time">Content updates &middot; Maintenance &middot; Technical support</span>
+        </article>
       </div>
-    </section>
+    </div>
+  </section>
 
-    <section class="cta" id="contact">
-      <div class="cta-inner">
-        <div>
-          <h2>TELL US ABOUT YOUR CAMPAIGN.</h2>
-          <p>Tell us what your campaign needs and when it needs to go live. Nate will reply to discuss the scope and next steps.</p>
-        </div>
-        <a class="btn-fill" href="/#contact">CONTACT NATE &rarr;</a>
+  <section class="section" id="process">
+    <div class="section-inner">
+      <h2 class="section-title">HOW IT WORKS</h2>
+      <div class="process-grid">
+        <article class="step"><strong>01</strong><h3>Agree on the work</h3><p>Tell us what the campaign needs, when it needs to launch, and who will approve the work. We set out the scope, fees, schedule, and advertising budget.</p></article>
+        <article class="step"><strong>02</strong><h3>Prepare the content</h3><p>We collect the text, photographs, account access, and disclosures needed for the project. We also write website copy and produce ads when that work is included in the scope.</p></article>
+        <article class="step"><strong>03</strong><h3>Build &amp; review</h3><p>We develop the website and advertising included in the project. Your team reviews the pages, forms, and ads and approves them before launch.</p></article>
+        <article class="step"><strong>04</strong><h3>Launch &amp; manage</h3><p>We launch the approved work, check the website and forms, and manage the agreed updates and advertising. Reports cover spending, ad performance, website traffic, and form submissions where tracking is available.</p></article>
       </div>
-    </section>
+    </div>
+  </section>
 
-    <aside class="compliance">
-      <div class="compliance-inner">East Bay Projects provides commercial technology, design, and digital-operations services. Clients remain responsible for campaign content, legal review, required disclaimers, accessibility and language review, treasurer approval, and all applicable reporting. Work is contracted and invoiced at standard commercial rates.</div>
-    </aside>
+  <section class="cta" id="contact">
+    <div class="cta-inner">
+      <div>
+        <h2>TELL US WHAT YOU NEED.</h2>
+        <p>For campaign work, include the project, deadline, and services you need. For pro-bono requests, tell us about your organization, its local community work, and the help you are looking for.</p>
+      </div>
+      <a class="btn-fill" href="/#contact">CONTACT US &rarr;</a>
+    </div>
+  </section>
+
+  <aside class="compliance">
+    <div class="compliance-inner">Campaign services are paid engagements, contracted and invoiced at standard commercial rates. Campaign clients remain responsible for their content, legal review, required disclaimers, accessibility and language review, treasurer approval, and applicable reporting. Pro-bono services for community nonprofits are considered separately.</div>
+  </aside>
   </main>
 
   <footer id="footer">
     <div class="footer-inner">
       <span class="footer-logo">EAST BAY PROJECTS</span>
-      <span class="footer-ctr">&copy; 2026 McGuire LLC (DBA East Bay Projects) &middot; <strong style="color:var(--amber,#C8750A)">MADE IN USA</strong></span>
+      <span class="footer-ctr">&copy; 2026 McGuire LLC, doing business as East Bay Projects. &middot; <strong style="color:var(--amber,#C8750A)">U.S.-LED</strong></span>
       <a href="mailto:contact@eastbayprojects.com" class="footer-email">contact@eastbayprojects.com</a>
       <a href="/vibe-code-to-production" class="footer-email">Vibe Code to Production</a>
       <a href="/about" class="footer-email">About</a>
 <a href="/careers" class="footer-email">Careers</a>
 <a href="/contact" class="footer-email">Contact</a>
-      <a href="/civic" class="footer-email">Civic &amp; Campaigns</a>
+      <a href="/civic" class="footer-email">CIVIC</a>
     </div>
   <div class="footer-legal"><a href="/privacy">Privacy Notice</a></div></footer>
   <script>
