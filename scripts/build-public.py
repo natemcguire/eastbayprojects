@@ -28,8 +28,14 @@ for name in PAGES:
             target = OUT / path
             target.parent.mkdir(parents=True, exist_ok=True)
             shutil.copy2(source, target)
-for name in ['style.css', 'vibe-code-to-production.css', 'people.css', 'portfolio.css', 'robots.txt', 'sitemap.xml', 'paper-depth.js']:
+for name in ['style.css', 'vibe-code-to-production.css', 'people.css', 'portfolio.css', 'robots.txt', 'sitemap.xml', 'paper-depth.js', '_headers']:
     shutil.copy2(ROOT / name, OUT / name)
 for name in ['social-card.png', 'drafting-paper.webp']:
     shutil.copy2(ROOT / 'assets/brand' / name, OUT / 'assets/brand' / name)
+# Fail closed: the deploy directory may hold only public web file types.
+PUBLIC_SUFFIXES = {'.html', '.css', '.js', '.png', '.jpg', '.jpeg', '.webp', '.svg', '.ico', '.txt', '.xml'}
+unexpected = [str(f.relative_to(OUT)) for f in OUT.rglob('*')
+              if f.is_file() and f.name != '_headers' and f.suffix.lower() not in PUBLIC_SUFFIXES]
+if unexpected:
+    raise SystemExit(f'Refusing to build: non-public files in public-dist: {unexpected}')
 print('Built eight marketing pages, a 404 page, and their public assets in public-dist/')

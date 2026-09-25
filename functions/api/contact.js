@@ -24,8 +24,16 @@ export async function onRequestPost(context) {
 
   const requestUrl = new URL(request.url);
   const origin = request.headers.get('origin');
-  if (origin && new URL(origin).hostname !== requestUrl.hostname) {
-    return new Response('Invalid origin', { status: 403 });
+  if (origin) {
+    let originHost = '';
+    try {
+      originHost = new URL(origin).hostname;
+    } catch {
+      // Opaque origins such as "null" cannot be same-site.
+    }
+    if (originHost !== requestUrl.hostname) {
+      return new Response('Invalid origin', { status: 403 });
+    }
   }
 
   let form;

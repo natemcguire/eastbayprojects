@@ -9,3 +9,6 @@ ad_review/.state/
 ad_review/private/
 ad_review/runtime/
 design-dist/
+
+# Private operational data; never commit or deploy.
+downloads/
