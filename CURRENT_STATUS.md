@@ -10,10 +10,10 @@ Last updated: September 25, 2026
 - `nates-mac-mini` is the canonical development and runtime host, not the canonical Git history.
 - Only cloud-safe source and documentation belong in GitHub. Approval records, browser sessions,
   generated drafts, credentials, contact data, logs, and queue state remain private on the mini.
-- Current deployment source: `1202b5f` (revised consultancy copy and security hardening)
+- Current deployment source: `a9a8c58` (revised copy, security hardening, unified service dropdowns)
 - Production: `https://eastbayprojects.com`
 - Cloudflare Pages project: `eastbayprojects`
-- Latest deployment URL: `https://507c9e9a.eastbayprojects-1vq.pages.dev`
+- Latest deployment URL: `https://a495f78c.eastbayprojects-1vq.pages.dev`
 - Google Ads tag `AW-18335868802` is installed immediately after `<head>` on every public HTML page.
 - Production routes, security headers, and live lead storage were verified after the September 25 deployment.
 - Deploy only with `wrangler pages deploy public-dist --project-name eastbayprojects`; `wrangler.toml` now defaults to `public-dist`.
@@ -29,7 +29,8 @@ workspace unless a new handoff explicitly reverses this decision.
 - Nate's About bio: Distinguished Engineer; software for Silicon Valley startups and Fortune 100 technology companies; founder of award-winning Mayven Studios.
 - Security: `_headers` adds HSTS (apex only), `X-Frame-Options: DENY`, Permissions-Policy, and a CSP limited to frame-ancestors/form-action/base-uri/object-src so Google Ads tracking is unaffected; wildcard CORS removed. The build refuses non-web file types in `public-dist/`. `/api/contact` returns 403 for opaque origins. `downloads/` is gitignored.
 - Audit: production, www, `pages.dev`, all prior production deployments, and design previews returned 404 for private repository paths.
-- Open: homepage and Contact service dropdowns still list the older service names; the homepage stamp still reads "Serving American Companies / Est. 2011". Consider a Cloudflare rate-limit rule on `/api/contact`.
+- Both inquiry forms offer the same service list: the six services, Vibe Code to Production, Campaign Services, Pro-Bono Nonprofit Help, Not Sure. The homepage stamp reads "Working Across the U.S."
+- Open: consider a Cloudflare rate-limit rule on `/api/contact`. Older deployment URLs still serve the previous priced copy.
 
 ## Active test revision (September 11, 2026)
 
